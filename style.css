@@ -1,0 +1,27 @@
+#headmaker > fieldset > fieldset > input {
+	width: 60%;
+}
+
+#headmaker > fieldset > fieldset > label {
+	width: 35%;
+}
+
+#headmaker {
+	width: 65%;
+	max-width: 50em;
+}
+
+#headmaker > fieldset > fieldset {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+main {
+	display: flex;
+	justify-content: space-around;
+}
+
+#right {
+	width: 30%;
+}
