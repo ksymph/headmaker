@@ -1,6 +1,5 @@
 <?php require "head.php"; ?>
 
-<script src="script.js"></script>
 <body>
 	<main>
 		<form id="headmaker">
@@ -8,11 +7,11 @@
 				<legend>meta</legend>
 				<fieldset>
 					<label for="charset">charset=</label>
-					<input id="charset" type="text" value="utf-8">
+					<input id="charset" type="text" value="utf-8" placeholder="utf-8">
 				</fieldset>
 				<fieldset>
 					<label for="viewport">name="viewport" content=</label>
-					<input id="viewport" type="text" value="width=device-width, initial-scale=1">
+					<input id="viewport" type="text" placeholder="width=device-width, initial-scale=1" value="width=device-width, initial-scale=1">
 				</fieldset>
 			</fieldset>
 			<fieldset>
@@ -30,7 +29,10 @@
 			</fieldset>
 		</form>
 		<div id="right">
-			here's a bunch of output
+			<button id="test">Check</button>
+			<div id="output">
+				here's a bunch of output'
+			</div>
 		</div>
 	</main>
 </body>
