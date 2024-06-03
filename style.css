@@ -1,8 +1,9 @@
-#headmaker > fieldset > fieldset > input {
+#headmaker input {
 	width: 60%;
+	font-size: .8em;
 }
 
-#headmaker > fieldset > fieldset > label {
+#headmaker label {
 	width: 35%;
 }
 
@@ -11,10 +12,25 @@
 	max-width: 50em;
 }
 
-#headmaker > fieldset > fieldset {
+.tag {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin: 0;
+	border: 0;
+	background-color: #041315;
+}
+
+.tag:nth-child(odd) {
+	background-color: #011b23;
+}
+
+.category {
+	padding: 0;
+	margin: 0;
+	background-color: #3b4362;
+	border: 1px solid #3b4362;
+	border-radius: 2px;
 }
 
 main {
@@ -22,6 +38,23 @@ main {
 	justify-content: space-around;
 }
 
+body {
+	background-color: #01242e;
+	color: white;
+	font-size: 1.2rem;
+}
+
+legend {
+	font-size: 1.6em;
+}
+
+
+
+
 #right {
 	width: 30%;
+}
+
+#output {
+	user-select: all;
 }
