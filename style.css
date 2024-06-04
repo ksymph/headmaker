@@ -101,7 +101,23 @@ legend {
 #output {
 	user-select: all;
 	background-color: #011b23;
-	border-radius: 8px;
+	border-radius: 10px;
 	border: 2px solid #3b4362;
-	padding: 8px;
+	padding: 6px 10px;
+}
+
+#output code {
+	font-size: 1em;
+}
+
+code {
+	font-size: .85em;
+}
+
+a {
+	color: #d4affd;
+}
+
+.big-input {
+	height: 100%;
 }
