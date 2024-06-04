@@ -42,8 +42,10 @@
 		</form>
 		<div id="right">
 			<button id="test">Check</button>
-			<code id="output">
-				some output
+			<div id="output">
+				<code id="output-code">
+					some output
+				</code>
 			</div>
 		</div>
 	</main>

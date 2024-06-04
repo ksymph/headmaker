@@ -1,4 +1,4 @@
-const output = document.getElementById("output");
+const output = document.getElementById("output-code");
 const testButton = document.getElementById("test");
 const items = document.getElementById("headmaker").children;
 
@@ -6,7 +6,7 @@ testButton.addEventListener("click", buildOutput);
 
 function buildOutput() {
 	const input = items;
-	let final = "<head>";
+	let final = "<head>\n";
 	for (var i = 0; i < input.length; i++) {
 		const currentFieldList = input[i];
 		const category = currentFieldList.querySelector("legend");
@@ -21,7 +21,7 @@ function buildOutput() {
 				for (var iz = 0; iz < labels.length; iz++) {
 					final += ` ${labels[iz].innerText}"${inputs[iz].value}"`;
 				}
-				final += ">";
+				final += ">\n";
 			}
 
 		}

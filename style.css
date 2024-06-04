@@ -100,4 +100,8 @@ legend {
 
 #output {
 	user-select: all;
+	background-color: #011b23;
+	border-radius: 8px;
+	border: 2px solid #3b4362;
+	padding: 8px;
 }
