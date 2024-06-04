@@ -14,7 +14,7 @@ function buildOutput() {
 			const currentField = currentFieldList.children[it];
 
 			const labels = currentField.querySelectorAll("label");
-			const inputs = currentField.querySelectorAll("input");
+			const inputs = currentField.querySelectorAll(".input-container input");
 
 			if (inputs[0].value) {
 				final += `<${category.innerText} `;

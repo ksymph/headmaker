@@ -1,23 +1,35 @@
-#headmaker input {
-	width: 60%;
+.input-container input {
 	font-size: .8em;
+	width: 95%;
+}
+.input-container {
+	width: 40%;
 }
 
-#headmaker label {
-	width: 35%;
+.label-container {
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
 }
+.label-container label {
+	width: 100%;
+}
+
 
 #headmaker {
 	width: 65%;
-	max-width: 50em;
+	max-width: 40em;
 }
 
 .tag {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	margin: 0;
 	border: 0;
+	padding: 12px 6px;
 	background-color: #041315;
 }
 
@@ -29,7 +41,7 @@
 	padding: 0;
 	margin: 0;
 	background-color: #3b4362;
-	border: 1px solid #3b4362;
+	border: 2px solid #3b4362;
 	border-radius: 2px;
 }
 
@@ -46,6 +58,37 @@ body {
 
 legend {
 	font-size: 1.6em;
+}
+
+#headmaker p {
+	display: none;
+	width: 100%;
+	margin: 8px 0 0 0;
+}
+
+.show-hidden {
+	width: 16px;
+	height: inherit;
+	border-radius: 50%;
+	appearance: none;
+	font-size: 1.2em;
+	margin: 0 6px 0 0;
+}
+
+.show-hidden:before {
+	content: "?";
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: block;
+	color: #d4affd;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.show-hidden:checked ~ p {
+	display: block !important;
 }
 
 
