@@ -60,10 +60,23 @@ legend {
 	font-size: 1.6em;
 }
 
-#headmaker p {
+.description {
 	display: none;
 	width: 100%;
 	margin: 8px 0 0 0;
+}
+
+.description ul {
+	margin: 8px 0;
+	font-family: monospace;
+	font-size: .85em;
+}
+
+.description li code {
+	color: #d4affd;
+	text-decoration: underline;
+	margin-right: 16px;
+
 }
 
 .show-hidden {
@@ -72,7 +85,7 @@ legend {
 	border-radius: 50%;
 	appearance: none;
 	font-size: 1.2em;
-	margin: 0 6px 0 0;
+	margin: 0 0px 0 4px;
 }
 
 .show-hidden:before {
@@ -87,7 +100,7 @@ legend {
 	align-items: center;
 }
 
-.show-hidden:checked ~ p {
+.show-hidden:checked ~ .description {
 	display: block !important;
 }
 
@@ -110,9 +123,7 @@ legend {
 	font-size: 1em;
 }
 
-code {
-	font-size: .85em;
-}
+
 
 a {
 	color: #d4affd;
