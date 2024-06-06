@@ -13,14 +13,13 @@ function buildOutput() {
 		for (var it = 1; it < currentFieldList.children.length; it++) {
 			const currentField = currentFieldList.children[it];
 
-			const category = currentField.dataset.tagName;
 			const labels = currentField.querySelectorAll("label");
 			const inputs = currentField.querySelectorAll(".input-container input");
 
 			if (inputs[0].value) {
-				final += `<${category} `;
+				final += "<";
 				for (var iz = 0; iz < labels.length; iz++) {
-					final += ` ${labels[iz].innerText}"${inputs[iz].value}"`;
+					final += `${labels[iz].innerText}"${inputs[iz].value}"`;
 				}
 				final += ">\n";
 			}
