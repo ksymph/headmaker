@@ -31,6 +31,7 @@
 	border: 0;
 	padding: 12px 6px;
 	background-color: #041315;
+	font-family: Georgia;
 }
 
 .tag:nth-child(odd) {
@@ -57,7 +58,7 @@ body {
 }
 
 legend {
-	font-size: 1.6em;
+	font-size: 1.8em;
 }
 
 .description {
@@ -109,6 +110,9 @@ legend {
 
 #right {
 	width: 30%;
+	position: sticky;
+	align-self: flex-start;
+	top: 0;
 }
 
 #output {
@@ -121,6 +125,14 @@ legend {
 
 #output code {
 	font-size: 1em;
+}
+
+.category-description {
+	font-size: .5em;
+	font-family: Georgia;
+
+	position: relative;
+	margin-left: 16px;
 }
 
 

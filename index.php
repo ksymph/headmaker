@@ -4,7 +4,7 @@
 	<main>
 		<form id="headmaker">
 			<fieldset class="category">
-				<legend>core metadata</legend>
+				<legend>core<span class="category-description">the important stuff</span></legend>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="charset">meta charset=</label></div>
@@ -53,7 +53,7 @@
 					<div class="label-container"><label for="theme-color">meta name="theme-color" content=</label></div>
 					<div class="input-container"><input id="theme-color" type="text" placeholder="#FFFFFF"></div>
 					<div class="description">
-						theme color for browser styling
+						color for browser styling
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -76,15 +76,7 @@
 				</fieldset>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="subject">meta name="subject" content=</label></div>
-					<div class="input-container"><input id="subject" type="text" placeholder="HTML Head Generator"></div>
-					<div class="description">
-						short description of the subject of the page
-					</div>
-				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="referrer">meta name="subject" content=</label></div>
+					<div class="label-container"><label for="referrer">meta name="referrer" content=</label></div>
 					<div class="input-container"><input id="referrer" type="text" placeholder="no-referrer"></div>
 					<div class="description">
 						how to handle referrer information
@@ -104,17 +96,9 @@
 						- email=no/yes
 					</div>
 				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="subject">meta name="subject" content=</label></div>
-					<div class="input-container"><input id="subject" type="text" placeholder="HTML Head Generator"></div>
-					<div class="description">
-						short description of the subject of the page
-					</div>
-				</fieldset>
 			</fieldset>
 			<fieldset class="category">
-				<legend>other metadata</legend>
+				<legend>other metadata<span class="category-description">not widely used for anything</span></legend>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="app-name">meta name="application-name" content=</label></div>
@@ -144,6 +128,14 @@
 						- restricted<br>
 						- 14 years<br>
 						- safe for kids<br>
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="subject">meta name="subject" content=</label></div>
+					<div class="input-container"><input id="subject" type="text" placeholder="HTML Head Generator"></div>
+					<div class="description">
+						short description of the subject of the page
 					</div>
 				</fieldset>
 			</fieldset>
@@ -196,7 +188,6 @@
 			</fieldset>
 		</form>
 		<div id="right">
-			<button id="test">Check</button>
 			<div id="output">
 				<code id="output-code">
 					some output

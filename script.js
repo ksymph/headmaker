@@ -2,15 +2,13 @@ const output = document.getElementById("output-code");
 const testButton = document.getElementById("test");
 const items = document.getElementById("headmaker").children;
 
-testButton.addEventListener("click", buildOutput);
-
 function buildOutput() {
 	const input = items;
 	let final = "<head>\n";
-	for (var i = 0; i < input.length; i++) {
+	for (let i = 0; i < input.length; i++) {
 		const currentFieldList = input[i];
 		// const category = currentFieldList.querySelector("legend");
-		for (var it = 1; it < currentFieldList.children.length; it++) {
+		for (let it = 1; it < currentFieldList.children.length; it++) {
 			const currentField = currentFieldList.children[it];
 
 			const labels = currentField.querySelectorAll("label");
@@ -18,7 +16,7 @@ function buildOutput() {
 
 			if (inputs[0].value) {
 				final += "<";
-				for (var iz = 0; iz < labels.length; iz++) {
+				for (let iz = 0; iz < labels.length; iz++) {
 					final += `${labels[iz].innerText}"${inputs[iz].value}"`;
 				}
 				final += ">\n";
@@ -28,9 +26,48 @@ function buildOutput() {
 	}
 
 	final = final + "</head>";
-
 	output.innerText = final;
 }
+
+let timeoutId
+
+function addInputListeners () {
+	const input = items;
+	for (let i = 0; i < input.length; i++) {
+		const currentFieldList = input[i];
+		for (let it = 1; it < currentFieldList.children.length; it++) {
+			const currentField = currentFieldList.children[it];
+
+			const labels = currentField.querySelectorAll("label");
+			const inputs = currentField.querySelectorAll(".input-container input");
+
+			for (let ix = 0; ix < inputs.length; ix++) {
+				inputs[ix].addEventListener("keyup", function(event) {
+					clearTimeout(timeoutId);
+					timeoutId = setTimeout(buildOutput, 500);
+				})
+			}
+
+		}
+	}
+}
+
+function addListListeners () {
+	const tagList = document.querySelectorAll(".tag");
+	for (let i = 0; i < tagList.length; i++) {
+		const inputElement = tagList[i].querySelector(".input-container input");
+		const suggestedValues = tagList[i].querySelectorAll("li code");
+		for (let valuePos = 0; valuePos < suggestedValues.length; valuePos++){
+			suggestedValues[valuePos].addEventListener("click", function() {
+				inputElement.value = suggestedValues[valuePos].innerText;
+				buildOutput();
+			});
+		}
+	}
+}
+
+addListListeners();
+addInputListeners();
 
 buildOutput();
 
