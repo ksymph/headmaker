@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Headmaker</title>
-		<link rel="stylesheet" href="./style.css">
-		<link rel="icon" href="./favicon.ico" type="image/x-icon">
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>headmaker</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
 
 <body>
+	<div id="intro">
+		<h1>headmaker</h1>
+		<div>easily make a <code>&lt;head></code></div>
+		<div><a href="https://github.com/Flicsmo/headmaker">github</a></div>
+	</div>
 	<main>
 		<form id="headmaker">
-			<fieldset class="category">
-				<legend>core<span class="category-description">the important stuff</span></legend>
+			<fieldset class="category" data-checked="false">
+				<legend>core<span class="category-description">the important stuff</span><span class="check-all">expand all</span></legend>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="charset">meta charset=</label></div>
@@ -105,8 +110,8 @@
 					</div>
 				</fieldset>
 			</fieldset>
-			<fieldset class="category">
-				<legend>other metadata<span class="category-description">not widely used for anything</span></legend>
+			<fieldset class="category" data-checked="false">
+				<legend>other metadata<span class="category-description">not widely used</span><span class="check-all">expand all</span></legend>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="app-name">meta name="application-name" content=</label></div>
@@ -147,20 +152,20 @@
 					</div>
 				</fieldset>
 			</fieldset>
-			<fieldset class="category">
-				<legend>SEO</legend>
+			<fieldset class="category" data-checked="false">
+				<legend>SEO<span class="category-description">description</span><span class="check-all">expand all</span></legend>
 			</fieldset>
-			<fieldset class="category">
-				<legend>social media embeds</legend>
+			<fieldset class="category" data-checked="false">
+				<legend>social media embeds<span class="category-description">description</span><span class="check-all">expand all</span></legend>
 			</fieldset>
-			<fieldset class="category">
-				<legend>browsers</legend>
+			<fieldset class="category" data-checked="false">
+				<legend>browsers<span class="category-description">description</span><span class="check-all">expand all</span></legend>
 			</fieldset>
-			<fieldset class="category">
-				<legend>app links</legend>
+			<fieldset class="category" data-checked="false">
+				<legend>app links<span class="category-description">description</span><span class="check-all">expand all</span></legend>
 			</fieldset>
-			<fieldset class="category">
-				<legend>link</legend>
+			<fieldset class="category" data-checked="false">
+				<legend>link<span class="category-description">description</span><span class="check-all">expand all</span></legend>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="stylesheet">link rel="stylesheet" href=</label></div>
@@ -203,8 +208,17 @@
 			</div>
 		</div>
 	</main>
-	https://html.spec.whatwg.org/multipage/semantics.html#standard-metadata-names
-	https://wiki.whatwg.org/wiki/MetaExtensions
+	<div id="end">
+		<span>thank you <a href="https://htmlhead.dev">htmlhead.dev</a> for the concise info and descriptions</span>
+		<span>further reading:</span>
+		<ul>
+			<li><a href="https://html.spec.whatwg.org/multipage/semantics.html#standard-metadata-names">html spec list of meta names</a></li>
+			<li><a href="https://wiki.whatwg.org/wiki/MetaExtensions">html spec list of non-standard meta names</a></li>
+		</ul>
+		<a href="https://creativecommons.org/publicdomain/zero/1.0/">
+			<img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" alt="CC0">
+		</a>
+	</div>
 </body>
 
 

@@ -52,6 +52,30 @@ function addInputListeners () {
 	}
 }
 
+function addExpandListeners () {
+	const input = items;
+	for (let i = 0; i < input.length; i++) {
+		const expandButton = input[i].querySelector(".check-all");
+		const checkBoxes = input[i].querySelectorAll(".show-hidden");
+		expandButton.addEventListener("click", function() {
+			const isChecked = input[i].dataset.checked;
+			let isCheckedBool = false;
+			if (isChecked === "false") {
+				isCheckedBool = true;
+				expandButton.innerText = "collapse all";
+			} else {
+				isCheckedBool = false;
+				expandButton.innerText = "expand all";
+			}
+			input[i].dataset.checked = isCheckedBool;
+
+			for (let checki = 0; checki < checkBoxes.length; checki++) {
+				checkBoxes[checki].checked = isCheckedBool;
+			}
+		});
+	}
+}
+
 function addListListeners () {
 	const tagList = document.querySelectorAll(".tag");
 	for (let i = 0; i < tagList.length; i++) {
@@ -68,6 +92,7 @@ function addListListeners () {
 
 addListListeners();
 addInputListeners();
+addExpandListeners();
 
 buildOutput();
 
