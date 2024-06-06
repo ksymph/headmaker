@@ -77,7 +77,7 @@ legend {
 	color: #d4affd;
 	text-decoration: underline;
 	margin-right: 16px;
-
+	cursor: pointer;
 }
 
 .show-hidden {
@@ -112,7 +112,7 @@ legend {
 	width: 30%;
 	position: sticky;
 	align-self: flex-start;
-	top: 0;
+	top: 24px;
 }
 
 #output {
