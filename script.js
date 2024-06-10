@@ -7,14 +7,21 @@ function buildOutput() {
 	let final = "<head>\n";
 	for (let i = 0; i < input.length; i++) {
 		const currentFieldList = input[i];
-		// const category = currentFieldList.querySelector("legend");
 		for (let it = 1; it < currentFieldList.children.length; it++) {
 			const currentField = currentFieldList.children[it];
 
 			const labels = currentField.querySelectorAll("label");
-			const inputs = currentField.querySelectorAll(".input-container input");
+			const inputs = currentField.querySelectorAll(".input-container input[type='text']");
+			const isChecklist = currentField.classList.contains("checklist-container");
 
-			if (inputs[0].value) {
+			if (isChecklist) {
+				const checkList = currentField.querySelectorAll("input[type='checkbox']");
+				for (let iz = 0; iz < checkList.length; iz++) {
+					if (checkList[iz].checked) {
+						final += `<${labels[iz-1].innerText}"${inputs[iz-1].value}">\n`;
+					}
+				}
+			} else if (inputs[0].value) {
 				final += "<";
 				for (let iz = 0; iz < labels.length; iz++) {
 					final += `${labels[iz].innerText}"${inputs[iz].value}"`;
@@ -45,6 +52,9 @@ function addInputListeners () {
 				inputs[ix].addEventListener("keyup", function(event) {
 					clearTimeout(timeoutId);
 					timeoutId = setTimeout(buildOutput, 500);
+				})
+				inputs[ix].addEventListener("click", function(event) {
+					buildOutput();
 				})
 			}
 

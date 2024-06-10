@@ -18,6 +18,22 @@
 }
 
 
+.checklist span {
+	display: flex;
+}
+
+.checklist input[type="checkbox"] {
+	width: auto;
+	position: absolute;
+	translate: -24px 2px;
+}
+
+.checklist input[type="text"] {
+	background-color: lightgray;
+	pointer-events: none;
+}
+
+
 #headmaker {
 	width: 65%;
 	max-width: 40em;
@@ -188,3 +204,4 @@ h1 {
 	text-align: left;
 	width: fit-content;
 }
+

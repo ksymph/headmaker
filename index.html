@@ -16,6 +16,8 @@
 	</div>
 	<main>
 		<form id="headmaker">
+
+
 			<fieldset class="category" data-checked="false">
 				<legend>core<span class="category-description">the important stuff</span><span class="check-all">expand all</span></legend>
 				<fieldset class="tag">
@@ -80,15 +82,6 @@
 				</fieldset>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="robots">meta name="robots" content=</label></div>
-					<div class="input-container"><input id="robots" type="text" placeholder="index,follow"></div>
-					<div class="description">
-						instructions for crawlers<br>
-						robots.txt is site-wide, use this for per-page
-					</div>
-				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="referrer">meta name="referrer" content=</label></div>
 					<div class="input-container"><input id="referrer" type="text" placeholder="no-referrer"></div>
 					<div class="description">
@@ -110,6 +103,8 @@
 					</div>
 				</fieldset>
 			</fieldset>
+
+
 			<fieldset class="category" data-checked="false">
 				<legend>other metadata<span class="category-description">not widely used</span><span class="check-all">expand all</span></legend>
 				<fieldset class="tag">
@@ -152,18 +147,125 @@
 					</div>
 				</fieldset>
 			</fieldset>
+
+
 			<fieldset class="category" data-checked="false">
-				<legend>SEO<span class="category-description">description</span><span class="check-all">expand all</span></legend>
+				<legend>search engines<span class="category-description">search engine specific</span><span class="check-all">expand all</span></legend>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="robots">meta name="robots" content=</label></div>
+					<div class="input-container"><input id="robots" type="text" placeholder="index,follow"></div>
+					<div class="description">
+						instructions for crawlers<br>
+						robots.txt is site-wide, use this for per-page
+						<ul>
+							<li><code>index,follow</code></li>
+						</ul>
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="googlebot">meta name="googlebot" content=</label></div>
+					<div class="input-container"><input id="googlebot" type="text" placeholder="index,follow"></div>
+					<div class="description">
+						control Google crawler behavior
+						<ul>
+							<li><code>index,follow</code></li>
+						</ul>
+					</div>
+				</fieldset>
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container">
+						<label for="google-nosite">meta name="google" content=</label>
+						<label for="google-nopage">meta name="google" content=</label>
+					</div>
+					<div class="input-container checklist" id="google">
+						<span>
+							<input id="google-nosite-check" type="checkbox">
+							<input id="google-nosite" type="text" value="nositelinkssearchbox" readonly>
+						</span>
+						<span>
+							<input id="google-nopage-check" type="checkbox">
+							<input id="google-nopage" type="text" value="nopagereadaloud" readonly>
+						</span>
+					</div>
+					<div class="description">
+						control certain google behaviors
+						<ul>
+							<li>nositelinkssearchbox&nbsp&nbsp&nbsp//prevents google from displaying a site-specific search box</li>
+							<li>nopagereadaloud&nbsp&nbsp&nbsp//disables google tts</li>
+						</ul>
+						<a href="https://developers.google.com/search/docs/crawling-indexing/special-tags">google supported meta tags</a>
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="google-site-verification">meta name="google-site-verification" content=</label></div>
+					<div class="input-container"><input id="google-site-verification" type="text" placeholder="verification_token"></div>
+					<div class="description">
+						verify website ownership to google
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="yandex-verification">meta name="yandex-verification" content=</label></div>
+					<div class="input-container"><input id="yandex-verification" type="text" placeholder="verification_token"></div>
+					<div class="description">
+						verify website ownership to yandex
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="msvalidate.01">meta name="msvalidate.01" content=</label></div>
+					<div class="input-container"><input id="msvalidate.01" type="text" placeholder="verification_token"></div>
+					<div class="description">
+						verify website ownership to microsoft bing
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="alexaVerifyID">meta name="alexaVerifyID" content=</label></div>
+					<div class="input-container"><input id="alexaVerifyID" type="text" placeholder="verification_token"></div>
+					<div class="description">
+						verify website ownership to amazon alexa
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="p:domain_verify">meta name="p:domain_verify" content=</label></div>
+					<div class="input-container"><input id="p:domain_verify" type="text" placeholder="verification_token"></div>
+					<div class="description">
+						verify website ownership to pinterest
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="norton-safeweb-site-verification">meta name="norton-safeweb-site-verification" content=</label></div>
+					<div class="input-container"><input id="norton-safeweb-site-verification" type="text" placeholder="verification_token"></div>
+					<div class="description">
+						verify website ownership to norton safe web
+					</div>
+				</fieldset>
 			</fieldset>
+
+
+
 			<fieldset class="category" data-checked="false">
 				<legend>social media embeds<span class="category-description">description</span><span class="check-all">expand all</span></legend>
 			</fieldset>
+
+
 			<fieldset class="category" data-checked="false">
 				<legend>browsers<span class="category-description">description</span><span class="check-all">expand all</span></legend>
 			</fieldset>
+
+
 			<fieldset class="category" data-checked="false">
 				<legend>app links<span class="category-description">description</span><span class="check-all">expand all</span></legend>
 			</fieldset>
+
+
 			<fieldset class="category" data-checked="false">
 				<legend>link<span class="category-description">description</span><span class="check-all">expand all</span></legend>
 				<fieldset class="tag">
