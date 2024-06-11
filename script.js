@@ -13,13 +13,18 @@ function buildOutput() {
 			const labels = currentField.querySelectorAll("label");
 			const inputs = currentField.querySelectorAll(".input-container input[type='text']");
 			const isChecklist = currentField.classList.contains("checklist-container");
+			const isInset = currentField.classList.contains("inset");
 
 			if (isChecklist) {
 				const checkList = currentField.querySelectorAll("input[type='checkbox']");
-				for (let iz = 0; iz < checkList.length; iz++) {
+				for (let iz = 1; iz < checkList.length; iz++) {
 					if (checkList[iz].checked) {
 						final += `<${labels[iz-1].innerText}"${inputs[iz-1].value}">\n`;
 					}
+				}
+			} else if (isInset && inputs[0].value) {
+				for (let iz = 0; iz < labels.length; iz++) {
+					final += `<${labels[iz].innerText}>${inputs[iz].value}<${labels[iz].innerText}>\n`;
 				}
 			} else if (inputs[0].value) {
 				final += "<";
