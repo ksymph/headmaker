@@ -85,6 +85,9 @@ legend {
 .description {
 	display: none;
 	width: 100%;
+	margin: 8px 8px 0;
+	padding-top: 8px;
+	border-top: 2px dashed #3b4362;
 }
 
 .description ul {
@@ -167,18 +170,33 @@ a {
 }
 
 #intro {
-	margin-bottom: 32px;
+	margin: 32px auto 0 auto;
+	width: fit-content;
 	font-family: georgia;
+	background-color: #011b23;
+	border-radius: 3px;
+
+	border: 3px solid #3b4362;
+
+}
+
+#intro-head {
+	background-color: #3b4362;
+	padding: 0 8px;
+	height: 1.6em;
+
+}
+
+#intro-desc {
+	padding: 8px 16px 16px;
 }
 
 h1 {
 	font-family: "courier new";
 	font-size: 3em;
-	margin-bottom: 8px;
-	margin-top: 32px;
-	background-color: #3b4362;
-	width: fit-content;
-	padding: 0 8px;
+	margin: 0;
+	position: relative;
+	bottom: .5em;
 }
 
 .check-all {
@@ -203,5 +221,21 @@ h1 {
 	margin-top: 4px;
 	text-align: left;
 	width: fit-content;
+}
+
+.b label {
+	color: #ffffffc0;
+}
+
+.c label {
+	color: #ffffff80;
+}
+
+#key-b {
+	color: #ffffffc0;
+}
+
+#key-c {
+	color: #ffffff80;
 }
 

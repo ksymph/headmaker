@@ -10,17 +10,20 @@
 
 <body>
 	<div id="intro">
-		<h1>headmaker</h1>
-		<div>an easier way to get a<code>&lt;head></code></div>
-		<div><a href="https://github.com/Flicsmo/headmaker">github</a></div>
+		<div id="intro-head"><h1>headmaker</h1></div>
+		<div id="intro-desc">
+			an easier way to get a<code>&lt;head></code><br>
+			<span id="key-a">opacity</span> <span id="key-b">implies</span> <span id="key-c">relevance</span><br>
+			(approximately)<br>
+			WIP<br>
+			<a href="https://github.com/Flicsmo/headmaker">github</a>
+		</div>
 	</div>
 	<main>
 		<form id="headmaker">
-
-
 			<fieldset class="category" data-checked="false">
-				<legend>core<span class="category-description">the important stuff</span><span class="check-all">expand all</span></legend>
-				<fieldset class="tag">
+				<legend>browser<span class="category-description">how the page should be displayed</span><span class="check-all">expand all</span></legend>
+				<fieldset class="tag a">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="charset">meta charset=</label></div>
 					<div class="input-container"><input id="charset" type="text" value="utf-8" placeholder="utf-8"></div>
@@ -31,7 +34,7 @@
 						</ul>
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag a">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="viewport">meta name="viewport" content=</label></div>
 					<div class="input-container"><input id="viewport" type="text" placeholder="width=device-width, initial-scale=1" value="width=device-width, initial-scale=1"></div>
@@ -42,7 +45,7 @@
 						</ul>
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container">
 						<label for="content-security-policy">meta http-equiv="content-security-policy" content=</label>
@@ -63,24 +66,7 @@
 						<a href="https://content-security-policy.com">content security policy quick reference</a>
 					</div>
 				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="theme-color">meta name="theme-color" content=</label></div>
-					<div class="input-container"><input id="theme-color" type="text" placeholder="#FFFFFF"></div>
-					<div class="description">
-						color for browser styling
-					</div>
-				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="description">meta name="description" content=</label></div>
-					<div class="input-container"><input id="description" type="text" placeholder="App for generating HTML <head> tags."></div>
-					<div class="description">
-						describe the site for search engines<br>
-						maximum 150 characters
-					</div>
-				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag c">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="referrer">meta name="referrer" content=</label></div>
 					<div class="input-container"><input id="referrer" type="text" placeholder="no-referrer"></div>
@@ -88,7 +74,7 @@
 						how to handle referrer information
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag c">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="format-detection">meta name="format-detection" content=</label></div>
 					<div class="input-container"><input id="format-detection" type="text" placeholder="telephone=no"></div>
@@ -104,10 +90,34 @@
 				</fieldset>
 			</fieldset>
 
-
 			<fieldset class="category" data-checked="false">
-				<legend>other metadata<span class="category-description">not widely used</span><span class="check-all">expand all</span></legend>
-				<fieldset class="tag">
+				<legend>identity<span class="category-description">what the page is and who made it</span><span class="check-all">expand all</span></legend>
+				<fieldset class="tag inset a">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="description">title</label></div>
+					<div class="input-container"><input id="description" type="text" placeholder="Page Title"></div>
+					<div class="description">
+						page title
+					</div>
+				</fieldset>
+				<fieldset class="tag a">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="description">meta name="description" content=</label></div>
+					<div class="input-container"><input id="description" type="text" placeholder="App for generating HTML <head> tags."></div>
+					<div class="description">
+						describe the site for search engines<br>
+						maximum 150 characters
+					</div>
+				</fieldset>
+				<fieldset class="tag b">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="theme-color">meta name="theme-color" content=</label></div>
+					<div class="input-container"><input id="theme-color" type="text" placeholder="#FFFFFF"></div>
+					<div class="description">
+						color for browser styling
+					</div>
+				</fieldset>
+				<fieldset class="tag c">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="app-name">meta name="application-name" content=</label></div>
 					<div class="input-container"><input id="app-name" type="text" placeholder="Application Name"></div>
@@ -115,30 +125,7 @@
 						for single page applications
 					</div>
 				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="generator">meta name="generator" content=</label></div>
-					<div class="input-container"><input id="generator" type="text" placeholder="WordPress 3.0.1"></div>
-					<div class="description">
-						identify the software used to build the site
-					</div>
-				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="rating">meta name="rating" content=</label></div>
-					<div class="input-container"><input id="rating" type="text" placeholder="General"></div>
-					<div class="description">
-						appropriate age for page content<br>
-						possible values:<br>
-						- general<br>
-						- mature<br>
-						- adult<br>
-						- restricted<br>
-						- 14 years<br>
-						- safe for kids<br>
-					</div>
-				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag c">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="subject">meta name="subject" content=</label></div>
 					<div class="input-container"><input id="subject" type="text" placeholder="HTML Head Generator"></div>
@@ -150,8 +137,8 @@
 
 
 			<fieldset class="category" data-checked="false">
-				<legend>search engines<span class="category-description">search engine specific</span><span class="check-all">expand all</span></legend>
-				<fieldset class="tag">
+				<legend>third party<span class="category-description">misc vendor-specific and search-related tags</span><span class="check-all">expand all</span></legend>
+				<fieldset class="tag a">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="robots">meta name="robots" content=</label></div>
 					<div class="input-container"><input id="robots" type="text" placeholder="index,follow"></div>
@@ -163,7 +150,7 @@
 						</ul>
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="googlebot">meta name="googlebot" content=</label></div>
 					<div class="input-container"><input id="googlebot" type="text" placeholder="index,follow"></div>
@@ -174,7 +161,7 @@
 						</ul>
 					</div>
 				</fieldset>
-				<fieldset class="tag checklist-container">
+				<fieldset class="tag checklist-container b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container">
 						<label for="google-nosite">meta name="google" content=</label>
@@ -199,7 +186,7 @@
 						<a href="https://developers.google.com/search/docs/crawling-indexing/special-tags">google supported meta tags</a>
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="google-site-verification">meta name="google-site-verification" content=</label></div>
 					<div class="input-container"><input id="google-site-verification" type="text" placeholder="verification_token"></div>
@@ -207,7 +194,7 @@
 						verify website ownership to google
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="yandex-verification">meta name="yandex-verification" content=</label></div>
 					<div class="input-container"><input id="yandex-verification" type="text" placeholder="verification_token"></div>
@@ -215,7 +202,7 @@
 						verify website ownership to yandex
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="msvalidate.01">meta name="msvalidate.01" content=</label></div>
 					<div class="input-container"><input id="msvalidate.01" type="text" placeholder="verification_token"></div>
@@ -223,7 +210,7 @@
 						verify website ownership to microsoft bing
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="alexaVerifyID">meta name="alexaVerifyID" content=</label></div>
 					<div class="input-container"><input id="alexaVerifyID" type="text" placeholder="verification_token"></div>
@@ -231,7 +218,7 @@
 						verify website ownership to amazon alexa
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="p:domain_verify">meta name="p:domain_verify" content=</label></div>
 					<div class="input-container"><input id="p:domain_verify" type="text" placeholder="verification_token"></div>
@@ -239,7 +226,7 @@
 						verify website ownership to pinterest
 					</div>
 				</fieldset>
-				<fieldset class="tag">
+				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="norton-safeweb-site-verification">meta name="norton-safeweb-site-verification" content=</label></div>
 					<div class="input-container"><input id="norton-safeweb-site-verification" type="text" placeholder="verification_token"></div>
@@ -247,6 +234,89 @@
 						verify website ownership to norton safe web
 					</div>
 				</fieldset>
+
+			</fieldset>
+
+			<fieldset class="category" data-checked="false">
+				<legend>embeds<span class="category-description">information in embeds on other sites</span><span class="check-all">expand all</span></legend>
+
+
+			</fieldset>
+
+			<fieldset class="category" data-checked="false">
+				<legend>miscellaneous<span class="category-description"></span><span class="check-all">expand all</span></legend>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="app-name">meta name="monetization" content=</label></div>
+					<div class="input-container"><input id="app-name" type="text" placeholder="$paymentpointer.example"></div>
+					<div class="description">
+						<a href="https://webmonetization.org">proposed standard details</a>
+					</div>
+				</fieldset>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="generator">meta name="generator" content=</label></div>
+					<div class="input-container"><input id="generator" type="text" placeholder="WordPress 3.0.1"></div>
+					<div class="description">
+						identify the software used to build the site
+					</div>
+				</fieldset>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="rating">meta name="rating" content=</label></div>
+					<div class="input-container"><input id="rating" type="text" placeholder="General"></div>
+					<div class="description">
+						appropriate age for page content<br>
+						possible values:<br>
+						- general<br>
+						- mature<br>
+						- adult<br>
+						- restricted<br>
+						- 14 years<br>
+						- safe for kids<br>
+					</div>
+				</fieldset>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="icbm">meta name="ICBM" content=</label></div>
+					<div class="input-container"><input id="icbm" type="text" placeholder="latitude, longitude"></div>
+					<div class="description">
+						provide geographic coordinates (latitude, longitude)
+					</div>
+				</fieldset>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="geo-position">meta name="geo.position" content=</label></div>
+					<div class="input-container"><input id="geo-position" type="text" placeholder="latitude;longitude"></div>
+					<div class="description">
+						specify geographic position (latitude;longitude)
+					</div>
+				</fieldset>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="geo-region">meta name="geo.region" content=</label></div>
+					<div class="input-container"><input id="geo-region" type="text" placeholder="country[-state]"></div>
+					<div class="description">
+						country code (ISO 3166-1) mandatory<br>
+						state code (ISO 3166-2) optional<br>
+						eg. content="US" / content="US-NY"
+					</div>
+				</fieldset>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="geo-placename">meta name="geo.placename" content=</label></div>
+					<div class="input-container"><input id="geo-placename" type="text" placeholder="city/town"></div>
+					<div class="description">
+						identify place name (city/town)
+					</div>
+				</fieldset>
+
+			</fieldset>
+
+
+			<fieldset class="category" data-checked="false">
+				<legend>search engines<span class="category-description">search engine specific</span><span class="check-all">expand all</span></legend>
+
 			</fieldset>
 
 
