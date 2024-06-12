@@ -14,7 +14,6 @@
 		<div id="intro-desc">
 			an easier way to get a<code>&lt;head></code><br>
 			<span id="key-a">opacity</span> <span id="key-b">implies</span> <span id="key-c">relevance</span><br>
-			(approximately)<br>
 			WIP<br>
 			<a href="https://github.com/Flicsmo/headmaker">github</a>
 		</div>
@@ -43,6 +42,14 @@
 						<ul>
 							<li><code>width=device-width, initial-scale=1</code>//sets document width to device width, and not zoomed in by default</li>
 						</ul>
+					</div>
+				</fieldset>
+				<fieldset class="tag a">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="stylesheet">link rel="stylesheet" href=</label></div>
+					<div class="input-container"><input id="stylesheet" type="text" placeholder="style.css"></div>
+					<div class="description">
+						points to an external stylesheet
 					</div>
 				</fieldset>
 				<fieldset class="tag b">
@@ -88,14 +95,33 @@
 						- email=no/yes
 					</div>
 				</fieldset>
+
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="alternate-rss">link rel="alternate" type="application/rss+xml" title="RSS" href=</label></div>
+					<div class="input-container"><input id="alternate-rss" type="text" placeholder="https://feeds.feedburner.com/example"></div>
+					<div class="description">
+					Specifies an alternate version of the content in RSS format.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="alternate-atom">link rel="alternate" type="application/atom+xml" title="Atom" href=</label></div>
+					<div class="input-container"><input id="alternate-atom" type="text" placeholder="https://example.com/feed.atom"></div>
+					<div class="description">
+					Specifies an alternate version of the content in Atom format.
+					</div>
+				</fieldset>
 			</fieldset>
 
 			<fieldset class="category" data-checked="false">
 				<legend>identity<span class="category-description">what the page is and who made it</span><span class="check-all">expand all</span></legend>
 				<fieldset class="tag inset a">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="description">title</label></div>
-					<div class="input-container"><input id="description" type="text" placeholder="Page Title"></div>
+					<div class="label-container"><label for="title">title</label></div>
+					<div class="input-container"><input id="title" type="text" placeholder="Page Title"></div>
 					<div class="description">
 						page title
 					</div>
@@ -107,6 +133,15 @@
 					<div class="description">
 						describe the site for search engines<br>
 						maximum 150 characters
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="author">link rel="author" href=</label></div>
+					<div class="input-container"><input id="author" type="text" placeholder="humans.txt"></div>
+					<div class="description">
+						specifies the author of the document<br>
+						set the link to a file with author information
 					</div>
 				</fieldset>
 				<fieldset class="tag b">
@@ -131,6 +166,23 @@
 					<div class="input-container"><input id="subject" type="text" placeholder="HTML Head Generator"></div>
 					<div class="description">
 						short description of the subject of the page
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="license">link rel="license" href=</label></div>
+					<div class="input-container"><input id="license" type="text" placeholder="copyright.html"></div>
+					<div class="description">
+						specifies the license of the document<br>
+						set the link to a file with licensing information
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="me">link rel="me" href=</label></div>
+					<div class="input-container"><input id="me" type="text" placeholder="copyright.html"></div>
+					<div class="description">
+						for verifying ownership
 					</div>
 				</fieldset>
 			</fieldset>
@@ -234,21 +286,428 @@
 						verify website ownership to norton safe web
 					</div>
 				</fieldset>
+			</fieldset>
+
+
+			<fieldset class="category" data-checked="false">
+				<legend>embeds<span class="category-description">information in embeds on other sites</span><span class="check-all">expand all</span></legend>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container">
+						<label for="oembed-json-href">link rel="alternate" type="application/json+oembed" href=</label>
+						<label for="oembed-json-title">title=</label>
+					</div>
+					<div class="input-container">
+						<input id="oembed-json-href" type="text" placeholder="https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=json">
+						<input id="oembed-json-title" type="text" placeholder="oEmbed JSON">
+					</div>
+					<div class="description">
+						oembed
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container">
+						<label for="oembed-xml-href">link rel="alternate" type="text/xml+oembed" href=</label>
+						<label for="oembed-xml-title">title=</label>
+					</div>
+					<div class="input-container">
+						<input id="oembed-xml-href" type="text" placeholder="https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=xml">
+						<input id="oembed-xml-title" type="text" placeholder="oEmbed XML">
+					</div>
+					<div class="description">
+						oembed
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="qq-name">meta itemprop="name" content=</label></div>
+					<div class="input-container"><input id="qq-name" type="text" placeholder="Embed Title"></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="qq-image">meta itemprop="image" content=</label></div>
+					<div class="input-container"><input id="qq-image" type="text" placeholder="/path/to/img.png"></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="qq-desc">meta itemprop="description" content=</label></div>
+					<div class="input-container"><input id="qq-desc" type="text" placeholder="Page description for embed"></div>
+					<div class="description"></div>
+				</fieldset>
+
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="fb-app-id">meta property="fb:app_id" content=</label></div>
+					<div class="input-container"><input id="fb-app-id" type="text" placeholder="123456789"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="og-url">meta property="og:url" content=</label></div>
+					<div class="input-container"><input id="og-url" type="text" placeholder="https://example.com/page.html"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="og-type">meta property="og:type" content=</label></div>
+					<div class="input-container"><input id="og-type" type="text" placeholder="website"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="og-title">meta property="og:title" content=</label></div>
+					<div class="input-container"><input id="og-title" type="text" placeholder="Content Title"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="og-image">meta property="og:image" content=</label></div>
+					<div class="input-container"><input id="og-image" type="text" placeholder="https://example.com/image.jpg"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="og-image-alt">meta property="og:image:alt" content=</label></div>
+					<div class="input-container"><input id="og-image-alt" type="text" placeholder="A description of what is in the image (not a caption)"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="og-description">meta property="og:description" content=</label></div>
+					<div class="input-container"><input id="og-description" type="text" placeholder="Description Here"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="og-site-name">meta property="og:site_name" content=</label></div>
+					<div class="input-container"><input id="og-site-name" type="text" placeholder="Site Name"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="og-locale">meta property="og:locale" content=</label></div>
+					<div class="input-container"><input id="og-locale" type="text" placeholder="en_US"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="article-author">meta property="article:author" content=</label></div>
+					<div class="input-container"><input id="article-author" type="text" placeholder=""></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="twitter-card">meta name="twitter:card" content=</label></div>
+					<div class="input-container"><input id="twitter-card" type="text" placeholder="summary"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="twitter-site">meta name="twitter:site" content=</label></div>
+					<div class="input-container"><input id="twitter-site" type="text" placeholder="@site_account"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="twitter-creator">meta name="twitter:creator" content=</label></div>
+					<div class="input-container"><input id="twitter-creator" type="text" placeholder="@individual_account"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="twitter-url">meta name="twitter:url" content=</label></div>
+					<div class="input-container"><input id="twitter-url" type="text" placeholder="https://example.com/page.html"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="twitter-title">meta name="twitter:title" content=</label></div>
+					<div class="input-container"><input id="twitter-title" type="text" placeholder="Content Title"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="twitter-description">meta name="twitter:description" content=</label></div>
+					<div class="input-container"><input id="twitter-description" type="text" placeholder="Content description less than 200 characters"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="twitter-image">meta name="twitter:image" content=</label></div>
+					<div class="input-container"><input id="twitter-image" type="text" placeholder="https://example.com/image.jpg"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="twitter-image-alt">meta name="twitter:image:alt" content=</label></div>
+					<div class="input-container"><input id="twitter-image-alt" type="text" placeholder="A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters."></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="twitter-dnt">meta name="twitter:dnt" content=</label></div>
+					<div class="input-container"><input id="twitter-dnt" type="text" placeholder="on"></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="pinterest">meta name="pinterest" content="nopin" description=</label></div>
+					<div class="input-container"><input id="pinterest" type="text" placeholder="Sorry, you can't save from my website!"></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="op-markup">meta property="op:markup_version" content=</label></div>
+					<div class="input-container"><input id="op-markup" type="text" placeholder="1.0"></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="fb-article-style">meta property="fb:article_style" content=</label></div>
+					<div class="input-container"><input id="fb-article-style" type="text" placeholder="myarticlestyle"></div>
+					<div class="description">
+						style to be used for the article
+					</div>
+				</fieldset>
+
+
 
 			</fieldset>
 
 			<fieldset class="category" data-checked="false">
-				<legend>embeds<span class="category-description">information in embeds on other sites</span><span class="check-all">expand all</span></legend>
+				<legend>links<span class="category-description"></span><span class="check-all">expand all</span></legend>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="amphtml">link rel="amphtml" href=</label></div>
+					<div class="input-container"><input id="amphtml" type="text" placeholder="https://example.com/path/to/amp-version.html"></div>
+					<div class="description">
+						provides the AMP version of the page<br>
+						set the link to the AMP version of your content
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="preconnect">link rel="preconnect" href=</label></div>
+					<div class="input-container"><input id="preconnect" type="text" placeholder="https://www.example.com/"></div>
+					<div class="description">
+						improves performance by establishing early connections<br>
+						set the link to the domain you want to preconnect
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="prefetch">link rel="prefetch" href=</label></div>
+					<div class="input-container"><input id="prefetch" type="text" placeholder="https://www.example.com/"></div>
+					<div class="description">
+						optimizes performance by prefetching resources<br>
+						set the link to the resource you want to prefetch
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="dns-prefetch">link rel="dns-prefetch" href=</label></div>
+					<div class="input-container"><input id="dns-prefetch" type="text" placeholder="//example.com/"></div>
+					<div class="description">
+						reduces latency by resolving the DNS for the domain early<br>
+						set the link to the domain you want to prefetch
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="prerender">link rel="prerender" href=</label></div>
+					<div class="input-container"><input id="prerender" type="text" placeholder="https://example.com/"></div>
+					<div class="description">
+						improves user experience by prerendering pages<br>
+						set the link to the page you want to prerender
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container">
+						<label for="preload">link rel="preload" href=</label>
+						<label for="as">as=</label>
+					</div>
+					<div class="input-container">
+						<input id="preload" type="text" placeholder="image.png">
+						<input id="as" type="text" placeholder="image">
+					</div>
+					<div class="description">
+						point to resources to preload<br>
+						"as" specifies resource type
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="manifest">link rel="manifest" href=</label></div>
+					<div class="input-container"><input id="manifest" type="text" placeholder="manifest.json"></div>
+					<div class="description">
+						specifies the web app manifest file<br>
+						set the link to your web app manifest file
+					</div>
+				</fieldset>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="canonical">link rel="canonical" href=</label></div>
+					<div class="input-container"><input id="canonical" type="text" placeholder="http://example.com/article"></div>
+					<div class="description">
+						for preventing duplicate content in search engines<br>
+						set the link to the main page the content lives<br>
+						<a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls#rel-canonical-link-method">google dev docs</a>
+					</div>
+				</fieldset>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container">
+						<label for="alternate">link rel="alternate" href=</label>
+						<label for="hreflang">hreflang=</label>
+					</div>
+					<div class="input-container">
+						<input id="alternate" type="text" placeholder="https://es.website.com">
+						<input id="hreflang" type="text" placeholder="es">
+					</div>
+					<div class="description">
+						test
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="archives">link rel="archives" href=</label></div>
+					<div class="input-container"><input id="archives" type="text" placeholder="https://example.com/archives/"></div>
+					<div class="description">
+					Points to a collection of historical posts or records.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="index">link rel="index" href=</label></div>
+					<div class="input-container"><input id="index" type="text" placeholder="https://example.com/article/"></div>
+					<div class="description">
+					Points to the main entry point or index of a collection of articles.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="self">link rel="self" type="application/atom+xml" href=</label></div>
+					<div class="input-container"><input id="self" type="text" placeholder="https://example.com/atom.xml"></div>
+					<div class="description">
+					Indicates the URL of the current document, useful in feeds.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="first">link rel="first" href=</label></div>
+					<div class="input-container"><input id="first" type="text" placeholder="https://example.com/article/"></div>
+					<div class="description">
+					Points to the first page in a series of documents.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="last">link rel="last" href=</label></div>
+					<div class="input-container"><input id="last" type="text" placeholder="https://example.com/article/?page=42"></div>
+					<div class="description">
+					Points to the last page in a series of documents.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="prev">link rel="prev" href=</label></div>
+					<div class="input-container"><input id="prev" type="text" placeholder="https://example.com/article/?page=1"></div>
+					<div class="description">
+					Points to the previous page in a series of documents.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="next">link rel="next" href=</label></div>
+					<div class="input-container"><input id="next" type="text" placeholder="https://example.com/article/?page=3"></div>
+					<div class="description">
+					Points to the next page in a series of documents.
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="EditURI">link rel="EditURI" type="application/rsd+xml" title="RSD" href=</label></div>
+					<div class="input-container"><input id="EditURI" type="text" placeholder="https://example.com/xmlrpc.php?rsd"></div>
+					<div class="description">
+					Provides the URL for the Really Simple Discovery (RSD) service, typically for editing purposes.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="pingback">link rel="pingback" href=</label></div>
+					<div class="input-container"><input id="pingback" type="text" placeholder="https://example.com/xmlrpc.php"></div>
+					<div class="description">
+					Specifies the URL for the pingback service, used for notifying other blogs of backlinks.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="webmention">link rel="webmention" href=</label></div>
+					<div class="input-container"><input id="webmention" type="text" placeholder="https://example.com/webmention"></div>
+					<div class="description">
+					Provides the URL for the Webmention service, used for notifying other sites about mentions.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="micropub">link rel="micropub" href=</label></div>
+					<div class="input-container"><input id="micropub" type="text" placeholder="https://example.com/micropub"></div>
+					<div class="description">
+					Indicates the URL for the Micropub endpoint, used for posting content to the site.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="search">link rel="search" href=</label></div>
+					<div class="input-container"><input id="search" type="text" placeholder="/open-search.xml"></div>
+					<div class="description">
+					Points to the OpenSearch description document, enhancing site search capabilities.
+					</div>
+				</fieldset>
 
 
 			</fieldset>
 
 			<fieldset class="category" data-checked="false">
 				<legend>miscellaneous<span class="category-description"></span><span class="check-all">expand all</span></legend>
+
 				<fieldset class="tag c">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="app-name">meta name="monetization" content=</label></div>
-					<div class="input-container"><input id="app-name" type="text" placeholder="$paymentpointer.example"></div>
+					<div class="label-container"><label for="monetization">meta name="monetization" content=</label></div>
+					<div class="input-container"><input id="monetization" type="text" placeholder="$paymentpointer.example"></div>
 					<div class="description">
 						<a href="https://webmonetization.org">proposed standard details</a>
 					</div>
@@ -313,64 +772,6 @@
 
 			</fieldset>
 
-
-			<fieldset class="category" data-checked="false">
-				<legend>search engines<span class="category-description">search engine specific</span><span class="check-all">expand all</span></legend>
-
-			</fieldset>
-
-
-
-			<fieldset class="category" data-checked="false">
-				<legend>social media embeds<span class="category-description">description</span><span class="check-all">expand all</span></legend>
-			</fieldset>
-
-
-			<fieldset class="category" data-checked="false">
-				<legend>browsers<span class="category-description">description</span><span class="check-all">expand all</span></legend>
-			</fieldset>
-
-
-			<fieldset class="category" data-checked="false">
-				<legend>app links<span class="category-description">description</span><span class="check-all">expand all</span></legend>
-			</fieldset>
-
-
-			<fieldset class="category" data-checked="false">
-				<legend>link<span class="category-description">description</span><span class="check-all">expand all</span></legend>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="stylesheet">link rel="stylesheet" href=</label></div>
-					<div class="input-container"><input id="stylesheet" type="text" placeholder="style.css"></div>
-					<div class="description">
-						points to an external stylesheet
-					</div>
-				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="canonical">link rel="canonical" href=</label></div>
-					<div class="input-container"><input id="canonical" type="text" placeholder="http://example.com/article"></div>
-					<div class="description">
-						for preventing duplicate content in search engines<br>
-						set the link to the main page the content lives<br>
-						<a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls#rel-canonical-link-method">google dev docs</a>
-					</div>
-				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container">
-						<label for="alternate">link rel="alternate" href=</label>
-						<label for="hreflang">hreflang=</label>
-					</div>
-					<div class="input-container">
-						<input id="alternate" type="text" placeholder="https://es.website.com">
-						<input id="hreflang" type="text" placeholder="es">
-					</div>
-					<div class="description">
-						test
-					</div>
-				</fieldset>
-			</fieldset>
 		</form>
 		<div id="right">
 			<div id="output">
