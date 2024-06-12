@@ -6,9 +6,9 @@ function buildOutput() {
 	const input = items;
 	let final = "<head>\n";
 	for (let i = 0; i < input.length; i++) {
-		const currentFieldList = input[i];
-		for (let it = 1; it < currentFieldList.children.length; it++) {
-			const currentField = currentFieldList.children[it];
+		const currentFieldList = input[i].querySelectorAll(".tag");
+		for (let it = 0; it < currentFieldList.length; it++) {
+			const currentField = currentFieldList[it];
 
 			const labels = currentField.querySelectorAll("label");
 			const inputs = currentField.querySelectorAll(".input-container input[type='text']");
