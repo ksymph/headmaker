@@ -49,6 +49,7 @@
 	background-color: #041315;
 	font-family: Georgia;
 	margin-bottom: 1px;
+	border-radius: 1px;
 }
 
 .tag:nth-child(odd) {
@@ -260,4 +261,9 @@ h1 {
 	height: 1em;
 	position: relative;
 	top: -2px;
+}
+
+.official {
+	border-left: 3px solid #d4affd;
+	padding-left: 3px;
 }
