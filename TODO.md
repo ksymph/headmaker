@@ -1,16 +1,14 @@
 # TODO List
 
 ## In Progress
-- [ ] add common meta tags
-- [ ] reorganize sections (identity, browser settings, third party and search engines, embeds, miscellaneous)
-- [ ] write logic for checklists
+- [ ] reorganize sections
+- [ ] finish tag descriptions and autofill values
+- [ ] distinguish offical w3 spec tags from extensions (left border?)
 
 ## To Do
-- [ ] add buttons in further info sections for autofilling common values
-- [ ] add relevant links to tags
 - [ ] add copy button to output
 - [ ] hide / show button for categories
-- [ ] distinguish offical w3 spec tags from extensions
+- [ ] click on dividers to hide the section
 
 ## Completed
 - [x] write javascript for autofill functionality
@@ -19,3 +17,5 @@
 - [x] create footer with attribution links
 - [x] create html structure and styling for checklist elements
 - [x] add importance gradation
+- [x] write logic for checklists
+- [x] add tags

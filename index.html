@@ -44,14 +44,6 @@
 						</ul>
 					</div>
 				</fieldset>
-				<fieldset class="tag a">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="stylesheet">link rel="stylesheet" href=</label></div>
-					<div class="input-container"><input id="stylesheet" type="text" placeholder="style.css"></div>
-					<div class="description">
-						points to an external stylesheet
-					</div>
-				</fieldset>
 				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container">
@@ -96,29 +88,15 @@
 					</div>
 				</fieldset>
 
-				<div class="divider"><hr><span>feeds</span></div>
-
-				<fieldset class="tag">
+				<div class="divider"><hr><span>identity & style</span></div>
+				<fieldset class="tag a">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="alternate-rss">link rel="alternate" type="application/rss+xml" title="RSS" href=</label></div>
-					<div class="input-container"><input id="alternate-rss" type="text" placeholder="https://feeds.feedburner.com/example"></div>
+					<div class="label-container"><label for="stylesheet">link rel="stylesheet" href=</label></div>
+					<div class="input-container"><input id="stylesheet" type="text" placeholder="style.css"></div>
 					<div class="description">
-					Specifies an alternate version of the content in RSS format.
+						points to an external stylesheet
 					</div>
 				</fieldset>
-
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="alternate-atom">link rel="alternate" type="application/atom+xml" title="Atom" href=</label></div>
-					<div class="input-container"><input id="alternate-atom" type="text" placeholder="https://example.com/feed.atom"></div>
-					<div class="description">
-					Specifies an alternate version of the content in Atom format.
-					</div>
-				</fieldset>
-			</fieldset>
-
-			<fieldset class="category" data-checked="false">
-				<legend>identity<span class="category-description">what the page is and who made it</span><span class="check-all">expand all</span></legend>
 				<fieldset class="tag inset a">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="title">title</label></div>
@@ -186,11 +164,33 @@
 						for verifying ownership
 					</div>
 				</fieldset>
+
+				<div class="divider"><hr><span>feeds</span></div>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="alternate-rss">link rel="alternate" type="application/rss+xml" title="RSS" href=</label></div>
+					<div class="input-container"><input id="alternate-rss" type="text" placeholder="https://feeds.feedburner.com/example"></div>
+					<div class="description">
+					Specifies an alternate version of the content in RSS format.
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="alternate-atom">link rel="alternate" type="application/atom+xml" title="Atom" href=</label></div>
+					<div class="input-container"><input id="alternate-atom" type="text" placeholder="https://example.com/feed.atom"></div>
+					<div class="description">
+					Specifies an alternate version of the content in Atom format.
+					</div>
+				</fieldset>
 			</fieldset>
 
 
 			<fieldset class="category" data-checked="false">
-				<legend>third party<span class="category-description">misc vendor-specific and search-related tags</span><span class="check-all">expand all</span></legend>
+				<legend>third party<span class="category-description">platform-specific and search-related</span><span class="check-all">expand all</span></legend>
+
+
 				<fieldset class="tag a">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="robots">meta name="robots" content=</label></div>
@@ -203,6 +203,16 @@
 						</ul>
 					</div>
 				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="al">meta property="al:web:url" content=</label></div>
+					<div class="input-container"><input id="al" type="text" placeholder="https://applinks.org/documentation"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<div class="divider"><hr><span>google</span></div>
+
 				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="googlebot">meta name="googlebot" content=</label></div>
@@ -219,6 +229,7 @@
 					<div class="label-container">
 						<label for="google-nosite">meta name="google" content=</label>
 						<label for="google-nopage">meta name="google" content=</label>
+						<label for="google-notranslate">meta name="google" content=</label>
 					</div>
 					<div class="input-container checklist" id="google">
 						<span>
@@ -228,6 +239,10 @@
 						<span>
 							<input id="google-nopage-check" type="checkbox">
 							<input id="google-nopage" type="text" value="nopagereadaloud" readonly>
+						</span>
+						<span>
+							<input id="google-notranslate-check" type="checkbox">
+							<input id="google-notranslate" type="text" value="notranslate" readonly>
 						</span>
 					</div>
 					<div class="description">
@@ -239,6 +254,254 @@
 						<a href="https://developers.google.com/search/docs/crawling-indexing/special-tags">google supported meta tags</a>
 					</div>
 				</fieldset>
+
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="mobile-web-app-capable">meta name="mobile-web-app-capable" content=</label></div>
+					<div class="input-container checklist">
+						<span>
+							<input id="mobile-web-app-capable-check" type="checkbox">
+							<input id="mobile-web-app-capable" type="text" value="yes" readonly>
+						</span>
+					</div>
+					<div class="description">
+						android web app
+
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="google-play-app">meta name="google-play-app" content=</label></div>
+					<div class="input-container"><input id="google-play-app" type="text" placeholder="app-id=package-name"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="chrome-webstore-item">link rel="chrome-webstore-item" href=</label></div>
+					<div class="input-container"><input id="chrome-webstore-item" type="text" placeholder="https://chrome.google.com/webstore/detail/APP_ID"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="android-url">meta property="al:android:url" content=</label></div>
+					<div class="input-container"><input id="android-url" type="text" placeholder="applinks://docs"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="android-app_name">meta property="al:android:app_name" content=</label></div>
+					<div class="input-container"><input id="android-app_name" type="text" placeholder="App Links"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="android-package">meta property="al:android:package" content=</label></div>
+					<div class="input-container"><input id="android-package" type="text" placeholder="org.applinks"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<div class="divider"><hr><span>qq mobile browser</span></div>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="x5-orientation">meta name="x5-orientation" content=</label></div>
+					<div class="input-container"><input id="x5-orientation" type="text" placeholder="landscape"></div>
+					<div class="description">
+						<ul>
+							<li><code>landscape</code></li>
+							<li><code>portrait</code></li>
+						</ul>
+					</div>
+				</fieldset>
+
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="x5-fullscreen">meta name="x5-fullscreen" content=</label></div>
+					<div class="input-container checklist">
+						<span>
+							<input id="x5-fullscreen-check" type="checkbox">
+							<input id="x5-fullscreen" type="text" value="true" readonly>
+						</span>
+					</div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="x5-page-mode">meta name="x5-page-mode" content=</label></div>
+					<div class="input-container checklist">
+						<span>
+							<input id="x5-page-mode-check" type="checkbox">
+							<input id="x5-page-mode" type="text" value="app" readonly>
+						</span>
+					</div>
+					<div class="description"></div>
+				</fieldset>
+
+
+				<div class="divider"><hr><span>uc mobile browser</span></div>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="screen-orientation">meta name="screen-orientation" content=</label></div>
+					<div class="input-container"><input id="screen-orientation" type="text" placeholder="landscape"></div>
+					<div class="description">
+						<ul>
+							<li><code>landscape</code></li>
+							<li><code>portrait</code></li>
+						</ul>
+					</div>
+				</fieldset>
+
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="full-screen">meta name="full-screen" content=</label></div>
+					<div class="input-container checklist">
+						<span>
+							<input id="full-screen-check" type="checkbox">
+							<input id="full-screen" type="text" value="yes" readonly>
+						</span>
+					</div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="imagemode">meta name="imagemode" content=</label></div>
+					<div class="input-container checklist">
+						<span>
+							<input id="imagemode-check" type="checkbox">
+							<input id="imagemode" type="text" value="force" readonly>
+						</span>
+					</div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="browsermode">meta name="browsermode" content=</label></div>
+					<div class="input-container checklist">
+						<span>
+							<input id="browsermode-check" type="checkbox">
+							<input id="browsermode" type="text" value="application" readonly>
+						</span>
+					</div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="nightmode">meta name="nightmode" content=</label></div>
+					<div class="input-container checklist">
+						<span>
+							<input id="nightmode-check" type="checkbox">
+							<input id="nightmode" type="text" value="disable" readonly>
+						</span>
+					</div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="layoutmode">meta name="layoutmode" content=</label></div>
+					<div class="input-container checklist">
+						<span>
+							<input id="layoutmode-check" type="checkbox">
+							<input id="layoutmode" type="text" value="fitscreen" readonly>
+						</span>
+					</div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag checklist-container">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="wap-font-scale">meta name="wap-font-scale" content=</label></div>
+					<div class="input-container checklist">
+						<span>
+							<input id="wap-font-scale-check" type="checkbox">
+							<input id="wap-font-scale" type="text" value="no" readonly>
+						</span>
+					</div>
+					<div class="description"></div>
+				</fieldset>
+
+
+
+
+
+				<div class="divider"><hr><span>ios</span></div>
+
+				<fieldset class="tag a">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="apple-title">meta name="apple-mobile-web-app-title" content=</label></div>
+					<div class="input-container"><input id="apple-title" type="text" placeholder="App Title"></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag a">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="apple-icon">link rel="apple-touch-icon" href=</label></div>
+					<div class="input-container"><input id="apple-icon" type="text" placeholder="/app_icon.png"></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag a">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="apple-splash">link rel="apple-touch-startup-image" href=</label></div>
+					<div class="input-container"><input id="apple-splash" type="text" placeholder="/splash.png"></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag a">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="apple-ui">meta name="apple-mobile-web-app-capable" content=</label></div>
+					<div class="input-container"><input id="apple-ui" type="text" placeholder="yes"></div>
+					<div class="description">
+						disable safari ui
+					</div>
+				</fieldset>
+				<fieldset class="tag a">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="apple-status-bar">meta name="apple-mobile-web-app-status-bar-style" content=</label></div>
+					<div class="input-container"><input id="apple-status-bar" type="text" placeholder="black"></div>
+					<div class="description">
+						change status bar color
+					</div>
+				</fieldset>
+				<fieldset class="tag a">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="apple-itunes-app">meta name="apple-itunes-app" content=</label></div>
+					<div class="input-container"><input id="apple-itunes-app" type="text" placeholder="app-id=APP-ID, app-argument=http/url-sample.com"></div>
+					<div class="description">
+						ios app deep linking
+					</div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="ios-url">meta property="al:ios:url" content=</label></div>
+					<div class="input-container"><input id="ios-url" type="text" placeholder="applinks://docs"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="ios-app_store_id">meta property="al:ios:app_store_id" content=</label></div>
+					<div class="input-container"><input id="ios-app_store_id" type="text" placeholder="12345"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="ios-app_name">meta property="al:ios:app_name" content=</label></div>
+					<div class="input-container"><input id="ios-app_name" type="text" placeholder="App Links"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<div class="divider"><hr><span>ownership verification</span></div>
+
 				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="google-site-verification">meta name="google-site-verification" content=</label></div>
@@ -292,6 +555,15 @@
 
 			<fieldset class="category" data-checked="false">
 				<legend>embeds<span class="category-description">information in embeds on other sites</span><span class="check-all">expand all</span></legend>
+
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="pinterest">meta name="pinterest" content="nopin" description=</label></div>
+					<div class="input-container"><input id="pinterest" type="text" placeholder="Sorry, you can't save from my website!"></div>
+					<div class="description"></div>
+				</fieldset>
+
+				<div class="divider"><hr><span>oembed</span></div>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container">
@@ -321,26 +593,7 @@
 					</div>
 				</fieldset>
 
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="qq-name">meta itemprop="name" content=</label></div>
-					<div class="input-container"><input id="qq-name" type="text" placeholder="Embed Title"></div>
-					<div class="description"></div>
-				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="qq-image">meta itemprop="image" content=</label></div>
-					<div class="input-container"><input id="qq-image" type="text" placeholder="/path/to/img.png"></div>
-					<div class="description"></div>
-				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="qq-desc">meta itemprop="description" content=</label></div>
-					<div class="input-container"><input id="qq-desc" type="text" placeholder="Page description for embed"></div>
-					<div class="description"></div>
-				</fieldset>
-
-
+				<div class="divider"><hr><span>facebook open graph</span></div>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="fb-app-id">meta property="fb:app_id" content=</label></div>
@@ -410,6 +663,22 @@
 					<div class="input-container"><input id="article-author" type="text" placeholder=""></div>
 					<div class="description"></div>
 				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="op-markup">meta property="op:markup_version" content=</label></div>
+					<div class="input-container"><input id="op-markup" type="text" placeholder="1.0"></div>
+					<div class="description"></div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="fb-article-style">meta property="fb:article_style" content=</label></div>
+					<div class="input-container"><input id="fb-article-style" type="text" placeholder="myarticlestyle"></div>
+					<div class="description">
+						style to be used for the article
+					</div>
+				</fieldset>
+
+				<div class="divider"><hr><span>twitter card</span></div>
 
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
@@ -472,25 +741,27 @@
 					<div class="input-container"><input id="twitter-dnt" type="text" placeholder="on"></div>
 					<div class="description"></div>
 				</fieldset>
+
+
+				<div class="divider"><hr><span>qq / wechat</span></div>
+
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="pinterest">meta name="pinterest" content="nopin" description=</label></div>
-					<div class="input-container"><input id="pinterest" type="text" placeholder="Sorry, you can't save from my website!"></div>
+					<div class="label-container"><label for="qq-name">meta itemprop="name" content=</label></div>
+					<div class="input-container"><input id="qq-name" type="text" placeholder="Embed Title"></div>
 					<div class="description"></div>
 				</fieldset>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="op-markup">meta property="op:markup_version" content=</label></div>
-					<div class="input-container"><input id="op-markup" type="text" placeholder="1.0"></div>
+					<div class="label-container"><label for="qq-image">meta itemprop="image" content=</label></div>
+					<div class="input-container"><input id="qq-image" type="text" placeholder="/path/to/img.png"></div>
 					<div class="description"></div>
 				</fieldset>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="fb-article-style">meta property="fb:article_style" content=</label></div>
-					<div class="input-container"><input id="fb-article-style" type="text" placeholder="myarticlestyle"></div>
-					<div class="description">
-						style to be used for the article
-					</div>
+					<div class="label-container"><label for="qq-desc">meta itemprop="description" content=</label></div>
+					<div class="input-container"><input id="qq-desc" type="text" placeholder="Page description for embed"></div>
+					<div class="description"></div>
 				</fieldset>
 
 
