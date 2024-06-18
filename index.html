@@ -21,8 +21,8 @@
 	<main>
 		<form id="headmaker">
 			<fieldset class="category" data-checked="false">
-				<legend>browser<span class="category-description">how the page should be displayed</span><span class="check-all">expand all</span></legend>
-				<fieldset class="tag a">
+				<legend>browser<span class="category-description">how the page should be interpreted</span><span class="check-all">expand all</span></legend>
+				<fieldset class="tag a standard">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="charset">meta charset=</label></div>
 					<div class="input-container"><input id="charset" type="text" value="utf-8" placeholder="utf-8"></div>
@@ -31,6 +31,7 @@
 						<ul>
 							<li><code>utf-8</code> //standard</li>
 						</ul>
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset">whatwg html spec</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag a">
@@ -71,6 +72,19 @@
 					<div class="input-container"><input id="referrer" type="text" placeholder="no-referrer"></div>
 					<div class="description">
 						how to handle referrer information
+						<ul>
+							<li><code>default</code></li>
+							<li><code>no-referrer</code>//no referrer info is sent</li>
+							<li><code>no-referrer-when-downgrade</code>//full URL for HTTPS, none for HTTP</li>
+							<li><code>same-origin</code>//referrer sent for same-origin requests only</li>
+							<li><code>origin</code>//only the origin is sent as referrer</li>
+							<li><code>strict-origin</code>//origin for HTTPS, none for HTTP</li>
+							<li><code>origin-when-cross-origin</code>//full URL for same-origin, origin for cross-origin</li>
+							<li><code>strict-origin-when-cross-origin</code>//full URL for same-origin, origin for HTTPS cross-origin</li>
+							<li><code>unsafe-url</code>//full URL is always sent</li>
+						</ul>
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-referrer">whatwg html spec</a><br>
+						<a href="https://w3c.github.io/webappsec-referrer-policy/">w3c referrer policy</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">
@@ -105,13 +119,14 @@
 						page title
 					</div>
 				</fieldset>
-				<fieldset class="tag a">
+				<fieldset class="tag a standard">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="description">meta name="description" content=</label></div>
 					<div class="input-container"><input id="description" type="text" placeholder="App for generating HTML <head> tags."></div>
 					<div class="description">
 						describe the site for search engines<br>
 						maximum 150 characters
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-description">whatwg html spec</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -123,6 +138,15 @@
 						set the link to a file with author information
 					</div>
 				</fieldset>
+				<fieldset class="tag standard">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="author">meta name="author" content=</label></div>
+					<div class="input-container"><input id="author" type="text" placeholder="John Doe"></div>
+					<div class="description">
+						name of the page's primary author'
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-author">whatwg html spec</a>
+					</div>
+				</fieldset>
 				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="theme-color">meta name="theme-color" content=</label></div>
@@ -131,12 +155,13 @@
 						color for browser styling
 					</div>
 				</fieldset>
-				<fieldset class="tag c">
+				<fieldset class="tag c standard">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="app-name">meta name="application-name" content=</label></div>
 					<div class="input-container"><input id="app-name" type="text" placeholder="Application Name"></div>
 					<div class="description">
-						for single page applications
+						application title for single page applications
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name">whatwg html spec</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">
@@ -162,6 +187,15 @@
 					<div class="input-container"><input id="me" type="text" placeholder="copyright.html"></div>
 					<div class="description">
 						for verifying ownership
+					</div>
+				</fieldset>
+				<fieldset class="tag standard">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="keywords">meta name="keywords" content=</label></div>
+					<div class="input-container"><input id="keywords" type="text" placeholder="blog, travel"></div>
+					<div class="description">
+						keywords relating to the page<br>
+						obsolete; not used by any modern big search engine
 					</div>
 				</fieldset>
 
@@ -984,12 +1018,13 @@
 						<a href="https://webmonetization.org">proposed standard details</a>
 					</div>
 				</fieldset>
-				<fieldset class="tag c">
+				<fieldset class="tag c standard">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="generator">meta name="generator" content=</label></div>
 					<div class="input-container"><input id="generator" type="text" placeholder="WordPress 3.0.1"></div>
 					<div class="description">
 						identify the software used to build the site
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-generator">whatwg html spec</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">

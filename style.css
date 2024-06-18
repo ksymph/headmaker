@@ -45,7 +45,7 @@
 	flex-wrap: wrap;
 	margin: 0;
 	border: 0;
-	padding: 12px 6px;
+	padding: 6px;
 	background-color: #041315;
 	font-family: Georgia;
 	margin-bottom: 1px;
@@ -263,7 +263,7 @@ h1 {
 	top: -2px;
 }
 
-.official {
+.standard {
 	border-left: 3px solid #d4affd;
 	padding-left: 3px;
 }

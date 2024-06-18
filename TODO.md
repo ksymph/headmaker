@@ -3,12 +3,15 @@
 ## In Progress
 - [ ] reorganize sections
 - [ ] finish tag descriptions and autofill values
-- [ ] distinguish offical w3 spec tags from extensions (left border?)
+- [ ] distinguish standard w3 spec tags from extensions (left border?)
 
 ## To Do
 - [ ] add copy button to output
 - [ ] hide / show button for categories
 - [ ] click on dividers to hide the section
+- [ ] make subsequent fields optional in multi-field tags
+
+- [ ] add http-equiv refresh
 
 ## Completed
 - [x] write javascript for autofill functionality
