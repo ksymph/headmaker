@@ -1,17 +1,13 @@
 # TODO List
 
 ## In Progress
-- [ ] reorganize sections
 - [ ] finish tag descriptions and autofill values
-- [ ] distinguish standard w3 spec tags from extensions (left border?)
 
 ## To Do
-- [ ] add copy button to output
 - [ ] hide / show button for categories
 - [ ] click on dividers to hide the section
 - [ ] make subsequent fields optional in multi-field tags
-
-- [ ] add http-equiv refresh
+- [ ] add and/or rearrange dividers
 
 ## Completed
 - [x] write javascript for autofill functionality
@@ -22,3 +18,6 @@
 - [x] add importance gradation
 - [x] write logic for checklists
 - [x] add tags
+- [x] add copy button to output
+- [x] reorganize sections
+- [x] distinguish standard w3 spec tags from extensions

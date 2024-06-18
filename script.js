@@ -1,6 +1,6 @@
 const output = document.getElementById("output-code");
-const testButton = document.getElementById("test");
 const items = document.getElementById("headmaker").children;
+const copyButton = document.getElementById("copy");
 
 function buildOutput() {
 	const input = items;
@@ -105,11 +105,21 @@ function addListListeners () {
 	}
 }
 
+function resetCopyButton () {
+	copyButton.innerText = "copy";
+}
+
+function copyOutput () {
+	navigator.clipboard.writeText(output.innerText);
+	copyButton.innerText = "copied";
+	setTimeout(resetCopyButton, 1000);
+}
+
+
+copyButton.addEventListener("click", copyOutput);
+
 addListListeners();
 addInputListeners();
 addExpandListeners();
 
 buildOutput();
-
-// I need to get the parent fieldset legend, add it to the string as e.g. <meta then add the label, then the input wrapped in quotes
-// then close the tag
