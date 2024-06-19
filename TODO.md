@@ -2,6 +2,7 @@
 
 ## In Progress
 - [ ] finish tag descriptions and autofill values
+- [ ] use <p> instead of <br>
 
 ## To Do
 - [ ] hide / show button for categories

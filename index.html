@@ -27,11 +27,11 @@
 					<div class="label-container"><label for="charset">meta charset=</label></div>
 					<div class="input-container"><input id="charset" type="text" value="utf-8" placeholder="utf-8"></div>
 					<div class="description">
-						defines the character encoding
+						<p>defines the character encoding</p>
 						<ul>
 							<li><code>utf-8</code> //standard</li>
 						</ul>
-						<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset">whatwg html spec</a>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset">whatwg html spec</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag a">
@@ -39,11 +39,11 @@
 					<div class="label-container"><label for="viewport">meta name="viewport" content=</label></div>
 					<div class="input-container"><input id="viewport" type="text" placeholder="width=device-width, initial-scale=1" value="width=device-width, initial-scale=1"></div>
 					<div class="description">
-						sets viewport properties
+						<p>sets viewport properties</p>
 						<ul>
 							<li><code>width=device-width, initial-scale=1</code>//sets document width to device width, and not zoomed in by default</li>
 						</ul>
-						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">mdn web docs</a>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">mdn web docs</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag b standard">
@@ -55,16 +55,16 @@
 						<input id="content-security-policy" type="text" placeholder="default-src 'self'">
 					</div>
 					<div class="description">
-						allows control over where resources are loaded from<br>
-						helps prevent cross-site scripting attacks
+						<p>allows control over where resources are loaded from</p>
+						<p>helps prevent cross-site scripting attacks</p>
 						<ul>
 							<li><code>default-src 'self'</code>//only allow content from same origin</li>
 							<li><code>script-src 'self' www.google-analytics.com ajax.googleapis.com;</code>//allow scripts from same origin, plus google analytics & google ajax cdn</li>
 							<li><code>default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';base-uri 'self';form-action 'self'</code>//allows only images, scripts, ajax, form actions, and css from same origin</li>
 						</ul>
-						<a href="https://w3c.github.io/webappsec-csp/#content-security-policy-object>">w3 consortium docs</a><br>
-						<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">mdn web docs</a><br>
-						<a href="https://content-security-policy.com">content security policy quick reference</a>
+						<p><a href="https://w3c.github.io/webappsec-csp/#content-security-policy-object>">w3 consortium docs</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">mdn web docs</a></p>
+						<p><a href="https://content-security-policy.com">content security policy quick reference</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag b standard">
@@ -76,13 +76,13 @@
 						<input id="refresh" type="text" placeholder="seconds; url=URL">
 					</div>
 					<div class="description">
-						allows control over where resources are loaded from<br>
-						helps prevent cross-site scripting attacks
+						<p>allows control over where resources are loaded from</p>
+						<p>helps prevent cross-site scripting attacks</p>
 						<ul>
 							<li><code>30</code>//refreshes page every 30 seconds</li>
 							<li><code>10; url=https://www.example.com</code>//redirects to example.com after 10 seconds</li>
 						</ul>
-						<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh">whatwg html spec</a>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh">whatwg html spec</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">
@@ -90,7 +90,7 @@
 					<div class="label-container"><label for="referrer">meta name="referrer" content=</label></div>
 					<div class="input-container"><input id="referrer" type="text" placeholder="no-referrer"></div>
 					<div class="description">
-						how to handle referrer information
+						<p>how to handle referrer information</p>
 						<ul>
 							<li><code>default</code></li>
 							<li><code>no-referrer</code>//no referrer info is sent</li>
@@ -102,8 +102,8 @@
 							<li><code>strict-origin-when-cross-origin</code>//full URL for same-origin, origin for HTTPS cross-origin</li>
 							<li><code>unsafe-url</code>//full URL is always sent</li>
 						</ul>
-						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-referrer">whatwg html spec</a><br>
-						<a href="https://w3c.github.io/webappsec-referrer-policy/">w3c referrer policy</a>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-referrer">whatwg html spec</a></p>
+						<p><a href="https://w3c.github.io/webappsec-referrer-policy/">w3c referrer policy</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">
@@ -111,15 +111,15 @@
 					<div class="label-container"><label for="format-detection">meta name="format-detection" content=</label></div>
 					<div class="input-container"><input id="format-detection" type="text" placeholder="telephone=no"></div>
 					<div class="description">
-						disable automatic detection and formatting of addresses<br>
-						safari-only<br>
+						<p>disable automatic detection and formatting of addresses</p>
+						<p>safari-only</p>
 						<ul>
 							<li><code>date=no</code></li>
 							<li><code>telephone=no</code></li>
 							<li><code>address=no</code></li>
 							<li><code>email=no</code></li>
 						</ul>
-						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">apple dev docs</a>
+						<p><a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">apple dev docs</a></p>
 					</div>
 				</fieldset>
 
@@ -129,7 +129,7 @@
 					<div class="label-container"><label for="stylesheet">link rel="stylesheet" type="text/css" href=</label></div>
 					<div class="input-container"><input id="stylesheet" type="text" placeholder="style.css"></div>
 					<div class="description">
-						points to an external stylesheet
+						<p>points to an external stylesheet</p>
 					</div>
 				</fieldset>
 				<fieldset class="tag inset a">
@@ -137,9 +137,9 @@
 					<div class="label-container"><label for="title">title</label></div>
 					<div class="input-container"><input id="title" type="text" placeholder="Page Title"></div>
 					<div class="description">
-						page title<br>
-						used for search engine results, browser tab title, bookmarks, etc.<br>
-						<a href="https://html.spec.whatwg.org/multipage/semantics.html#the-title-element">whatwg html spec</a>
+						<p>page title</p>
+						<p>used for search engine results, browser tab title, bookmarks, etc.</p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-title-element">whatwg html spec</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag a standard">
@@ -147,9 +147,9 @@
 					<div class="label-container"><label for="description">meta name="description" content=</label></div>
 					<div class="input-container"><input id="description" type="text" placeholder="App for generating HTML <head> tags."></div>
 					<div class="description">
-						describe the site for search engines<br>
-						maximum 150 characters<br>
-						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-description">whatwg html spec</a>
+						<p>describe the site for search engines</p>
+						<p>maximum 150 characters</p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-description">whatwg html spec</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag standard">
@@ -157,8 +157,8 @@
 					<div class="label-container"><label for="author">meta name="author" content=</label></div>
 					<div class="input-container"><input id="author" type="text" placeholder="John Doe"></div>
 					<div class="description">
-						name of primary author of the page<br>
-						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-author">whatwg html spec</a>
+						<p>name of primary author of the page</p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-author">whatwg html spec</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -166,9 +166,9 @@
 					<div class="label-container"><label for="author">link rel="author" href=</label></div>
 					<div class="input-container"><input id="author" type="text" placeholder="https://www.example.com/authors/john-doe"></div>
 					<div class="description">
-						link to further info about the author<br>
-						<a href="https://microformats.org/wiki/rel-author">microformats wiki</a><br>
-						<a href="https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#link-type-author">w3</a>
+						<p>link to further info about the author</p>
+						<p><a href="https://microformats.org/wiki/rel-author">microformats wiki</a></p>
+						<p><a href="https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#link-type-author">w3</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag b">
@@ -182,10 +182,10 @@
 						<input id="theme-color-media" type="text" placeholder="(prefers-color-scheme: light|dark)">
 					</div>
 					<div class="description">
-						used for browser styling<br>
-						can be any valid css color<br>
-						displays in status bar on chrome android, address bar on safari ios, tile when pinned with edge, etc.<br>
-						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color">mdn web docs</a>
+						<p>used for browser styling</p>
+						<p>can be any valid css color</p>
+						<p>displays in status bar on chrome android, address bar on safari ios, tile when pinned with edge, etc.</p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color">mdn web docs</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag c standard">
@@ -193,8 +193,8 @@
 					<div class="label-container"><label for="app-name">meta name="application-name" content=</label></div>
 					<div class="input-container"><input id="app-name" type="text" placeholder="Application Name"></div>
 					<div class="description">
-						application title for single page applications<br>
-						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name">whatwg html spec</a>
+						<p>application title for single page applications</p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name">whatwg html spec</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">
@@ -202,8 +202,8 @@
 					<div class="label-container"><label for="subject">meta name="subject" content=</label></div>
 					<div class="input-container"><input id="subject" type="text" placeholder="HTML Head Generator"></div>
 					<div class="description">
-						short description of the subject of the page<br>
-						obsolete; no longer widely used by major search engines, browsers etc.
+						<p>short description of the subject of the page</p>
+						<p>obsolete; no longer widely used by major search engines, browsers etc.</p>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -211,8 +211,8 @@
 					<div class="label-container"><label for="license">link rel="license" href=</label></div>
 					<div class="input-container"><input id="license" type="text" placeholder="copyright.html"></div>
 					<div class="description">
-						link to file with licensing information<br>
-						<a href="https://microformats.org/wiki/rel-license">microformats wiki</a>
+						<p>link to file with licensing information</p>
+						<p><a href="https://microformats.org/wiki/rel-license">microformats wiki</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -220,9 +220,9 @@
 					<div class="label-container"><label for="me">link rel="me" href=</label></div>
 					<div class="input-container"><input id="me" type="text" placeholder="https://mastodon.social/@yourprofile"></div>
 					<div class="description">
-						for verifying ownership<br>
-						<a href="https://microformats.org/wiki/rel-me">microformats wiki</a><br>
-						<a href="https://gmpg.org/xfn/">xfn spec</a><br>
+						<p>for verifying ownership</p>
+						<p><a href="https://microformats.org/wiki/rel-me">microformats wiki</a></p>
+						<p><a href="https://gmpg.org/xfn/">xfn spec</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag standard c">
@@ -230,9 +230,9 @@
 					<div class="label-container"><label for="keywords">meta name="keywords" content=</label></div>
 					<div class="input-container"><input id="keywords" type="text" placeholder="blog, travel"></div>
 					<div class="description">
-						keywords relating to the page<br>
-						obsolete; no longer widely used by major search engines, browsers etc.<br>
-						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-keywords">whatwg html spec</a>
+						<p>keywords relating to the page</p>
+						<p>obsolete; no longer widely used by major search engines, browsers etc.</p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-keywords">whatwg html spec</a></p>
 					</div>
 				</fieldset>
 
@@ -243,8 +243,8 @@
 					<div class="label-container"><label for="alternate-rss">link rel="alternate" type="application/rss+xml" title="RSS" href=</label></div>
 					<div class="input-container"><input id="alternate-rss" type="text" placeholder="/rss/"></div>
 					<div class="description">
-						link to rss feed
-						<a href="https://www.rssboard.org/rss-autodiscovery">rss advisory board</a>
+						<p>link to rss feed</p>
+						<p><a href="https://www.rssboard.org/rss-autodiscovery">rss advisory board</a></p>
 					</div>
 				</fieldset>
 
@@ -253,7 +253,7 @@
 					<div class="label-container"><label for="alternate-atom">link rel="alternate" type="application/atom+xml" title="Atom" href=</label></div>
 					<div class="input-container"><input id="alternate-atom" type="text" placeholder="/atom/"></div>
 					<div class="description">
-						link to atom feed
+						<p>link to atom feed</p>
 					</div>
 				</fieldset>
 			</fieldset>

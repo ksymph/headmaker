@@ -86,15 +86,27 @@ legend {
 .description {
 	display: none;
 	width: 100%;
-	margin: 8px 8px 0;
+	margin: 8px 8px 2px;
 	padding-top: 8px;
 	border-top: 2px dashed #3b4362;
+
+	text-indent: -16px;
+	padding-left: 16px;
+}
+
+.description p {
+	margin: 0;
 }
 
 .description ul {
 	margin: 8px 0;
 	font-family: monospace;
 	font-size: .85em;
+	padding-left: 8px;
+}
+
+.description li {
+	padding-left: 16px;
 }
 
 .description li code {
