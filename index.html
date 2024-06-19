@@ -43,15 +43,16 @@
 						<ul>
 							<li><code>width=device-width, initial-scale=1</code>//sets document width to device width, and not zoomed in by default</li>
 						</ul>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">mdn web docs</a>
 					</div>
 				</fieldset>
-				<fieldset class="tag b">
+				<fieldset class="tag b standard">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container">
 						<label for="content-security-policy">meta http-equiv="content-security-policy" content=</label>
 					</div>
 					<div class="input-container">
-						<input id="content-security-policy" type="text" placeholder="default-src">
+						<input id="content-security-policy" type="text" placeholder="default-src 'self'">
 					</div>
 					<div class="description">
 						allows control over where resources are loaded from<br>
@@ -64,6 +65,24 @@
 						<a href="https://w3c.github.io/webappsec-csp/#content-security-policy-object>">w3 consortium docs</a><br>
 						<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">mdn web docs</a><br>
 						<a href="https://content-security-policy.com">content security policy quick reference</a>
+					</div>
+				</fieldset>
+				<fieldset class="tag b standard">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container">
+						<label for="refresh">meta http-equiv="refresh" content=</label>
+					</div>
+					<div class="input-container">
+						<input id="refresh" type="text" placeholder="seconds; url=URL">
+					</div>
+					<div class="description">
+						allows control over where resources are loaded from<br>
+						helps prevent cross-site scripting attacks
+						<ul>
+							<li><code>30</code>//refreshes page every 30 seconds</li>
+							<li><code>10; url=https://www.example.com</code>//redirects to example.com after 10 seconds</li>
+						</ul>
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh">whatwg html spec</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">
@@ -92,20 +111,22 @@
 					<div class="label-container"><label for="format-detection">meta name="format-detection" content=</label></div>
 					<div class="input-container"><input id="format-detection" type="text" placeholder="telephone=no"></div>
 					<div class="description">
-						disable automatic detection and formatting of addresses and whatnot<br>
-						browser support is mixed<br>
-						possible values:<br>
-						- date=no/yes<br>
-						- telephone=no/yes<br>
-						- address=no/yes<br>
-						- email=no/yes
+						disable automatic detection and formatting of addresses<br>
+						safari-only<br>
+						<ul>
+							<li><code>date=no</code></li>
+							<li><code>telephone=no</code></li>
+							<li><code>address=no</code></li>
+							<li><code>email=no</code></li>
+						</ul>
+						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">apple dev docs</a>
 					</div>
 				</fieldset>
 
 				<div class="divider"><hr><span>identity & style</span></div>
 				<fieldset class="tag a">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="stylesheet">link rel="stylesheet" href=</label></div>
+					<div class="label-container"><label for="stylesheet">link rel="stylesheet" type="text/css" href=</label></div>
 					<div class="input-container"><input id="stylesheet" type="text" placeholder="style.css"></div>
 					<div class="description">
 						points to an external stylesheet
@@ -116,7 +137,9 @@
 					<div class="label-container"><label for="title">title</label></div>
 					<div class="input-container"><input id="title" type="text" placeholder="Page Title"></div>
 					<div class="description">
-						page title
+						page title<br>
+						used for search engine results, browser tab title, bookmarks, etc.<br>
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#the-title-element">whatwg html spec</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag a standard">
@@ -125,17 +148,8 @@
 					<div class="input-container"><input id="description" type="text" placeholder="App for generating HTML <head> tags."></div>
 					<div class="description">
 						describe the site for search engines<br>
-						maximum 150 characters
+						maximum 150 characters<br>
 						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-description">whatwg html spec</a>
-					</div>
-				</fieldset>
-				<fieldset class="tag">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="author">link rel="author" href=</label></div>
-					<div class="input-container"><input id="author" type="text" placeholder="humans.txt"></div>
-					<div class="description">
-						specifies the author of the document<br>
-						set the link to a file with author information
 					</div>
 				</fieldset>
 				<fieldset class="tag standard">
@@ -143,16 +157,35 @@
 					<div class="label-container"><label for="author">meta name="author" content=</label></div>
 					<div class="input-container"><input id="author" type="text" placeholder="John Doe"></div>
 					<div class="description">
-						name of the page's primary author'
+						name of primary author of the page<br>
 						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-author">whatwg html spec</a>
+					</div>
+				</fieldset>
+				<fieldset class="tag">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="author">link rel="author" href=</label></div>
+					<div class="input-container"><input id="author" type="text" placeholder="https://www.example.com/authors/john-doe"></div>
+					<div class="description">
+						link to further info about the author<br>
+						<a href="https://microformats.org/wiki/rel-author">microformats wiki</a><br>
+						<a href="https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#link-type-author">w3</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag b">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="theme-color">meta name="theme-color" content=</label></div>
-					<div class="input-container"><input id="theme-color" type="text" placeholder="#FFFFFF"></div>
+					<div class="label-container">
+						<label for="theme-color">meta name="theme-color" content=</label>
+						<label for="theme-color-media">media=</label>
+					</div>
+					<div class="input-container">
+						<input id="theme-color" type="text" placeholder="#FFFFFF">
+						<input id="theme-color-media" type="text" placeholder="(prefers-color-scheme: light|dark)">
+					</div>
 					<div class="description">
-						color for browser styling
+						used for browser styling<br>
+						can be any valid css color<br>
+						displays in status bar on chrome android, address bar on safari ios, tile when pinned with edge, etc.<br>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color">mdn web docs</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag c standard">
@@ -160,7 +193,7 @@
 					<div class="label-container"><label for="app-name">meta name="application-name" content=</label></div>
 					<div class="input-container"><input id="app-name" type="text" placeholder="Application Name"></div>
 					<div class="description">
-						application title for single page applications
+						application title for single page applications<br>
 						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name">whatwg html spec</a>
 					</div>
 				</fieldset>
@@ -169,7 +202,8 @@
 					<div class="label-container"><label for="subject">meta name="subject" content=</label></div>
 					<div class="input-container"><input id="subject" type="text" placeholder="HTML Head Generator"></div>
 					<div class="description">
-						short description of the subject of the page
+						short description of the subject of the page<br>
+						obsolete; no longer widely used by major search engines, browsers etc.
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -177,25 +211,28 @@
 					<div class="label-container"><label for="license">link rel="license" href=</label></div>
 					<div class="input-container"><input id="license" type="text" placeholder="copyright.html"></div>
 					<div class="description">
-						specifies the license of the document<br>
-						set the link to a file with licensing information
+						link to file with licensing information<br>
+						<a href="https://microformats.org/wiki/rel-license">microformats wiki</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="me">link rel="me" href=</label></div>
-					<div class="input-container"><input id="me" type="text" placeholder="copyright.html"></div>
+					<div class="input-container"><input id="me" type="text" placeholder="https://mastodon.social/@yourprofile"></div>
 					<div class="description">
-						for verifying ownership
+						for verifying ownership<br>
+						<a href="https://microformats.org/wiki/rel-me">microformats wiki</a><br>
+						<a href="https://gmpg.org/xfn/">xfn spec</a><br>
 					</div>
 				</fieldset>
-				<fieldset class="tag standard">
+				<fieldset class="tag standard c">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="keywords">meta name="keywords" content=</label></div>
 					<div class="input-container"><input id="keywords" type="text" placeholder="blog, travel"></div>
 					<div class="description">
 						keywords relating to the page<br>
-						obsolete; not used by any modern big search engine
+						obsolete; no longer widely used by major search engines, browsers etc.<br>
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-keywords">whatwg html spec</a>
 					</div>
 				</fieldset>
 
@@ -204,18 +241,19 @@
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="alternate-rss">link rel="alternate" type="application/rss+xml" title="RSS" href=</label></div>
-					<div class="input-container"><input id="alternate-rss" type="text" placeholder="https://feeds.feedburner.com/example"></div>
+					<div class="input-container"><input id="alternate-rss" type="text" placeholder="/rss/"></div>
 					<div class="description">
-					Specifies an alternate version of the content in RSS format.
+						link to rss feed
+						<a href="https://www.rssboard.org/rss-autodiscovery">rss advisory board</a>
 					</div>
 				</fieldset>
 
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="alternate-atom">link rel="alternate" type="application/atom+xml" title="Atom" href=</label></div>
-					<div class="input-container"><input id="alternate-atom" type="text" placeholder="https://example.com/feed.atom"></div>
+					<div class="input-container"><input id="alternate-atom" type="text" placeholder="/atom/"></div>
 					<div class="description">
-					Specifies an alternate version of the content in Atom format.
+						link to atom feed
 					</div>
 				</fieldset>
 			</fieldset>
@@ -242,7 +280,9 @@
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="al">meta property="al:web:url" content=</label></div>
 					<div class="input-container"><input id="al" type="text" placeholder="https://applinks.org/documentation"></div>
-					<div class="description"></div>
+					<div class="description">
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">facebook dev docs</a>
+					</div>
 				</fieldset>
 
 				<div class="divider"><hr><span>google</span></div>
@@ -322,21 +362,27 @@
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="android-url">meta property="al:android:url" content=</label></div>
 					<div class="input-container"><input id="android-url" type="text" placeholder="applinks://docs"></div>
-					<div class="description"></div>
+					<div class="description">
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">facebook dev docs</a>
+					</div>
 				</fieldset>
 
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="android-app_name">meta property="al:android:app_name" content=</label></div>
 					<div class="input-container"><input id="android-app_name" type="text" placeholder="App Links"></div>
-					<div class="description"></div>
+					<div class="description">
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">facebook dev docs</a>
+					</div>
 				</fieldset>
 
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="android-package">meta property="al:android:package" content=</label></div>
 					<div class="input-container"><input id="android-package" type="text" placeholder="org.applinks"></div>
-					<div class="description"></div>
+					<div class="description">
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">facebook dev docs</a>
+					</div>
 				</fieldset>
 
 				<div class="divider"><hr><span>qq mobile browser</span></div>
@@ -385,6 +431,7 @@
 					<div class="label-container"><label for="screen-orientation">meta name="screen-orientation" content=</label></div>
 					<div class="input-container"><input id="screen-orientation" type="text" placeholder="landscape"></div>
 					<div class="description">
+						force pages to display vertically or horizontally
 						<ul>
 							<li><code>landscape</code></li>
 							<li><code>portrait</code></li>
@@ -401,7 +448,9 @@
 							<input id="full-screen" type="text" value="yes" readonly>
 						</span>
 					</div>
-					<div class="description"></div>
+					<div class="description">
+						hide menu bar
+					</div>
 				</fieldset>
 
 				<fieldset class="tag checklist-container">
@@ -517,21 +566,27 @@
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="ios-url">meta property="al:ios:url" content=</label></div>
 					<div class="input-container"><input id="ios-url" type="text" placeholder="applinks://docs"></div>
-					<div class="description"></div>
+					<div class="description">
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">facebook dev docs</a>
+					</div>
 				</fieldset>
 
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="ios-app_store_id">meta property="al:ios:app_store_id" content=</label></div>
 					<div class="input-container"><input id="ios-app_store_id" type="text" placeholder="12345"></div>
-					<div class="description"></div>
+					<div class="description">
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">facebook dev docs</a>
+					</div>
 				</fieldset>
 
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="ios-app_name">meta property="al:ios:app_name" content=</label></div>
 					<div class="input-container"><input id="ios-app_name" type="text" placeholder="App Links"></div>
-					<div class="description"></div>
+					<div class="description">
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">facebook dev docs</a>
+					</div>
 				</fieldset>
 
 				<div class="divider"><hr><span>ownership verification</span></div>
@@ -609,7 +664,7 @@
 						<input id="oembed-json-title" type="text" placeholder="oEmbed JSON">
 					</div>
 					<div class="description">
-						oembed
+						<a href="https://oembed.com">oembed.com</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -623,7 +678,7 @@
 						<input id="oembed-xml-title" type="text" placeholder="oEmbed XML">
 					</div>
 					<div class="description">
-						oembed
+						<a href="https://oembed.com">oembed.com</a>
 					</div>
 				</fieldset>
 
@@ -1015,7 +1070,7 @@
 					<div class="label-container"><label for="monetization">meta name="monetization" content=</label></div>
 					<div class="input-container"><input id="monetization" type="text" placeholder="$paymentpointer.example"></div>
 					<div class="description">
-						<a href="https://webmonetization.org">proposed standard details</a>
+						<a href="https://webmonetization.org">webmonetization.org</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag c standard">

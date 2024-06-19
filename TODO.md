@@ -6,8 +6,11 @@
 ## To Do
 - [ ] hide / show button for categories
 - [ ] click on dividers to hide the section
-- [ ] make subsequent fields optional in multi-field tags
+- [ ] make subsequent fields optional in multi-field tags (to-fix: theme-color)
 - [ ] add and/or rearrange dividers
+- [ ] fix autofill for multi-field tags
+- [ ] add reset button
+- [ ] add way to duplicate a tag
 
 ## Completed
 - [x] write javascript for autofill functionality
