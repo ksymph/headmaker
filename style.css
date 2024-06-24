@@ -1,9 +1,13 @@
 .input-container input {
 	font-size: .8em;
 	width: 95%;
+
 }
 .input-container {
 	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 .label-container {
@@ -155,7 +159,6 @@ legend {
 }
 
 #output {
-	user-select: all;
 	background-color: #011b23;
 	border-radius: 10px;
 	border: 2px solid #3b4362;
@@ -238,6 +241,7 @@ h1 {
 	width: fit-content;
 }
 
+/*
 .b label {
 	color: #ffffffc0;
 }
@@ -246,6 +250,7 @@ h1 {
 	color: #ffffff80;
 }
 
+
 #key-b {
 	color: #ffffffc0;
 }
@@ -253,6 +258,7 @@ h1 {
 #key-c {
 	color: #ffffff80;
 }
+*/
 
 
 .divider {
@@ -280,4 +286,17 @@ h1 {
 .standard {
 	border-left: 3px solid #d4affd;
 	padding-left: 3px;
+}
+
+.standard:has(.show-hidden:checked) {
+	padding-bottom: 0;
+}
+
+.standard:has(.show-hidden:checked):after {
+	content: "Part of the WHATWG HTML standard";
+	border-bottom: 3px solid #d4affd;
+	left: -3px;
+	position: relative;
+	font-size: .8em;
+	padding-top: 8px;
 }
