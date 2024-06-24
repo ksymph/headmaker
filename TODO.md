@@ -12,6 +12,7 @@
 - [ ] fix autofill for multi-field tags
 - [ ] add reset button
 - [ ] add way to duplicate a tag
+- [ ] rework description layout/spacing for a clean left colored shadow for readability
 
 ## Completed
 - [x] write javascript for autofill functionality
