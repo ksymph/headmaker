@@ -106,12 +106,12 @@ function addListListeners () {
 }
 
 function resetCopyButton () {
-	copyButton.innerText = "copy";
+	copyButton.innerText = "Copy";
 }
 
 function copyOutput () {
 	navigator.clipboard.writeText(output.innerText);
-	copyButton.innerText = "copied";
+	copyButton.innerText = "Copied!";
 	setTimeout(resetCopyButton, 1000);
 }
 
