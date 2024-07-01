@@ -1,0 +1,62 @@
+:root {
+	--background-primary: #01242e;
+	--background-a: #041315;
+	--background-b: #011b23;
+	--primary: #3b4362;
+	--accent: #d4affd;
+}
+
+
+body {
+	background-color: var(--background-primary);
+	color: white;
+	font-size: 1.2rem;
+	font-family: "Georgia";
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Courier New";
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+a {
+	color: var(--accent);
+}
+
+
+
+
+
+
+
+header {
+	background-color: var(--background-b);
+	border: 3px solid var(--primary);
+	border-top: 32px solid var(--primary);
+	border-radius: 3px;
+	margin-top: 32px;
+}
+
+h1 {
+	margin: -1em 0 -12px;
+	width: fit-content;
+	text-align: center;
+	font-size: 3em;
+	padding: 0 8px;
+}
+
+#intro-desc {
+	margin: 16px 0;
+}
+
+#intro-desc p {
+	margin: 0 16px;
+}
+
+
+
