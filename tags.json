@@ -1,0 +1,20 @@
+[
+	{
+		"tag": ["meta charset="],
+		"type": "text",
+		"standard": true,
+		"category": "core",
+		"subcategory": "none",
+		"suggested": "utf-8",
+		"autofill": true;
+		"summary": ["Defines the page's character encoding"],
+		"autofill": [
+			{"value": "utf-8", "description": "standard"}
+		],
+		"links": [
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset", "text": "WHATWG"}
+		]
+	},
+
+
+]

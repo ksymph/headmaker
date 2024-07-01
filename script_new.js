@@ -1,0 +1,1 @@
+// type can be: text | inset | check
