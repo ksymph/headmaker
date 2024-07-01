@@ -19,8 +19,9 @@
 	</div>
 	<main>
 		<form id="headmaker">
+
 			<fieldset class="category" data-checked="false">
-				<legend>browser<span class="category-description">how the page should be interpreted</span><span class="check-all">expand all</span></legend>
+				<legend>browser<span class="category-description">how the page is interpreted</span><span class="check-all">expand all</span></legend>
 				<fieldset class="tag a standard">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="charset">meta charset=</label></div>
@@ -30,7 +31,7 @@
 						<ul>
 							<li><code>utf-8</code> //standard</li>
 						</ul>
-						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset">WHATWG HTML Specification</a></p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset">WHATWG</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag a">
@@ -43,7 +44,7 @@
 						<ul>
 							<li><code>width=device-width, initial-scale=1</code>//sets page width to device width, and not zoomed in by default</li>
 						</ul>
-						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">MDN Web Docs</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">MDN</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag b standard">
@@ -62,8 +63,8 @@
 							<li><code>script-src 'self' www.google-analytics.com ajax.googleapis.com;</code>//allow scripts from same origin, plus google analytics & google ajax cdn</li>
 							<li><code>default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';base-uri 'self';form-action 'self'</code>//allows only images, scripts, ajax, form actions, and css from same origin</li>
 						</ul>
-						<p><a href="https://w3c.github.io/webappsec-csp/#content-security-policy-object>">W3 Consortium</a></p>
-						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">MDN Web Docs</a></p>
+						<p><a href="https://w3c.github.io/webappsec-csp/#content-security-policy-object>">W3C</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">MDN</a></p>
 						<p><a href="https://content-security-policy.com">Content Security Policy Quick Reference</a></p>
 					</div>
 				</fieldset>
@@ -79,15 +80,15 @@
 						<p>Timed page refresh</p>
 						<ul>
 							<li><code>30</code>//refresh page every 30 seconds</li>
-							<li><code>10; url=https://www.wikipedia.org</code>//redirect to wikipedia.org after 10 seconds</li>
+							<li><code>10; url=https://www.example.com</code>//redirect to example.com after 10 seconds</li>
 						</ul>
-						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh">WHATWG HTML Specification</a></p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh">WHATWG</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="referrer">meta name="referrer" content=</label></div>
-					<div class="input-container"><input id="referrer" type="text" placeholder="no-referrer"></div>
+					<div class="input-container"><input id="referrer" type="text" placeholder="default"></div>
 					<div class="description">
 						<p>Controls what referrer information is sent</p>
 						<ul>
@@ -101,27 +102,10 @@
 							<li><code>strict-origin-when-cross-origin</code>//full URL for same-origin, origin for HTTPS cross-origin</li>
 							<li><code>unsafe-url</code>//full URL is always sent</li>
 						</ul>
-						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-referrer">WHATWG HTML Specification</a></p>
-						<p><a href="https://w3c.github.io/webappsec-referrer-policy/">w3c referrer policy</a></p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-referrer">WHATWG</a></p>
+						<p><a href="https://w3c.github.io/webappsec-referrer-policy/">W3C</a></p>
 					</div>
 				</fieldset>
-				<fieldset class="tag c">
-					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="format-detection">meta name="format-detection" content=</label></div>
-					<div class="input-container"><input id="format-detection" type="text" placeholder="telephone=no"></div>
-					<div class="description">
-						<p>Disable automatic detection and formatting of addresses</p>
-						<p>Safari-only</p>
-						<ul>
-							<li><code>date=no</code></li>
-							<li><code>telephone=no</code></li>
-							<li><code>address=no</code></li>
-							<li><code>email=no</code></li>
-						</ul>
-						<p><a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW5">apple dev docs</a></p>
-					</div>
-				</fieldset>
-
 				<div class="divider"><hr><span>identity & style</span></div>
 				<fieldset class="tag a">
 					<input type="checkbox" class="show-hidden">
@@ -137,27 +121,27 @@
 					<div class="input-container"><input id="title" type="text" placeholder="Page Title"></div>
 					<div class="description">
 						<p>Sets page title</p>
-						<p>Used in search engine results, browser tab title, bookmarks, etc.</p>
-						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-title-element">WHATWG HTML Specification</a></p>
+						<p>Displayed in search engine results, browser tab title, bookmarks, etc.</p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-title-element">WHATWG</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag a standard">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="description">meta name="description" content=</label></div>
-					<div class="input-container"><input id="description" type="text" placeholder="App for generating HTML <head> tags."></div>
+					<div class="input-container"><input id="description" type="text" placeholder="A short description of the page."></div>
 					<div class="description">
 						<p>Describe the site for search engines</p>
 						<p>Maximum 150 characters</p>
-						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-description">WHATWG HTML Specification</a></p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-description">WHATWG</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag standard">
 					<input type="checkbox" class="show-hidden">
-					<div class="label-container"><label for="author">meta name="author" content=</label></div>
-					<div class="input-container"><input id="author" type="text" placeholder="John Doe"></div>
+					<div class="label-container"><label for="author-name">meta name="author" content=</label></div>
+					<div class="input-container"><input id="author-name" type="text" placeholder="John Doe"></div>
 					<div class="description">
 						<p>Name of the page's primary author</p>
-						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-author">WHATWG HTML Specification</a></p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-author">WHATWG</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -167,7 +151,7 @@
 					<div class="description">
 						<p>Link to author information</p>
 						<p><a href="https://microformats.org/wiki/rel-author">Microformats Wiki</a></p>
-						<p><a href="https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#link-type-author">w3</a></p>
+						<p><a href="https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#link-type-author">W3C</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag b">
@@ -184,7 +168,16 @@
 						<p>Used for browser styling</p>
 						<p>Colors the status bar on Chrome Android, address bar on Safari iOS, tile when pinned with Edge, etc.</p>
 						<p>Can be any valid css color</p>
-						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color">MDN Web Docs</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color">MDN</a></p>
+						<ul>
+							<li><code>default</code></li>
+							<li><code>no-referrer</code>//no referrer info is sent</li>
+						</ul>
+						<ul>
+							<li><code>test</code></li>
+							<li><code>test2</code>//no referrer info is sent</li>
+						</ul>
+
 					</div>
 				</fieldset>
 				<fieldset class="tag c standard">
@@ -194,7 +187,7 @@
 					<div class="description">
 						<p>Application title for single page applications</p>
 						<p>Should not be used if page is not a SPA</p>
-						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name">WHATWG HTML Specification</a></p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name">WHATWG</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">
@@ -232,7 +225,7 @@
 					<div class="description">
 						<p>Keywords relating to the page</p>
 						<p>Largely obsolete; no longer widely used by major search engines, browsers etc.</p>
-						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-keywords">WHATWG HTML Specification</a></p>
+						<p><a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-keywords">WHATWG</a></p>
 					</div>
 				</fieldset>
 
@@ -268,7 +261,7 @@
 
 
 			<fieldset class="category" data-checked="false">
-				<legend>third party<span class="category-description">platform-specific and search-related</span><span class="check-all">expand all</span></legend>
+				<legend>third party<span class="category-description">search and platform-specific</span><span class="check-all">expand all</span></legend>
 
 
 				<fieldset class="tag a">
@@ -291,11 +284,11 @@
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="al">meta property="al:web:url" content=</label></div>
-					<div class="input-container"><input id="al" type="text" placeholder="https://wikipedia.org"></div>
+					<div class="input-container"><input id="al" type="text" placeholder="https://example.com"></div>
 					<div class="description">
 						<p>Canonical link to be optionally used alongside app links</p>
 						<p>If user is on desktop or doesn't have the app installed, the page will automatically redirect to the specified URL</p>
-						<p><a href="https://developers.facebook.com/docs/applinks/metadata-reference/">Facebook Developer Reference</a></p>
+						<p><a href="https://developers.facebook.com/docs/applinks/metadata-reference/">Facebook Docs</a></p>
 					</div>
 				</fieldset>
 
@@ -313,7 +306,7 @@
 							<li><code>index,nofollow</code></li>
 							<li><code>noindex,follow</code></li>
 						</ul>
-						<p><a href="https://developers.google.com/search/docs/crawling-indexing/special-tags">Google Developer Documentation</a></p>
+						<p><a href="https://developers.google.com/search/docs/crawling-indexing/special-tags">Google Developer Docs</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag checklist-container b">
@@ -344,7 +337,7 @@
 							<li><code>nopagereadaloud</code>//disables google tts</li>
 							<li><code>nopagereadaloud</code>//disables translate button in search results</li>
 						</ul>
-						<p><a href="https://developers.google.com/search/docs/crawling-indexing/special-tags">Google Developer Documentation</a></p>
+						<p><a href="https://developers.google.com/search/docs/crawling-indexing/special-tags">Google Developer Docs</a></p>
 					</div>
 				</fieldset>
 
@@ -359,7 +352,7 @@
 					</div>
 					<div class="description">
 						<p>Disable navigation bar for web apps on Android</p>
-						<p><a href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Developer Documentation</a> (everything here applies, ignoring the apple- prefix)</p>
+						<p><a href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Docs</a> (everything here applies, ignoring the apple- prefix)</p>
 					</div>
 				</fieldset>
 
@@ -368,7 +361,7 @@
 					<div class="label-container"><label for="android-url">meta property="al:android:url" content=</label></div>
 					<div class="input-container"><input id="android-url" type="text" placeholder="applinks://docs"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -377,7 +370,7 @@
 					<div class="label-container"><label for="android-app_name">meta property="al:android:app_name" content=</label></div>
 					<div class="input-container"><input id="android-app_name" type="text" placeholder="App Links"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -386,7 +379,7 @@
 					<div class="label-container"><label for="android-package">meta property="al:android:package" content=</label></div>
 					<div class="input-container"><input id="android-package" type="text" placeholder="org.applinks"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -539,14 +532,30 @@
 
 
 
-				<div class="divider"><hr><span>ios</span></div>
+				<div class="divider"><hr><span>apple</span></div>
+				<fieldset class="tag c">
+					<input type="checkbox" class="show-hidden">
+					<div class="label-container"><label for="format-detection">meta name="format-detection" content=</label></div>
+					<div class="input-container"><input id="format-detection" type="text" placeholder="telephone=no"></div>
+					<div class="description">
+						<p>Disable automatic detection and formatting of addresses</p>
+						<p>Safari-only</p>
+						<ul>
+							<li><code>date=no</code></li>
+							<li><code>telephone=no</code></li>
+							<li><code>address=no</code></li>
+							<li><code>email=no</code></li>
+						</ul>
+						<p><a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW5">Apple Docs</a></p>
+					</div>
+				</fieldset>
 
 				<fieldset class="tag a">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="apple-title">meta name="apple-mobile-web-app-title" content=</label></div>
 					<div class="input-container"><input id="apple-title" type="text" placeholder="App Title"></div>
 					<div class="description">
-						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Developer Documentation</a>
+						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Docs</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag a">
@@ -554,7 +563,7 @@
 					<div class="label-container"><label for="apple-icon">link rel="apple-touch-icon" href=</label></div>
 					<div class="input-container"><input id="apple-icon" type="text" placeholder="/app_icon.png"></div>
 					<div class="description">
-						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Developer Documentation</a>
+						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Docs</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag a">
@@ -562,7 +571,7 @@
 					<div class="label-container"><label for="apple-splash">link rel="apple-touch-startup-image" href=</label></div>
 					<div class="input-container"><input id="apple-splash" type="text" placeholder="/splash.png"></div>
 					<div class="description">
-						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Developer Documentation</a>
+						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Docs</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag a">
@@ -570,7 +579,7 @@
 					<div class="label-container"><label for="apple-ui">meta name="apple-mobile-web-app-capable" content=</label></div>
 					<div class="input-container"><input id="apple-ui" type="text" placeholder="yes"></div>
 					<div class="description">
-						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Developer Documentation</a>
+						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Docs</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag a">
@@ -578,7 +587,7 @@
 					<div class="label-container"><label for="apple-status-bar">meta name="apple-mobile-web-app-status-bar-style" content=</label></div>
 					<div class="input-container"><input id="apple-status-bar" type="text" placeholder="black"></div>
 					<div class="description">
-						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Developer Documentation</a>
+						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Docs</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag a">
@@ -586,7 +595,7 @@
 					<div class="label-container"><label for="apple-itunes-app">meta name="apple-itunes-app" content=</label></div>
 					<div class="input-container"><input id="apple-itunes-app" type="text" placeholder="app-id=APP-ID, app-argument=http/url-sample.com"></div>
 					<div class="description">
-						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Developer Documentation</a>
+						<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple Docs</a>
 					</div>
 				</fieldset>
 
@@ -595,7 +604,7 @@
 					<div class="label-container"><label for="ios-url">meta property="al:ios:url" content=</label></div>
 					<div class="input-container"><input id="ios-url" type="text" placeholder="applinks://docs"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -604,7 +613,7 @@
 					<div class="label-container"><label for="ios-app_store_id">meta property="al:ios:app_store_id" content=</label></div>
 					<div class="input-container"><input id="ios-app_store_id" type="text" placeholder="12345"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -613,7 +622,7 @@
 					<div class="label-container"><label for="ios-app_name">meta property="al:ios:app_name" content=</label></div>
 					<div class="input-container"><input id="ios-app_name" type="text" placeholder="App Links"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/applinks/add-to-content">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -708,7 +717,7 @@
 					<div class="input-container"><input id="fb-app-id" type="text" placeholder="123456789"></div>
 					<div class="description">
 						<p>For use with Facebook analytics</p>
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -717,7 +726,7 @@
 					<div class="label-container"><label for="og-url">meta property="og:url" content=</label></div>
 					<div class="input-container"><input id="og-url" type="text" placeholder="https://example.com/page.html"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -726,7 +735,7 @@
 					<div class="label-container"><label for="og-type">meta property="og:type" content=</label></div>
 					<div class="input-container"><input id="og-type" type="text" placeholder="website"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -735,7 +744,7 @@
 					<div class="label-container"><label for="og-title">meta property="og:title" content=</label></div>
 					<div class="input-container"><input id="og-title" type="text" placeholder="Content Title"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -744,7 +753,7 @@
 					<div class="label-container"><label for="og-image">meta property="og:image" content=</label></div>
 					<div class="input-container"><input id="og-image" type="text" placeholder="https://example.com/image.jpg"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -753,7 +762,7 @@
 					<div class="label-container"><label for="og-image-alt">meta property="og:image:alt" content=</label></div>
 					<div class="input-container"><input id="og-image-alt" type="text" placeholder="A description of what is in the image (not a caption)"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -762,7 +771,7 @@
 					<div class="label-container"><label for="og-description">meta property="og:description" content=</label></div>
 					<div class="input-container"><input id="og-description" type="text" placeholder="Description Here"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -771,7 +780,7 @@
 					<div class="label-container"><label for="og-site-name">meta property="og:site_name" content=</label></div>
 					<div class="input-container"><input id="og-site-name" type="text" placeholder="Site Name"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -780,7 +789,7 @@
 					<div class="label-container"><label for="og-locale">meta property="og:locale" content=</label></div>
 					<div class="input-container"><input id="og-locale" type="text" placeholder="en_US"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -789,7 +798,7 @@
 					<div class="label-container"><label for="article-author">meta property="article:author" content=</label></div>
 					<div class="input-container"><input id="article-author" type="text" placeholder=""></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -797,7 +806,7 @@
 					<div class="label-container"><label for="op-markup">meta property="op:markup_version" content=</label></div>
 					<div class="input-container"><input id="op-markup" type="text" placeholder="1.0"></div>
 					<div class="description">
-						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developer Reference</a>
+						<a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Docs</a>
 					</div>
 				</fieldset>
 
@@ -808,7 +817,7 @@
 					<div class="label-container"><label for="twitter-card">meta name="twitter:card" content=</label></div>
 					<div class="input-container"><input id="twitter-card" type="text" placeholder="summary"></div>
 					<div class="description">
-						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Developer Documentation</a>
+						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Docs</a>
 					</div>
 				</fieldset>
 
@@ -817,7 +826,7 @@
 					<div class="label-container"><label for="twitter-site">meta name="twitter:site" content=</label></div>
 					<div class="input-container"><input id="twitter-site" type="text" placeholder="@site_account"></div>
 					<div class="description">
-						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Developer Documentation</a>
+						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Docs</a>
 					</div>
 				</fieldset>
 
@@ -826,7 +835,7 @@
 					<div class="label-container"><label for="twitter-creator">meta name="twitter:creator" content=</label></div>
 					<div class="input-container"><input id="twitter-creator" type="text" placeholder="@individual_account"></div>
 					<div class="description">
-						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Developer Documentation</a>
+						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Docs</a>
 					</div>
 				</fieldset>
 
@@ -835,7 +844,7 @@
 					<div class="label-container"><label for="twitter-url">meta name="twitter:url" content=</label></div>
 					<div class="input-container"><input id="twitter-url" type="text" placeholder="https://example.com/page.html"></div>
 					<div class="description">
-						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Developer Documentation</a>
+						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Docs</a>
 					</div>
 				</fieldset>
 
@@ -844,7 +853,7 @@
 					<div class="label-container"><label for="twitter-title">meta name="twitter:title" content=</label></div>
 					<div class="input-container"><input id="twitter-title" type="text" placeholder="Content Title"></div>
 					<div class="description">
-						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Developer Documentation</a>
+						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Docs</a>
 					</div>
 				</fieldset>
 
@@ -853,7 +862,7 @@
 					<div class="label-container"><label for="twitter-description">meta name="twitter:description" content=</label></div>
 					<div class="input-container"><input id="twitter-description" type="text" placeholder="Content description less than 200 characters"></div>
 					<div class="description">
-						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Developer Documentation</a>
+						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Docs</a>
 					</div>
 				</fieldset>
 
@@ -862,7 +871,7 @@
 					<div class="label-container"><label for="twitter-image">meta name="twitter:image" content=</label></div>
 					<div class="input-container"><input id="twitter-image" type="text" placeholder="https://example.com/image.jpg"></div>
 					<div class="description">
-						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Developer Documentation</a>
+						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Docs</a>
 					</div>
 				</fieldset>
 
@@ -871,7 +880,7 @@
 					<div class="label-container"><label for="twitter-image-alt">meta name="twitter:image:alt" content=</label></div>
 					<div class="input-container"><input id="twitter-image-alt" type="text" placeholder="A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters."></div>
 					<div class="description">
-						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Developer Documentation</a>
+						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Docs</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -879,7 +888,7 @@
 					<div class="label-container"><label for="twitter-dnt">meta name="twitter:dnt" content=</label></div>
 					<div class="input-container"><input id="twitter-dnt" type="text" placeholder="on"></div>
 					<div class="description">
-						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Developer Documentation</a>
+						<a href="https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started">Twitter Docs</a>
 					</div>
 				</fieldset>
 
@@ -911,22 +920,22 @@
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="preconnect">link rel="preconnect" href=</label></div>
-					<div class="input-container"><input id="preconnect" type="text" placeholder="https://www.wikipedia.org/"></div>
+					<div class="input-container"><input id="preconnect" type="text" placeholder="https://www.example.com/"></div>
 					<div class="description">
 						<p>Tells the browser to initiate a connection to the linked content upon page load</p>
 						<p>Improves load time of linked content, but doesn't complete a connection</p>
-						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect">MDN Web Docs</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect">MDN</a></p>
 						<p><a href="https://www.debugbear.com/blog/resource-hints-rel-preload-prefetch-preconnect">Preload vs Prefetch vs Preconnect</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
 					<input type="checkbox" class="show-hidden">
 					<div class="label-container"><label for="prefetch">link rel="prefetch" href=</label></div>
-					<div class="input-container"><input id="prefetch" type="text" placeholder="https://www.wikipedia.org/"></div>
+					<div class="input-container"><input id="prefetch" type="text" placeholder="https://www.example.com/"></div>
 					<div class="description">
 						<p>Tells the browser to fetch and cache the linked content upon page load</p>
 						<p>Improves load time of linked content</p>
-						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/prefetch">MDN Web Docs</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/prefetch">MDN</a></p>
 						<p><a href="https://www.debugbear.com/blog/resource-hints-rel-preload-prefetch-preconnect">Preload vs Prefetch vs Preconnect</a></p>
 					</div>
 				</fieldset>
@@ -937,7 +946,7 @@
 					<div class="description">
 						<p>Tells the browser to resolve DNS for link upon page load</p>
 						<p>Improves load time of linked content</p>
-						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch">MDN Web Docs</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch">MDN</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag">
@@ -961,7 +970,7 @@
 							<li>style</li>
 							<li>track</li>
 						</ul>
-						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload">MDN Web Docs</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload">MDN</a></p>
 						<p><a href="https://www.debugbear.com/blog/resource-hints-rel-preload-prefetch-preconnect">Preload vs Prefetch vs Preconnect</a></p>
 					</div>
 				</fieldset>
@@ -974,7 +983,7 @@
 					<div class="description">
 						<p>Used to prevent duplicate content in search engines</p>
 						<p>Set link to the page's main location</p>
-						<a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls#rel-canonical-link-method">Google Developer Documentation</a>
+						<a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls#rel-canonical-link-method">Google Developer Docs</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">
@@ -990,7 +999,7 @@
 					<div class="description">
 						<p>Point to the page in a different language</p>
 						<p>Used by search engines</p>
-						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#alternate">MDN Web Docs</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#alternate">MDN</a></p>
 						<p><a href="https://en.wikipedia.org/wiki/Hreflang">Wikipedia</a></p>
 					</div>
 				</fieldset>
@@ -1052,7 +1061,7 @@
 					<div class="input-container"><input id="generator" type="text" placeholder="WordPress 3.0.1"></div>
 					<div class="description">
 						<p>Identify the software used to build the site</p>
-						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-generator">WHATWG HTML Specification</a>
+						<a href="https://html.spec.whatwg.org/multipage/semantics.html#meta-generator">WHATWG</a>
 					</div>
 				</fieldset>
 				<fieldset class="tag checklist-container">
@@ -1066,7 +1075,7 @@
 					</div>
 					<div class="description">
 						<p>Mark explicit content for search engines</p>
-						<p><a href="https://developers.google.com/search/docs/crawling-indexing/safesearch#add-metadata">Google Developer Documentation</a></p>
+						<p><a href="https://developers.google.com/search/docs/crawling-indexing/safesearch#add-metadata">Google Developer Docs</a></p>
 					</div>
 				</fieldset>
 				<fieldset class="tag c">

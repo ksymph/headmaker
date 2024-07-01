@@ -29,7 +29,10 @@ function buildOutput() {
 			} else if (inputs[0].value) {
 				final += "<";
 				for (let iz = 0; iz < labels.length; iz++) {
-					final += `${labels[iz].innerText}"${inputs[iz].value}"`;
+					if (inputs[iz].value) {
+						final += (iz > 0) ? " " : "";
+						final += `${labels[iz].innerText}"${inputs[iz].value}"`;
+					}
 				}
 				final += ">\n";
 			}
@@ -94,16 +97,25 @@ function addExpandListeners () {
 function addListListeners () {
 	const tagList = document.querySelectorAll(".tag");
 	for (let i = 0; i < tagList.length; i++) {
-		const inputElement = tagList[i].querySelector(".input-container input");
-		const suggestedValues = tagList[i].querySelectorAll("li code");
-		for (let valuePos = 0; valuePos < suggestedValues.length; valuePos++){
-			suggestedValues[valuePos].addEventListener("click", function() {
-				inputElement.value = suggestedValues[valuePos].innerText;
-				buildOutput();
-			});
+		const tag = tagList[i];
+		const suggestionList = tag.querySelectorAll("ul");
+		const inputList = tag.querySelectorAll(".input-container input");
+		for (let iz = 0; iz < suggestionList.length; iz++) {
+			const currentInput = inputList[iz];
+			const currentSuggestionList = suggestionList[iz].querySelectorAll("li code");
+			for (ix = 0; ix < currentSuggestionList.length; ix++) {
+				const currentSuggestionText = currentSuggestionList[ix].innerText;
+				currentSuggestionList[ix].addEventListener("click", function() {
+					currentInput.value = currentSuggestionText;
+					buildOutput();
+				});
+			}
 		}
+
+
 	}
 }
+
 
 function resetCopyButton () {
 	copyButton.innerText = "Copy";
