@@ -5,16 +5,697 @@
 		"standard": true,
 		"category": "core",
 		"subcategory": "none",
-		"suggested": "utf-8",
+		"suggested": ["utf-8"],
 		"autofill": true;
 		"summary": ["Defines the page's character encoding"],
-		"autofill": [
+		"suggested": [
 			{"value": "utf-8", "description": "standard"}
 		],
 		"links": [
 			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset", "text": "WHATWG"}
 		]
 	},
+	{
+		"tag": ["meta name=\"viewport\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "core",
+		"subcategory": "none",
+		"suggested": ["width=device-width, initial-scale=1"],
+		"autofill": true,
+		"summary": ["Sets viewport properties", "Used primarily to make page responsive on mobile"],
+		"suggested": [
+			{"value": "width=device-width, initial-scale=1", "description": "sets page width to device width, and not zoomed in by default"}
+		],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag", "text": "MDN"}
+		]
+	},
+	{
+		"tag": ["meta http-equiv=\"content-security-policy\" content="],
+		"type": "text",
+		"standard": true,
+		"category": "core",
+		"subcategory": "none",
+		"suggested": ["default-src 'self'"],
+		"autofill": false,
+		"summary": ["Controls from where resources can be loaded", "Helps prevent cross-site scripting attacks"],
+		"suggested": [
+			{"value": "default-src 'self'", "description": "only allow content from same origin"},
+			{"value": "script-src 'self' www.google-analytics.com ajax.googleapis.com;", "description": "allow scripts from same origin, plus google analytics & google ajax cdn"},
+			{"value": "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'self'", "description": "allows only images, scripts, ajax, form actions, and css from same origin"}
+		],
+		"links": [
+			{"href": "https://w3c.github.io/webappsec-csp/#content-security-policy-object", "text": "W3C"},
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy", "text": "MDN"},
+			{"href": "https://content-security-policy.com", "text": "Content Security Policy Quick Reference"}
+		]
+	},
+	{
+		"tag": ["meta http-equiv=\"refresh\" content="],
+		"type": "text",
+		"standard": true,
+		"category": "other",
+		"subcategory": "misc",
+		"suggested": ["seconds; url=URL"],
+		"autofill": false,
+		"summary": ["Timed page refresh"],
+		"suggested": [
+			{"value": "30", "description": "refresh page every 30 seconds"},
+			{"value": "10; url=https://www.example.com", "description": "redirect to example.com after 10 seconds"}
+		],
+		"links": [
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh", "text": "WHATWG"}
+		]
+	},
+	{
+		"tag": ["meta name=\"referrer\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "other",
+		"subcategory": "misc",
+		"suggested": ["default"],
+		"autofill": false,
+		"summary": ["Controls what referrer information is sent"],
+		"suggested": [
+			{"value": "default", "description": ""},
+			{"value": "no-referrer", "description": "no referrer info is sent"},
+			{"value": "no-referrer-when-downgrade", "description": "full URL for HTTPS, none for HTTP"},
+			{"value": "same-origin", "description": "referrer sent for same-origin requests only"},
+			{"value": "origin", "description": "only the origin is sent as referrer"},
+			{"value": "strict-origin", "description": "origin for HTTPS, none for HTTP"},
+			{"value": "origin-when-cross-origin", "description": "full URL for same-origin, origin for cross-origin"},
+			{"value": "strict-origin-when-cross-origin", "description": "full URL for same-origin, origin for HTTPS cross-origin"},
+			{"value": "unsafe-url", "description": "full URL is always sent"}
+		],
+		"links": [
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#meta-referrer", "text": "WHATWG"},
+			{"href": "https://w3c.github.io/webappsec-referrer-policy/", "text": "W3C"}
+		]
+	},
+	{
+		"tag": ["link rel=\"stylesheet\" type=\"text/css\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "style",
+		"suggested": ["style.css"],
+		"autofill": false,
+		"summary": ["Load an external stylesheet"],
+		"links": []
+	},
+	{
+		"tag": ["title"],
+		"type": "inset",
+		"standard": true,
+		"category": "core",
+		"subcategory": "none",
+		"suggested": ["Page Title"],
+		"autofill": false,
+		"summary": ["Sets page title", "Displayed in search engine results, browser tab title, bookmarks, etc."],
+		"links": [
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element", "text": "WHATWG"}
+		]
+	},
+	{
+		"tag": ["link rel=\"author\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "metadata",
+		"suggested": ["https://www.example.com/authors/john-doe"],
+		"autofill": false,
+		"summary": ["Link to author information"],
+		"links": [
+			{"href": "https://microformats.org/wiki/rel-author", "text": "Microformats Wiki"},
+			{"href": "https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#link-type-author", "text": "W3C"}
+		]
+	},
+	{
+		"tag": ["meta name=\"theme-color\" content=", "media="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "style",
+		"suggested": ["#FFFFFF", "(prefers-color-scheme: light|dark)"],
+		"autofill": false,
+		"summary": ["Used for browser styling", "Colors the status bar on Chrome Android, address bar on Safari iOS, tile when pinned with Edge, etc.", "Can be any valid css color"],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color", "text": "MDN"}
+		]
+	},
+	{
+		"tag": ["meta name=\"application-name\" content="],
+		"type": "text",
+		"standard": true,
+		"category": "application",
+		"subcategory": "none",
+		"suggested": ["Application Name"],
+		"autofill": false,
+		"summary": ["Application title for single page applications", "Should not be used if page is not a SPA"],
+		"links": [
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name", "text": "WHATWG"}
+		]
+	},
+	{
+		"tag": ["meta name=\"subject\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "metadata",
+		"suggested": ["HTML Head Generator"],
+		"autofill": false,
+		"summary": ["Short description of the subject of the page", "Largely obsolete; no longer widely used by major search engines, browsers etc."]
+	},
+	{
+		"tag": ["link rel=\"license\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "metadata",
+		"suggested": ["copyright.html"],
+		"autofill": false,
+		"summary": ["Link to file with licensing information"],
+		"links": [
+			{"href": "https://microformats.org/wiki/rel-license", "text": "Microformats Wiki"}
+		]
+	},
+	{
+		"tag": ["link rel=\"me\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "none",
+		"suggested": ["https://mastodon.social/@yourprofile"],
+		"autofill": false,
+		"summary": ["Used to verify ownership"],
+		"links": [
+			{"href": "https://microformats.org/wiki/rel-me", "text": "Microformats Wiki"},
+			{"href": "https://gmpg.org/xfn/", "text": "XHTML Friends Network information"}
+		]
+	},
+	{
+		"tag": ["meta name=\"keywords\" content="],
+		"type": "text",
+		"standard": true,
+		"category": "content",
+		"subcategory": "metadata",
+		"suggested": ["blog, travel"],
+		"autofill": false,
+		"summary": ["Keywords relating to the page", "Largely obsolete; no longer widely used by major search engines, browsers etc."],
+		"links": [
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#meta-keywords", "text": "WHATWG"}
+		]
+	},
+	{
+		"tag": ["link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "alt",
+		"suggested": ["/rss/"],
+		"autofill": false,
+		"summary": ["Link to RSS feed"],
+		"links": [
+			{"href": "https://www.rssboard.org/rss-autodiscovery", "text": "RSS Advisory Board"}
+		]
+	},
+	{
+		"tag": ["link rel=\"alternate\" type=\"application/atom+xml\" title=\"Atom\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "alt",
+		"suggested": ["/atom/"],
+		"autofill": false,
+		"summary": ["Link to atom feed"]
+	},
+	{
+		"tag": ["link rel=\"self\" type=\"application/atom+xml\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "alt",
+		"suggested": ["https://example.com/atom.xml"],
+		"autofill": false,
+		"summary": ["Point to current document, for use with feeds"]
+	},
+	{
+		"tag": ["meta name=\"robots\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "search",
+		"suggested": ["index,follow"],
+		"autofill": false,
+		"summary": ["Instructions for crawlers", "robots.txt is site-wide, use this for per-page control"],
+		"suggested": [
+			{"value": "index,follow", "description": ""},
+			{"value": "noindex,nofollow", "description": ""},
+			{"value": "index,nofollow", "description": ""},
+			{"value": "noindex,follow", "description": ""}
+		],
+		"links": [
+			{"href": "https://www.robotstxt.org/meta.html", "text": "robotstxt.org"}
+		]
+	},
+	{
+		"tag": ["meta property=\"al:web:url\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "none",
+		"suggested": ["https://example.com"],
+		"autofill": false,
+		"summary": ["Canonical link to be optionally used alongside app links", "If user is on desktop or doesn't have the app installed, the page will automatically redirect to the specified URL"],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/applinks/metadata-reference/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"googlebot\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "search",
+		"suggested": ["index,follow"],
+		"autofill": false,
+		"summary": ["Control Google crawler behavior"],
+		"suggested": [
+			{"value": "index,follow", "description": ""},
+			{"value": "noindex,nofollow", "description": ""},
+			{"value": "index,nofollow", "description": ""},
+			{"value": "noindex,follow", "description": ""}
+		],
+		"links": [
+			{"href": "https://developers.google.com/search/docs/crawling-indexing/special-tags", "text": "Google Developer Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"google\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "content",
+		"subcategory": "search",
+		"suggested": ["nositelinkssearchbox", "nopagereadaloud", "notranslate"],
+		"autofill": true,
+		"summary": ["Control Google search result features"],
+		"suggested": [
+			{"value": "nositelinkssearchbox", "description": "disables site-specific search box"},
+			{"value": "nopagereadaloud", "description": "disables google tts"},
+			{"value": "notranslate", "description": "disables translate button"}
+		],
+		"links": [
+			{"href": "https://developers.google.com/search/docs/crawling-indexing/special-tags", "text": "Google Developer Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"mobile-web-app-capable\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["yes"],
+		"autofill": true,
+		"summary": ["Disable navigation bar for web apps on Android"],
+		"links": [
+			{"href": "https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"al:android:url\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "none",
+		"suggested": "applinks://docs",
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"al:android:app_name\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "none",
+		"suggested": "App Links",
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"al:android:package\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "none",
+		"suggested": "org.applinks",
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"x5-fullscreen\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "qq",
+		"suggested": "true",
+		"autofill": false,
+		"summary": ["Address bar becomes a floating button"]
+	},
+	{
+		"tag": ["meta name=\"x5-page-mode\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "qq",
+		"suggested": "app",
+		"autofill": false,
+		"summary": ["If the page should display in 'application mode'"]
+	},
 
 
+
+
+	{
+		"tag": ["meta name=\"screen-orientation\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "uc",
+		"suggested": "landscape",
+		"autofill": false,
+		"summary": ["Force certain screen orientation"],
+		"suggested": [
+			{"value": "landscape", "description": ""},
+			{"value": "portrait", "description": ""}
+		]
+	},
+	{
+		"tag": ["meta name=\"full-screen\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "uc",
+		"suggested": "yes",
+		"autofill": false,
+		"summary": ["Address bar becomes a floating button"]
+	},
+	{
+		"tag": ["meta name=\"imagemode\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "uc",
+		"suggested": "force",
+		"autofill": false,
+		"summary": ["Force displaying images when browser is in text mode"]
+	},
+	{
+		"tag": ["meta name=\"browsermode\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "uc",
+		"suggested": "application",
+		"autofill": false,
+		"summary": ["If the page should display in 'application mode'"]
+	},
+	{
+		"tag": ["meta name=\"nightmode\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "uc",
+		"suggested": "disable",
+		"autofill": false,
+		"summary": ["Disable browser night mode"]
+	},
+	{
+		"tag": ["meta name=\"layoutmode\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "uc",
+		"suggested": "fitscreen",
+		"autofill": false,
+		"summary": ["Force a simplified rendering, similar to 'reader mode'"]
+	},
+	{
+		"tag": ["meta name=\"wap-font-scale\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "uc",
+		"suggested": "no",
+		"autofill": false,
+		"summary": ["Disable UC Browser's automatic resizing of fonts when page is detected as text-focused"]
+	},
+
+
+	{
+		"tag": ["meta name=\"format-detection\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "device",
+		"suggested": ["date=no", "telephone=no", "address=no", "email=no"],
+		"autofill": false,
+		"summary": ["Disable automatic detection and formatting of addresses", "Safari-only"],
+		"links": [
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW5", "text": "Apple Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"apple-mobile-web-app-title\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["App Title"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+		]
+	},
+	{
+		"tag": ["link rel=\"apple-touch-icon\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["/app_icon.png"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+		]
+	},
+	{
+		"tag": ["link rel=\"apple-touch-startup-image\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["/splash.png"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"apple-mobile-web-app-capable\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["yes"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"apple-mobile-web-app-status-bar-style\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["black"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"apple-itunes-app\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["app-id=\"APP-ID\", app-argument=\"http/example.com\""],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"al:ios:url\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["applinks://docs"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"al:ios:app_store_id\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["12345"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"al:ios:app_name\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"suggested": ["App Links"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"google-site-verification\""],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "verification",
+		"suggested": ["verification_token"],
+		"autofill": false,
+		"summary": ["Verify website ownership to Google"],
+		"links": [
+			{"href": "https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification", "text": "Google Webmaster Support"}
+		]
+	},
+	{
+		"tag": ["meta name=\"yandex-verification\""],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "verification",
+		"suggested": ["verification_token"],
+		"autofill": false,
+		"summary": ["Verify website ownership to Yandex"],
+		"links": [
+			{"href": "https://yandex.com/dev/webmaster/doc/dg/concepts/verification.html", "text": "Yandex Webmaster Documentation"}
+		]
+	},
+	{
+		"tag": ["meta name=\"msvalidate.01\""],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "verification",
+		"suggested": ["verification_token"],
+		"autofill": false,
+		"summary": ["Verify website ownership to Bing"],
+		"links": [
+			{"href": "https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b", "text": "Bing Webmaster Help"}
+		]
+	},
+	{
+		"tag": ["meta name=\"p:domain_verify\""],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "verification",
+		"suggested": ["verification_token"],
+		"autofill": false,
+		"summary": ["Verify website ownership to Pinterest"],
+		"links": [
+			{"href": "https://help.pinterest.com/en/business/article/claim-your-website#section-13836", "text": "Pinterest Help Center"}
+		]
+	},
+
+
+	{
+		"tag": ["meta name=\"pinterest\""],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "none",
+		"suggested": ["Sorry, you can't save from my website!"],
+		"autofill": false,
+		"summary": ["Prevent page from being saved to Pinterest"],
+		"links": [
+			{"href": "https://help.pinterest.com/en/business/article/prevent-saves-to-pinterest-from-your-site", "text": "Pinterest Help Center"}
+		]
+	},
+	{
+		"tag": ["link rel=\"alternate\" type=\"application/json+oembed\" href=", "title="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "feed",
+		"suggested": ["https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=json", "oEmbed JSON"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://oembed.com/", "text": "oembed.com"}
+		]
+	},
+	{
+		"tag": ["link rel=\"alternate\" type=\"text/xml+oembed\" href=", "title="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "feed",
+		"suggested": ["https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=xml", "oEmbed XML"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://oembed.com/", "text": "oembed.com"}
+		]
+	},
+
+	{
+		"tag": ["meta property=\"fb:app_id\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["123456789"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	}
 ]
