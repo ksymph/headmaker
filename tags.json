@@ -697,5 +697,252 @@
 		"links": [
 			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
 		]
-	}
+	},
+	{
+		"tag": ["meta property=\"og:url\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["https://example.com/page.html"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"og:type\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["website"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"og:title\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["Content Title"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"og:image\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["https://example.com/image.png"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"og:image:alt\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["A description of the image"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"og:description\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["A description of the page"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"og:site_name\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["Site Name"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"og:locale\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["en_US"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"article:author\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["John Doe"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta property=\"op:markup_version\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "facebook",
+		"suggested": ["1.0"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:card\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"suggested": ["Summary of content"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:site\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"suggested": ["@website_account"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:creator\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"suggested": ["@creator_account"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:url\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"suggested": ["https://example.com/page.html"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:title\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"suggested": ["Content Title"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:description\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"suggested": ["Content description less than 200 characters"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:image\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"suggested": ["https://example.com/image.png"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:image:alt\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"suggested": ["A description of the image"],
+		"autofill": false,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:dnt\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"suggested": ["on"],
+		"autofill": true,
+		"summary": [],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+		]
+	},
 ]
