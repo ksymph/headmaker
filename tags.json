@@ -4,9 +4,9 @@
 		"type": "text",
 		"standard": true,
 		"category": "core",
-		"subcategory": "none",
-		"suggested": ["utf-8"],
-		"autofill": true;
+		"subcategory": null,
+		"hint": ["utf-8"],
+		"autofill": true,
 		"summary": ["Defines the page's character encoding"],
 		"suggested": [
 			{"value": "utf-8", "description": "standard"}
@@ -20,8 +20,8 @@
 		"type": "text",
 		"standard": false,
 		"category": "core",
-		"subcategory": "none",
-		"suggested": ["width=device-width, initial-scale=1"],
+		"subcategory": null,
+		"hint": ["width=device-width, initial-scale=1"],
 		"autofill": true,
 		"summary": ["Sets viewport properties", "Used primarily to make page responsive on mobile"],
 		"suggested": [
@@ -36,8 +36,8 @@
 		"type": "text",
 		"standard": true,
 		"category": "core",
-		"subcategory": "none",
-		"suggested": ["default-src 'self'"],
+		"subcategory": null,
+		"hint": ["default-src 'self'"],
 		"autofill": false,
 		"summary": ["Controls from where resources can be loaded", "Helps prevent cross-site scripting attacks"],
 		"suggested": [
@@ -57,7 +57,7 @@
 		"standard": true,
 		"category": "other",
 		"subcategory": "misc",
-		"suggested": ["seconds; url=URL"],
+		"hint": ["seconds; url=URL"],
 		"autofill": false,
 		"summary": ["Timed page refresh"],
 		"suggested": [
@@ -74,7 +74,7 @@
 		"standard": false,
 		"category": "other",
 		"subcategory": "misc",
-		"suggested": ["default"],
+		"hint": ["default"],
 		"autofill": false,
 		"summary": ["Controls what referrer information is sent"],
 		"suggested": [
@@ -99,7 +99,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "style",
-		"suggested": ["style.css"],
+		"hint": ["style.css"],
 		"autofill": false,
 		"summary": ["Load an external stylesheet"],
 		"links": []
@@ -109,8 +109,8 @@
 		"type": "inset",
 		"standard": true,
 		"category": "core",
-		"subcategory": "none",
-		"suggested": ["Page Title"],
+		"subcategory": null,
+		"hint": ["Page Title"],
 		"autofill": false,
 		"summary": ["Sets page title", "Displayed in search engine results, browser tab title, bookmarks, etc."],
 		"links": [
@@ -123,7 +123,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "metadata",
-		"suggested": ["https://www.example.com/authors/john-doe"],
+		"hint": ["https://www.example.com/authors/john-doe"],
 		"autofill": false,
 		"summary": ["Link to author information"],
 		"links": [
@@ -137,7 +137,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "style",
-		"suggested": ["#FFFFFF", "(prefers-color-scheme: light|dark)"],
+		"hint": ["#FFFFFF", "(prefers-color-scheme: light|dark)"],
 		"autofill": false,
 		"summary": ["Used for browser styling", "Colors the status bar on Chrome Android, address bar on Safari iOS, tile when pinned with Edge, etc.", "Can be any valid css color"],
 		"links": [
@@ -149,8 +149,8 @@
 		"type": "text",
 		"standard": true,
 		"category": "application",
-		"subcategory": "none",
-		"suggested": ["Application Name"],
+		"subcategory": null,
+		"hint": ["Application Name"],
 		"autofill": false,
 		"summary": ["Application title for single page applications", "Should not be used if page is not a SPA"],
 		"links": [
@@ -163,7 +163,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "metadata",
-		"suggested": ["HTML Head Generator"],
+		"hint": ["HTML Head Generator"],
 		"autofill": false,
 		"summary": ["Short description of the subject of the page", "Largely obsolete; no longer widely used by major search engines, browsers etc."]
 	},
@@ -173,7 +173,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "metadata",
-		"suggested": ["copyright.html"],
+		"hint": ["copyright.html"],
 		"autofill": false,
 		"summary": ["Link to file with licensing information"],
 		"links": [
@@ -185,8 +185,8 @@
 		"type": "text",
 		"standard": false,
 		"category": "social",
-		"subcategory": "none",
-		"suggested": ["https://mastodon.social/@yourprofile"],
+		"subcategory": null,
+		"hint": ["https://mastodon.social/@yourprofile"],
 		"autofill": false,
 		"summary": ["Used to verify ownership"],
 		"links": [
@@ -200,7 +200,7 @@
 		"standard": true,
 		"category": "content",
 		"subcategory": "metadata",
-		"suggested": ["blog, travel"],
+		"hint": ["blog, travel"],
 		"autofill": false,
 		"summary": ["Keywords relating to the page", "Largely obsolete; no longer widely used by major search engines, browsers etc."],
 		"links": [
@@ -213,7 +213,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "alt",
-		"suggested": ["/rss/"],
+		"hint": ["/rss/"],
 		"autofill": false,
 		"summary": ["Link to RSS feed"],
 		"links": [
@@ -226,7 +226,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "alt",
-		"suggested": ["/atom/"],
+		"hint": ["/atom/"],
 		"autofill": false,
 		"summary": ["Link to atom feed"]
 	},
@@ -236,7 +236,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "alt",
-		"suggested": ["https://example.com/atom.xml"],
+		"hint": ["https://example.com/atom.xml"],
 		"autofill": false,
 		"summary": ["Point to current document, for use with feeds"]
 	},
@@ -246,7 +246,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "search",
-		"suggested": ["index,follow"],
+		"hint": ["index,follow"],
 		"autofill": false,
 		"summary": ["Instructions for crawlers", "robots.txt is site-wide, use this for per-page control"],
 		"suggested": [
@@ -264,8 +264,8 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "none",
-		"suggested": ["https://example.com"],
+		"subcategory": null,
+		"hint": ["https://example.com"],
 		"autofill": false,
 		"summary": ["Canonical link to be optionally used alongside app links", "If user is on desktop or doesn't have the app installed, the page will automatically redirect to the specified URL"],
 		"links": [
@@ -278,7 +278,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "search",
-		"suggested": ["index,follow"],
+		"hint": ["index,follow"],
 		"autofill": false,
 		"summary": ["Control Google crawler behavior"],
 		"suggested": [
@@ -297,7 +297,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "search",
-		"suggested": ["nositelinkssearchbox", "nopagereadaloud", "notranslate"],
+		"hint": ["nositelinkssearchbox"],
 		"autofill": true,
 		"summary": ["Control Google search result features"],
 		"suggested": [
@@ -315,7 +315,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["yes"],
+		"hint": ["yes"],
 		"autofill": true,
 		"summary": ["Disable navigation bar for web apps on Android"],
 		"links": [
@@ -327,8 +327,8 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "none",
-		"suggested": "applinks://docs",
+		"subcategory": null,
+		"hint": ["applinks://docs"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -340,8 +340,8 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "none",
-		"suggested": "App Links",
+		"subcategory": null,
+		"hint": ["App Links"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -353,8 +353,8 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "none",
-		"suggested": "org.applinks",
+		"subcategory": null,
+		"hint": ["org.applinks"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -367,7 +367,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "qq",
-		"suggested": "true",
+		"hint": ["true"],
 		"autofill": false,
 		"summary": ["Address bar becomes a floating button"]
 	},
@@ -377,7 +377,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "qq",
-		"suggested": "app",
+		"hint": ["app"],
 		"autofill": false,
 		"summary": ["If the page should display in 'application mode'"]
 	},
@@ -391,7 +391,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "uc",
-		"suggested": "landscape",
+		"hint": ["landscape"],
 		"autofill": false,
 		"summary": ["Force certain screen orientation"],
 		"suggested": [
@@ -405,7 +405,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "uc",
-		"suggested": "yes",
+		"hint": ["yes"],
 		"autofill": false,
 		"summary": ["Address bar becomes a floating button"]
 	},
@@ -415,7 +415,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "uc",
-		"suggested": "force",
+		"hint": ["force"],
 		"autofill": false,
 		"summary": ["Force displaying images when browser is in text mode"]
 	},
@@ -425,7 +425,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "uc",
-		"suggested": "application",
+		"hint": ["application"],
 		"autofill": false,
 		"summary": ["If the page should display in 'application mode'"]
 	},
@@ -435,7 +435,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "uc",
-		"suggested": "disable",
+		"hint": ["disable"],
 		"autofill": false,
 		"summary": ["Disable browser night mode"]
 	},
@@ -445,7 +445,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "uc",
-		"suggested": "fitscreen",
+		"hint": ["fitscreen"],
 		"autofill": false,
 		"summary": ["Force a simplified rendering, similar to 'reader mode'"]
 	},
@@ -455,7 +455,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "uc",
-		"suggested": "no",
+		"hint": ["no"],
 		"autofill": false,
 		"summary": ["Disable UC Browser's automatic resizing of fonts when page is detected as text-focused"]
 	},
@@ -467,6 +467,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "device",
+		"hint": ["date=no"],
 		"suggested": ["date=no", "telephone=no", "address=no", "email=no"],
 		"autofill": false,
 		"summary": ["Disable automatic detection and formatting of addresses", "Safari-only"],
@@ -480,7 +481,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["App Title"],
+		"hint": ["App Title"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -493,7 +494,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["/app_icon.png"],
+		"hint": ["/app_icon.png"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -506,7 +507,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["/splash.png"],
+		"hint": ["/splash.png"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -519,7 +520,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["yes"],
+		"hint": ["yes"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -532,7 +533,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["black"],
+		"hint": ["black"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -545,7 +546,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["app-id=\"APP-ID\", app-argument=\"http/example.com\""],
+		"hint": ["app-id=\"APP-ID\", app-argument=\"http/example.com\""],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -558,7 +559,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["applinks://docs"],
+		"hint": ["applinks://docs"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -571,7 +572,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["12345"],
+		"hint": ["12345"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -584,7 +585,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "pwa",
-		"suggested": ["App Links"],
+		"hint": ["App Links"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -597,7 +598,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "verification",
-		"suggested": ["verification_token"],
+		"hint": ["verification_token"],
 		"autofill": false,
 		"summary": ["Verify website ownership to Google"],
 		"links": [
@@ -610,7 +611,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "verification",
-		"suggested": ["verification_token"],
+		"hint": ["verification_token"],
 		"autofill": false,
 		"summary": ["Verify website ownership to Yandex"],
 		"links": [
@@ -623,7 +624,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "verification",
-		"suggested": ["verification_token"],
+		"hint": ["verification_token"],
 		"autofill": false,
 		"summary": ["Verify website ownership to Bing"],
 		"links": [
@@ -636,7 +637,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "verification",
-		"suggested": ["verification_token"],
+		"hint": ["verification_token"],
 		"autofill": false,
 		"summary": ["Verify website ownership to Pinterest"],
 		"links": [
@@ -650,8 +651,8 @@
 		"type": "text",
 		"standard": false,
 		"category": "social",
-		"subcategory": "none",
-		"suggested": ["Sorry, you can't save from my website!"],
+		"subcategory": null,
+		"hint": ["Sorry, you can't save from my website!"],
 		"autofill": false,
 		"summary": ["Prevent page from being saved to Pinterest"],
 		"links": [
@@ -664,7 +665,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "feed",
-		"suggested": ["https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=json", "oEmbed JSON"],
+		"hint": ["https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=json", "oEmbed JSON"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -677,7 +678,7 @@
 		"standard": false,
 		"category": "content",
 		"subcategory": "feed",
-		"suggested": ["https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=xml", "oEmbed XML"],
+		"hint": ["https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=xml", "oEmbed XML"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -691,7 +692,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["123456789"],
+		"hint": ["123456789"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -704,7 +705,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["https://example.com/page.html"],
+		"hint": ["https://example.com/page.html"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -717,7 +718,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["website"],
+		"hint": ["website"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -730,7 +731,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["Content Title"],
+		"hint": ["Content Title"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -743,7 +744,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["https://example.com/image.png"],
+		"hint": ["https://example.com/image.png"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -756,7 +757,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["A description of the image"],
+		"hint": ["A description of the image"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -769,7 +770,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["A description of the page"],
+		"hint": ["A description of the page"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -782,7 +783,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["Site Name"],
+		"hint": ["Site Name"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -795,7 +796,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["en_US"],
+		"hint": ["en_US"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -808,7 +809,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["John Doe"],
+		"hint": ["John Doe"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -821,7 +822,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "facebook",
-		"suggested": ["1.0"],
+		"hint": ["1.0"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -834,7 +835,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"suggested": ["Summary of content"],
+		"hint": ["Summary of content"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -847,7 +848,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"suggested": ["@website_account"],
+		"hint": ["@website_account"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -860,7 +861,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"suggested": ["@creator_account"],
+		"hint": ["@creator_account"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -873,7 +874,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"suggested": ["https://example.com/page.html"],
+		"hint": ["https://example.com/page.html"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -886,7 +887,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"suggested": ["Content Title"],
+		"hint": ["Content Title"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -899,7 +900,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"suggested": ["Content description less than 200 characters"],
+		"hint": ["Content description less than 200 characters"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -912,7 +913,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"suggested": ["https://example.com/image.png"],
+		"hint": ["https://example.com/image.png"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -925,7 +926,7 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"suggested": ["A description of the image"],
+		"hint": ["A description of the image"],
 		"autofill": false,
 		"summary": [],
 		"links": [
@@ -938,11 +939,240 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"suggested": ["on"],
+		"hint": ["on"],
 		"autofill": true,
 		"summary": [],
 		"links": [
 			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
 		]
 	},
+	{
+		"tag": ["link rel=\"amphtml\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "other",
+		"subcategory": null,
+		"hint": ["https://example.com/page/amp.html"],
+		"autofill": false,
+		"summary": ["Link to AMP page"],
+		"links": [
+			{"href": "https://amp.dev/", "text": "amp.dev"}
+		]
+	},
+	{
+		"tag": ["link rel=\"manifest\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"hint": ["manifest.json"],
+		"autofill": false,
+		"summary": ["Link to web app manifest"],
+		"links": [
+
+		]
+	},
+	{
+		"tag": ["link rel=\"preconnect\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "performance",
+		"hint": ["https://example.com/"],
+		"autofill": false,
+		"summary": ["Tells the browser to initiate a connection to the linked content upon page load", "Improves load time of linked content, but doesn't complete a connection"],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect", "text": "MDN"},
+			{"href": "https://www.debugbear.com/blog/resource-hints-rel-preload-prefetch-preconnect", "text": "Preload / Prefetch / Preconnect}"}
+		]
+	},
+	{
+		"tag": ["link rel=\"prefetch\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "performance",
+		"hint": ["https://example.com/"],
+		"autofill": false,
+		"summary": ["Tells the browser to fetch and cache the linked content upon page load", "Improves load time of linked content"],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/prefetch", "text": "MDN"},
+			{"href": "https://www.debugbear.com/blog/resource-hints-rel-preload-prefetch-preconnect", "text": "Preload / Prefetch / Preconnect}"}
+		]
+	},
+	{
+		"tag": ["link rel=\"dns-prefetch\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "performance",
+		"hint": ["https://example.com/"],
+		"autofill": false,
+		"summary": ["Tells the browser to resolve DNS for link upon page load", "Improves load time of linked content"],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch", "text": "MDN"}
+		]
+	},
+	{
+		"tag": ["link rel=\"canonical\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "alt",
+		"hint": ["https://example.com/article"],
+		"autofill": false,
+		"summary": ["Used to prevent duplicate content in search engines", "Link to the page's main location"],
+		"links": [
+			{"href": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls#rel-canonical-link-method", "text": "Google Dev Docs"}
+		]
+	},
+	{
+		"tag": ["link rel=\"alternate\" href=", "hreflang="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "alt",
+		"hint": ["https://es.example.com/", "es"],
+		"autofill": false,
+		"summary": ["Point to the page in a different language", "Used by search engines"],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#alternate", "text": "MDN"},
+			{"href": "https://en.wikipedia.org/wiki/Hreflang", "text": "Wikipedia"}
+		]
+	},
+	{
+		"tag": ["link rel=\"prev\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "alt",
+		"hint": ["https://example.com/article/?page=1"],
+		"autofill": false,
+		"summary": ["Previous page in a series"],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#prev", "text": "MDN"}
+		]
+	},
+	{
+		"tag": ["link rel=\"next\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "content",
+		"subcategory": "alt",
+		"hint": ["https://example.com/article/?page=3"],
+		"autofill": false,
+		"summary": ["Next page in a series"],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#next", "text": "MDN"}
+		]
+	},
+	{
+		"tag": ["link rel=\"webmention\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "misc",
+		"subcategory": null,
+		"hint": ["https://example.com/webmention"],
+		"autofill": false,
+		"summary": ["URL for Webmention service", "Used to notify other sites about mentions"],
+		"links": [
+			{"href": "https://www.w3.org/TR/webmention/", "text": "W3C"},
+			{"href": "https://indieweb.org/Webmention", "text": "IndieWeb"}
+		]
+	},
+	{
+		"tag": ["link rel=\"micropub\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "misc",
+		"subcategory": null,
+		"hint": ["https://example.com/micropub"],
+		"autofill": false,
+		"summary": ["Micropub endpoint"],
+		"links": [
+			{"href": "https://www.w3.org/TR/micropub/", "text": "W3C"},
+			{"href": "https://indieweb.org/Micropub", "text": "IndieWeb"}
+		]
+	},
+	{
+		"tag": ["meta name=\"generator\" content="],
+		"type": "text",
+		"standard": true,
+		"category": "misc",
+		"subcategory": null,
+		"hint": ["WordPress 3.0.1"],
+		"autofill": false,
+		"summary": ["Identify the software used to build the site (if any)"],
+		"links": [
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#meta-generator", "text": "WHATWG"}
+		]
+	},
+	{
+		"tag": ["meta name=\"rating\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "misc",
+		"subcategory": null,
+		"hint": ["adult"],
+		"autofill": false,
+		"summary": ["Mark explicit content for search engines"],
+		"links": [
+			{"href": "https://developers.google.com/search/docs/crawling-indexing/safesearch#add-metadata", "text": "Google Dev Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"ICBM\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "misc",
+		"subcategory": null,
+		"hint": ["latitude, longitude"],
+		"autofill": false,
+		"summary": ["Specify geographic location (latitude, longitude)", "Older version of geo.position"],
+		"links": [
+			{"href": "https://www.geo-tag.de/informator/en2.html", "text": "Geo Tag Information"}
+		]
+	},
+	{
+		"tag": ["meta name=\"geo.position\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "misc",
+		"subcategory": null,
+		"hint": ["latitude;longitude"],
+		"autofill": false,
+		"summary": ["Specify geographic location (latitude;longitude)"],
+		"links": [
+			{"href": "https://www.geo-tag.de/informator/en2.html", "text": "Geo Tag Information"}
+		]
+	},
+	{
+		"tag": ["meta name=\"geo.region\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "misc",
+		"subcategory": null,
+		"hint": ["country[-state]"],
+		"autofill": false,
+		"summary": ["Identify approximate location", "Country code (ISO 3166-1) required", "Region code (ISO 3166-2) optional", "e.g. content=\"US\" | content=\"US-NY\""],
+		"links": [
+			{"href": "https://www.geo-tag.de/informator/en2.html", "text": "Geo Tag Information"}
+		]
+	},
+	{
+		"tag": ["meta name=\"geo.placename\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "misc",
+		"subcategory": null,
+		"hint": ["New York"],
+		"autofill": false,
+		"summary": ["Name of location"],
+		"links": [
+			{"href": "https://www.geo-tag.de/informator/en2.html", "text": "Geo Tag Information"}
+		]
+	}
 ]
+
+
+
