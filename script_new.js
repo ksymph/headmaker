@@ -40,12 +40,23 @@ function populateForms(tags) {
 
 		// inputs
 		let tagInputs = "";
-		if (tag.type === "text") {
+		if (tag.type === "text" || tag.type === "inset") {
+			tagInputs += `<div class="tag-input">`;
 			for(const hint of tag.hint) {
 				tagInputs += `<input type="text" placeholder="${hint}"`;
 				tagInputs += (tag.autofill) ? ` value="${hint}"` : "";
 				tagInputs += ">";
 			}
+			tagInputs += `</div>`;
+		} else if (tag.type === "check") {
+			tagInputs += `<div class="tag-input input-check">`;
+			for(const hint of tag.hint) {
+				tagInputs += `<input type="checkbox">`;
+				tagInputs += `<input type="text" placeholder="${hint}"`;
+				tagInputs += (tag.autofill) ? ` value="${hint}"` : "";
+				tagInputs += " readonly>";
+			}
+			tagInputs += `</div>`;
 		}
 
 		// label
