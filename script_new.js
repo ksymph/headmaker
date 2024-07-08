@@ -1,17 +1,17 @@
-// type can be: text | inset | check
-
+let tags;
 
 async function generateForms() {
 	const response = await fetch("tags.json");
-	const tags = await response.json();
+	tags = await response.json();
+
+	for (let i = 0; i < tags.length; i++) {
+		tags[i].index = i;
+	}
 
 	populateForms(tags);
 
 }
 
-function parseTag(tag) {
-
-}
 
 function populateForms(tags) {
 	// const categories = document.querySelectorAll(".category");
@@ -98,15 +98,15 @@ function populateForms(tags) {
 
 
 
-		selectedSubcategory.innerHTML += `<details class="tag${(tag.standard) ? " standard" : ""}">
+		selectedSubcategory.innerHTML += `<details class="tag${(tag.standard) ? " standard" : ""} type-${tag.type}">
 
-							<summary class="tag-main">
+							<summary class="tag-main"">
 								<div class="tag-label">
 									${tagLabel}
 								</div>
-								<div class="tag-input">
+
 									${tagInputs}
-								</div>
+
 							</summary>
 
 							<div class="tag-details">
@@ -120,5 +120,53 @@ function populateForms(tags) {
 	}
 }
 
+function buildOutput() {
+	const tagsHtml = document.querySelectorAll(".tag");
 
+	let output = "";
+
+	for (const tagHtml of tagsHtml) {
+		if (tagHtml.classList.contains("type-text")) {
+			const inputs = tagHtml.querySelectorAll(".tag-input input");
+			const labels = tagHtml.querySelectorAll(".tag-label span");
+
+			let isFilled = false;
+			let tagContent = "";
+
+			for (let i = 0; i < inputs.length; i++) {
+				if (inputs[i].value) {
+					isFilled = true;
+					tagContent += `<${labels[i].innerText}"${inputs[i].value}">`
+				}
+			}
+			output += isFilled ? tagContent : "";
+		} else if (tagHtml.classList.contains("type-check")) {
+			const checkbox = tagHtml.querySelector("input[type='checkbox']");
+			const label = tagHtml.querySelector(".tag-label span");
+			const value = tagHtml.querySelector("input[type='text']");
+			console.log(value);
+			if (checkbox.checked) {
+				output += `<${label.innerText}"${value.value}">`;
+			}
+		} else if (tagHtml.classList.contains("type-inset")) {
+			const label = tagHtml.querySelector(".tag-label span");
+			const value = tagHtml.querySelector("input[type='text']");
+			if (value.value) {
+				output += `<${label.innerText}>${value.value}</${label.innerText}>`;
+			}
+		}
+	}
+
+
+
+
+	document.getElementById("output-code").innerText = output;
+}
+
+
+
+
+
+
+document.querySelector("#copy-code").onclick = buildOutput;
 generateForms();
