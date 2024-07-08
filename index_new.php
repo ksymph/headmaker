@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>headmaker</title>
 	<link rel="stylesheet" href="style_new.css">
+	<script src="script_new.js" defer></script>
 </head>
 
 <body>
@@ -19,17 +20,66 @@
 		</header>
 
 		<section id="headmaker-app">
-			<section id="left-pane">
+			<section id="input-pane">
+				<div class="category" id="core">
+					<div class="category-label">
+						<h2 class="category-label-main">Core</h2>
+						<div class="category-label-buttons">
+							<div class="collapse link">expand all</div>
+							<div class="hide link">hide</div>
+						</div>
+					</div>
+					<div class="category-content"></div>
+				</div>
+				<div class="category" id="content">
+					<div class="category-label">
+						<h2 class="category-label-main">Content</h2>
+						<div class="category-label-buttons">
+							<div class="collapse link">expand all</div>
+							<div class="hide link">hide</div>
+						</div>
+					</div>
+					<div class="category-content"></div>
+				</div>
+				<div class="category" id="application">
+					<div class="category-label">
+						<h2 class="category-label-main">Application</h2>
+						<div class="category-label-buttons">
+							<div class="collapse link">expand all</div>
+							<div class="hide link">hide</div>
+						</div>
+					</div>
+					<div class="category-content"></div>
+				</div>
+				<div class="category" id="social">
+					<div class="category-label">
+						<h2 class="category-label-main">Social</h2>
+						<div class="category-label-buttons">
+							<div class="collapse link">expand all</div>
+							<div class="hide link">hide</div>
+						</div>
+					</div>
+					<div class="category-content"></div>
+				</div>
+				<div class="category" id="other">
+					<div class="category-label">
+						<h2 class="category-label-main">Other</h2>
+						<div class="category-label-buttons">
+							<div class="collapse link">expand all</div>
+							<div class="hide link">hide</div>
+						</div>
+					</div>
+					<div class="category-content"></div>
+				</div>
+
 
 			</section>
-			<section id="right-pane">
-				<div id="output-box">
-					<span class="link" id="copy-code">Copy</span>
-					<div id="output-container">
-						<code id="output-code">
-							This requires JavaScript!
-						</code>
-					</div>
+			<section id="output-pane">
+				<span class="link" id="copy-code">Copy</span>
+				<div id="output-container">
+					<code id="output-code">
+						This requires JavaScript!
+					</code>
 				</div>
 			</section>
 		</section>

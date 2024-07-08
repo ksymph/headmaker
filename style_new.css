@@ -22,10 +22,13 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 32px;
 }
 
-a {
+a, .link {
 	color: var(--accent);
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 
@@ -60,3 +63,169 @@ h1 {
 
 
 
+
+
+
+
+#headmaker-app {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+#input-pane {
+	width: 60vw;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+#output-pane {
+	width: 30vw;
+}
+
+
+
+.category {
+	background-color: var(--primary);
+	padding: 0px 2px 2px 2px;
+}
+
+.category-label {
+	display: flex;
+	justify-content: space-between;
+	height: 16px;
+	align-items: flex-end;
+}
+.category-label-main {
+	margin: 0;
+	font-size: 2em;
+	line-height: .85em;
+	padding-left: 2px;
+}
+.category-label-buttons {
+	display: flex;
+	gap: 16px;
+	font-size: .85em;
+	padding-bottom: 2px;
+	padding-right: 8px;
+}
+
+
+
+
+.category-content {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+}
+
+.subcategory {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+}
+
+.subcategory-header {
+	width: 90%;
+	background-color: white;
+	margin: .5em auto;
+	height: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.subcategory-header span {
+	position: relative;
+	display: block;
+	background-color: var(--primary);
+	padding: 0 12px;
+}
+
+/*
+.null .subcategory-header {
+	display: none;
+}
+*/
+
+
+
+
+.tag {
+	background-color: var(--background-a);
+	border-radius: 2px;
+}
+.tag:nth-child(odd) {
+	background-color: var(--background-b);
+}
+
+.tag-main {
+	display: flex;
+	cursor: pointer;
+	font-family: monospace;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px 0;
+	margin: 0 8px;
+}
+
+.tag-main:before {
+	content: "\25BA";
+	position: absolute;
+}
+
+.tag[open] .tag-main:before {
+	content: "\25BC";
+}
+
+.tag-label {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1em;
+}
+
+.tag-input {
+	display: flex;
+	flex-direction: column;
+}
+.tag-input input {
+	font-family: monospace;
+}
+
+.tag[open] .tag-main {
+	border-bottom: 2px dashed var(--primary);
+}
+
+.tag-details p {
+	margin: 2px 12px;
+	text-indent: -16px;
+	padding-left: 16px;
+}
+
+.tag-details ul {
+	margin: 8px 16px;
+	font-family: monospace;
+	text-indent: -16px;
+	padding-left: 16px;
+	font-size: .9em;
+}
+
+.tag-details li {
+	padding-left: 12px;
+}
+
+.tag-details li .link {
+	padding-right: 12px;
+}
+
+.standard {
+	border-left: 3px solid var(--accent);
+}
+
+.standard-text {
+	border-bottom: 3px solid var(--accent);
+	width: fit-content;
+	padding-right: 16px;
+	font-size: .8em;
+}
