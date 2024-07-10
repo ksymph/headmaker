@@ -9,7 +9,8 @@ async function generateForms() {
 	}
 
 	populateForms(tags);
-
+	buildOutput();
+	addInputListeners();
 }
 
 
@@ -144,7 +145,6 @@ function buildOutput() {
 			const checkbox = tagHtml.querySelector("input[type='checkbox']");
 			const label = tagHtml.querySelector(".tag-label span");
 			const value = tagHtml.querySelector("input[type='text']");
-			console.log(value);
 			if (checkbox.checked) {
 				output += `<${label.innerText}"${value.value}">`;
 			}
@@ -163,6 +163,25 @@ function buildOutput() {
 	document.getElementById("output-code").innerText = output;
 }
 
+let timeoutId;
+
+function addInputListeners() {
+	const textInputs = document.querySelectorAll(".tag-input input[type='text']");
+	const checkInputs = document.querySelectorAll(".tag-input input[type='checkbox']");
+
+	for (const inputItem of textInputs) {
+		inputItem.addEventListener("keyup", function(event) {
+			clearTimeout(timeoutId);
+			timeoutId = setTimeout(buildOutput, 500);
+		})
+	}
+
+	for (const inputItem of checkInputs) {
+		inputItem.addEventListener("click", function(event) {
+			buildOutput();
+		})
+	}
+}
 
 
 
