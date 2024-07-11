@@ -87,7 +87,7 @@ h1 {
 
 .category {
 	background-color: var(--primary);
-	padding: 0px 2px 2px 2px;
+	padding: 0px 3px 3px 3px;
 }
 
 .category-label {
@@ -238,4 +238,12 @@ h1 {
 	width: fit-content;
 	padding-right: 16px;
 	font-size: .75em;
+}
+
+#output-container {
+	background-color: #011b23;
+	border-radius: 10px;
+	border: 2px solid #3b4362;
+	padding: 6px 10px;
+	overflow: auto;
 }
