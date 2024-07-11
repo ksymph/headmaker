@@ -25,8 +25,8 @@
 					<div class="category-label">
 						<h2 class="category-label-main">Core</h2>
 						<div class="category-label-buttons">
-							<div class="collapse link">expand all</div>
-							<div class="hide link">hide</div>
+							<div class="collapse link" data-checked="false">expand all</div>
+
 						</div>
 					</div>
 					<div class="category-content"></div>
@@ -35,8 +35,8 @@
 					<div class="category-label">
 						<h2 class="category-label-main">Content</h2>
 						<div class="category-label-buttons">
-							<div class="collapse link">expand all</div>
-							<div class="hide link">hide</div>
+							<div class="collapse link" data-checked="false">expand all</div>
+
 						</div>
 					</div>
 					<div class="category-content"></div>
@@ -45,8 +45,8 @@
 					<div class="category-label">
 						<h2 class="category-label-main">Application</h2>
 						<div class="category-label-buttons">
-							<div class="collapse link">expand all</div>
-							<div class="hide link">hide</div>
+							<div class="collapse link" data-checked="false">expand all</div>
+
 						</div>
 					</div>
 					<div class="category-content"></div>
@@ -55,8 +55,8 @@
 					<div class="category-label">
 						<h2 class="category-label-main">Social</h2>
 						<div class="category-label-buttons">
-							<div class="collapse link">expand all</div>
-							<div class="hide link">hide</div>
+							<div class="collapse link" data-checked="false">expand all</div>
+
 						</div>
 					</div>
 					<div class="category-content"></div>
@@ -65,8 +65,8 @@
 					<div class="category-label">
 						<h2 class="category-label-main">Other</h2>
 						<div class="category-label-buttons">
-							<div class="collapse link">expand all</div>
-							<div class="hide link">hide</div>
+							<div class="collapse link" data-checked="false">expand all</div>
+
 						</div>
 					</div>
 					<div class="category-content"></div>
@@ -75,12 +75,12 @@
 
 			</section>
 			<section id="output-pane">
-				<span class="link" id="copy-code">Copy</span>
 				<div id="output-container">
 					<code id="output-code">
 						This requires JavaScript!
 					</code>
 				</div>
+				<span class="link" id="copy-code">copy</span>
 			</section>
 		</section>
 

@@ -11,6 +11,8 @@ async function generateForms() {
 	populateForms(tags);
 	buildOutput();
 	addInputListeners();
+	addExpandListeners();
+	addAutofillListeners();
 }
 
 
@@ -90,41 +92,38 @@ function populateForms(tags) {
 		}
 
 		// standard
-
 		let tagStandardText = "";
 		if (tag.standard) {
 			tagStandardText = `<div class="standard-text">Part of the WHATWG HTML standard</div>`;
 		}
 
+		selectedSubcategory.innerHTML += `
+			<details class="tag${(tag.standard) ? " standard" : ""} type-${tag.type}">
+				<summary class="tag-main"">
+					<div class="tag-label">
+						${tagLabel}
+					</div>
 
+						${tagInputs}
 
+				</summary>
 
-		selectedSubcategory.innerHTML += `<details class="tag${(tag.standard) ? " standard" : ""} type-${tag.type}">
+				<div class="tag-details">
+					${tagDescription}
+					${tagSuggestions}
+					${tagLinks}
+					${tagStandardText}
+				</div>
 
-							<summary class="tag-main"">
-								<div class="tag-label">
-									${tagLabel}
-								</div>
-
-									${tagInputs}
-
-							</summary>
-
-							<div class="tag-details">
-								${tagDescription}
-								${tagSuggestions}
-								${tagLinks}
-								${tagStandardText}
-							</div>
-
-						</details>`;
+			</details>
+		`;
 	}
 }
 
 function buildOutput() {
 	const tagsHtml = document.querySelectorAll(".tag");
 
-	let output = "";
+	let output = "<head>\n";
 
 	for (const tagHtml of tagsHtml) {
 		if (tagHtml.classList.contains("type-text")) {
@@ -137,7 +136,7 @@ function buildOutput() {
 			for (let i = 0; i < inputs.length; i++) {
 				if (inputs[i].value) {
 					isFilled = true;
-					tagContent += `<${labels[i].innerText}"${inputs[i].value}">`
+					tagContent += `<${labels[i].innerText}"${inputs[i].value}">\n`
 				}
 			}
 			output += isFilled ? tagContent : "";
@@ -146,19 +145,18 @@ function buildOutput() {
 			const label = tagHtml.querySelector(".tag-label span");
 			const value = tagHtml.querySelector("input[type='text']");
 			if (checkbox.checked) {
-				output += `<${label.innerText}"${value.value}">`;
+				output += `<${label.innerText}"${value.value}">\n`;
 			}
 		} else if (tagHtml.classList.contains("type-inset")) {
 			const label = tagHtml.querySelector(".tag-label span");
 			const value = tagHtml.querySelector("input[type='text']");
 			if (value.value) {
-				output += `<${label.innerText}>${value.value}</${label.innerText}>`;
+				output += `<${label.innerText}>${value.value}</${label.innerText}>\n`;
 			}
 		}
 	}
 
-
-
+	output += `</head>`;
 
 	document.getElementById("output-code").innerText = output;
 }
@@ -183,9 +181,49 @@ function addInputListeners() {
 	}
 }
 
+function addExpandListeners() {
+	const categories = document.querySelectorAll(".category");
+	for (const category of categories) {
+		const tagList = category.querySelectorAll("details");
+		const expandButton = category.querySelector(".collapse");
+		expandButton.addEventListener("click", function() {
+			const isChecked = expandButton.dataset.checked;
+			const toBeCollapsed = (isChecked === "true") ? true : false;
+
+			expandButton.dataset.checked = !toBeCollapsed;
+			expandButton.innerText = toBeCollapsed ? "expand all" : "collapse all";
+			for (const tag of tagList) {
+				tag.open = !toBeCollapsed;
+			}
+		});
+	}
+}
+
+function addAutofillListeners() {
+	const tags = document.querySelectorAll(".tag");
+	for (const tag of tags) {
+		const input = tag.querySelector(".tag-input input")
+		const autofillList = tag.querySelectorAll(".tag-details li .link");
+		for (const autofillItem of autofillList) {
+			autofillItem.addEventListener("click", function() {
+				input.value = autofillItem.innerText;
+			});
+		}
+	}
+}
 
 
 
+const copyButton = document.getElementById("copy-code")
+const output = document.getElementById("output-code")
+function resetCopyButton () {
+	copyButton.innerText = "copy";
+}
+function copyOutput () {
+	navigator.clipboard.writeText(output.innerText);
+	copyButton.innerText = "copied!";
+	setTimeout(resetCopyButton, 1000);
+}
+copyButton.addEventListener("click", copyOutput);
 
-document.querySelector("#copy-code").onclick = buildOutput;
 generateForms();
