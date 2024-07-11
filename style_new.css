@@ -40,7 +40,7 @@ a, .link {
 header {
 	background-color: var(--background-b);
 	border: 3px solid var(--primary);
-	border-top: 32px solid var(--primary);
+	border-top: 30px solid var(--primary);
 	border-radius: 3px;
 	margin-top: 32px;
 }
@@ -93,7 +93,7 @@ h1 {
 .category-label {
 	display: flex;
 	justify-content: space-between;
-	height: 16px;
+	height: 20px;
 	align-items: flex-end;
 }
 .category-label-main {
@@ -193,6 +193,10 @@ h1 {
 	font-family: monospace;
 }
 
+.tag-input input[type="text"] {
+	width: 256px;
+}
+
 .tag-input.input-check {
 	flex-direction: row;
 }
@@ -246,4 +250,10 @@ h1 {
 	border: 2px solid #3b4362;
 	padding: 6px 10px;
 	overflow: auto;
+}
+
+#license {
+	display: block;
+	width: 100%;
+	text-align: center;
 }

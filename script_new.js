@@ -30,8 +30,10 @@ function populateForms(tags) {
 		categories[category].innerHTML += `<div class="subcategory null"></div>`;
 	}
 	for (const tag of tags) {
+		const subcategoryString = tag.subcategory;
+		tag.subcategory = tag.subcategory ? tag.subcategory.replace(/\s+/g, '-') : null;
 		if (!categories[tag.category].querySelector(`.${tag.subcategory}`)) {
-			categories[tag.category].innerHTML += `<div class="subcategory ${tag.subcategory}"><div class="subcategory-header"><span>${tag.subcategory}</span></div></div>`;
+			categories[tag.category].innerHTML += `<div class="subcategory ${tag.subcategory}"><div class="subcategory-header"><span>${subcategoryString}</span></div></div>`;
 		}
 	}
 
@@ -207,6 +209,7 @@ function addAutofillListeners() {
 		for (const autofillItem of autofillList) {
 			autofillItem.addEventListener("click", function() {
 				input.value = autofillItem.innerText;
+				buildOutput();
 			});
 		}
 	}
