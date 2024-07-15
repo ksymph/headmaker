@@ -41,7 +41,7 @@ header {
 	background-color: var(--background-b);
 	border: 3px solid var(--primary);
 	border-top: 30px solid var(--primary);
-	border-radius: 3px;
+	border-radius: 1px;
 	margin-top: 32px;
 }
 
@@ -88,6 +88,7 @@ h1 {
 .category {
 	background-color: var(--primary);
 	padding: 0px 3px 3px 3px;
+	border-radius: 1px;
 }
 
 .category-label {
@@ -237,6 +238,10 @@ h1 {
 	border-left: 3px solid var(--accent);
 }
 
+.standard .tag-main {
+	margin-left: 6px;
+}
+
 .standard-text {
 	border-bottom: 3px solid var(--accent);
 	width: fit-content;
@@ -256,4 +261,10 @@ h1 {
 	display: block;
 	width: 100%;
 	text-align: center;
+}
+
+#output-controls {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4px;
 }

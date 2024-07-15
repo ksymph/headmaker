@@ -8,6 +8,12 @@ async function generateForms() {
 		tags[i].index = i;
 	}
 
+	// clear everything for a reset
+	const categoryContents = document.querySelectorAll(".category-content");
+	for (const content of categoryContents) {
+		content.innerHTML = "";
+	}
+
 	populateForms(tags);
 	buildOutput();
 	addInputListeners();
@@ -17,7 +23,6 @@ async function generateForms() {
 
 
 function populateForms(tags) {
-	// const categories = document.querySelectorAll(".category");
 	const categories = {};
 	categories["core"] = document.querySelector("#core .category-content");
 	categories["content"] = document.querySelector("#content .category-content");
@@ -96,7 +101,7 @@ function populateForms(tags) {
 		// standard
 		let tagStandardText = "";
 		if (tag.standard) {
-			tagStandardText = `<div class="standard-text">Part of the WHATWG HTML standard</div>`;
+			tagStandardText = `<div class="standard-text">Part of the HTML standard</div>`;
 		}
 
 		selectedSubcategory.innerHTML += `
@@ -204,7 +209,7 @@ function addExpandListeners() {
 function addAutofillListeners() {
 	const tags = document.querySelectorAll(".tag");
 	for (const tag of tags) {
-		const input = tag.querySelector(".tag-input input")
+		const input = tag.querySelector(".tag-input input");
 		const autofillList = tag.querySelectorAll(".tag-details li .link");
 		for (const autofillItem of autofillList) {
 			autofillItem.addEventListener("click", function() {
@@ -217,8 +222,8 @@ function addAutofillListeners() {
 
 
 
-const copyButton = document.getElementById("copy-code")
-const output = document.getElementById("output-code")
+const copyButton = document.getElementById("copy-code");
+const output = document.getElementById("output-code");
 function resetCopyButton () {
 	copyButton.innerText = "copy";
 }
@@ -228,5 +233,11 @@ function copyOutput () {
 	setTimeout(resetCopyButton, 1000);
 }
 copyButton.addEventListener("click", copyOutput);
+
+
+
+
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", generateForms);
 
 generateForms();

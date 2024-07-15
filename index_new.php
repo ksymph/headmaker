@@ -52,7 +52,7 @@
 				</div>
 				<div class="category" id="social">
 					<div class="category-label">
-						<h2 class="category-label-main">Social</h2>
+						<h2 class="category-label-main">Social & Embeds</h2>
 						<div class="category-label-buttons">
 							<div class="collapse link" data-checked="false">expand all</div>
 
@@ -74,12 +74,16 @@
 
 			</section>
 			<section id="output-pane">
+				<div id="output-controls">
+					<span class="link" id="copy-code">copy</span>
+					<span class="link" id="reset">reset</span>
+				</div>
 				<div id="output-container">
 					<code id="output-code">
 						This requires JavaScript!
 					</code>
 				</div>
-				<span class="link" id="copy-code">copy</span>
+
 			</section>
 		</section>
 
