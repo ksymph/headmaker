@@ -12,7 +12,8 @@
 			{"value": "utf-8", "description": "standard"}
 		],
 		"links": [
-			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset", "text": "WHATWG"}
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset", "text": "WHATWG"},
+			{"href": "https://www.w3schools.com/html/html_charset.asp", "text": "W3Schools"}
 		]
 	},
 	{
@@ -28,6 +29,7 @@
 			{"value": "width=device-width, initial-scale=1", "description": "sets page width to device width, and not zoomed in by default"}
 		],
 		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag", "text": "MDN"},
 			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag", "text": "MDN"}
 		]
 	},
@@ -55,8 +57,8 @@
 		"tag": ["meta http-equiv=\"refresh\" content="],
 		"type": "text",
 		"standard": true,
-		"category": "other",
-		"subcategory": "misc",
+		"category": "application",
+		"subcategory": null,
 		"hint": ["seconds; url=URL"],
 		"autofill": false,
 		"description": ["Timed page refresh"],
@@ -72,8 +74,8 @@
 		"tag": ["meta name=\"referrer\" content="],
 		"type": "text",
 		"standard": false,
-		"category": "other",
-		"subcategory": "misc",
+		"category": "application",
+		"subcategory": null,
 		"hint": ["default"],
 		"autofill": false,
 		"description": ["Controls what referrer information is sent"],
@@ -105,6 +107,20 @@
 		"links": []
 	},
 	{
+		"tag": ["link rel=\"preconnect\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "performance",
+		"hint": ["https://example.com/"],
+		"autofill": false,
+		"description": ["Tells the browser to initiate a connection to the linked content upon page load", "Improves load time of linked content, but doesn't complete a connection"],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect", "text": "MDN"},
+			{"href": "https://www.debugbear.com/blog/resource-hints-rel-preload-prefetch-preconnect", "text": "Preload / Prefetch / Preconnect}"}
+		]
+	},
+	{
 		"tag": ["title"],
 		"type": "inset",
 		"standard": true,
@@ -114,7 +130,9 @@
 		"autofill": false,
 		"description": ["Sets page title", "Displayed in search engine results, browser tab title, bookmarks, etc."],
 		"links": [
-			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element", "text": "WHATWG"}
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element", "text": "WHATWG"},
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title", "text": "MDN"},
+			{"href": "https://www.w3schools.com/html/html_page_title.asp", "text": "W3Schools"}
 		]
 	},
 	{
@@ -128,7 +146,8 @@
 		"description": ["Link to author information"],
 		"links": [
 			{"href": "https://microformats.org/wiki/rel-author", "text": "Microformats Wiki"},
-			{"href": "https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#link-type-author", "text": "W3C"}
+			{"href": "https://www.w3.org/TR/2011/WD-html5-author-20110809/links.html#link-type-author", "text": "W3C"},
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#author", "text": "MDN"}
 		]
 	},
 	{
@@ -152,20 +171,10 @@
 		"subcategory": null,
 		"hint": ["Application Name"],
 		"autofill": false,
-		"description": ["Application title for single page applications", "Should not be used if page is not a SPA"],
+		"description": ["Title for web applications", "Should not be used if page is not a web application", "(no precise definition for web application is given by WHATWG)"],
 		"links": [
 			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name", "text": "WHATWG"}
 		]
-	},
-	{
-		"tag": ["meta name=\"subject\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "content",
-		"subcategory": "metadata",
-		"hint": ["HTML Head Generator"],
-		"autofill": false,
-		"description": ["Short description of the subject of the page", "Largely obsolete; no longer widely used by major search engines, browsers etc."]
 	},
 	{
 		"tag": ["link rel=\"license\" href="],
@@ -177,6 +186,7 @@
 		"autofill": false,
 		"description": ["Link to file with licensing information"],
 		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#license", "text": "MDN"},
 			{"href": "https://microformats.org/wiki/rel-license", "text": "Microformats Wiki"}
 		]
 	},
@@ -202,7 +212,7 @@
 		"subcategory": "metadata",
 		"hint": ["blog, travel"],
 		"autofill": false,
-		"description": ["Keywords relating to the page", "Largely obsolete; no longer widely used by major search engines, browsers etc."],
+		"description": ["Keywords relating to the page", "Obsolete; no longer widely used by major search engines, browsers etc."],
 		"links": [
 			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#meta-keywords", "text": "WHATWG"}
 		]
@@ -212,12 +222,13 @@
 		"type": "text",
 		"standard": false,
 		"category": "content",
-		"subcategory": "alt",
+		"subcategory": "feed",
 		"hint": ["/rss/"],
 		"autofill": false,
 		"description": ["Link to RSS feed"],
 		"links": [
-			{"href": "https://www.rssboard.org/rss-autodiscovery", "text": "RSS Advisory Board"}
+			{"href": "https://www.rssboard.org/rss-autodiscovery", "text": "RSS Advisory Board"},
+			{"href": "https://www.xul.fr/en-xml-rss.html", "text": "Building and Using an RSS Feed"}
 		]
 	},
 	{
@@ -225,20 +236,13 @@
 		"type": "text",
 		"standard": false,
 		"category": "content",
-		"subcategory": "alt",
+		"subcategory": "feed",
 		"hint": ["/atom/"],
 		"autofill": false,
-		"description": ["Link to atom feed"]
-	},
-	{
-		"tag": ["link rel=\"self\" type=\"application/atom+xml\" href="],
-		"type": "text",
-		"standard": false,
-		"category": "content",
-		"subcategory": "alt",
-		"hint": ["https://example.com/atom.xml"],
-		"autofill": false,
-		"description": ["Point to current document, for use with feeds"]
+		"description": ["Link to atom feed"],
+		"links": [
+			{"href": "https://validator.w3.org/feed/docs/atom.html", "text": "W3C"}
+		]
 	},
 	{
 		"tag": ["meta name=\"robots\" content="],
@@ -250,13 +254,26 @@
 		"autofill": false,
 		"description": ["Instructions for crawlers", "robots.txt is site-wide, use this for per-page control"],
 		"suggested": [
-			{"value": "index,follow", "description": ""},
-			{"value": "noindex,nofollow", "description": ""},
-			{"value": "index,nofollow", "description": ""},
-			{"value": "noindex,follow", "description": ""}
+			{"value": "index,follow", "description": "Index page and any links in it"},
+			{"value": "noindex,nofollow", "description": "Don't index page or any links in it"},
+			{"value": "index,nofollow", "description": "Index page, but no links"},
+			{"value": "noindex,follow", "description": "Don't index page, but follow links"}
 		],
 		"links": [
 			{"href": "https://www.robotstxt.org/meta.html", "text": "robotstxt.org"}
+		]
+	},
+	{
+		"tag": ["meta name=\"mobile-web-app-capable\" content="],
+		"type": "check",
+		"standard": false,
+		"category": "application",
+		"subcategory": "pwa",
+		"hint": ["yes"],
+		"autofill": true,
+		"description": ["Disable navigation bar for web apps on Android"],
+		"links": [
+			{"href": "https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
 		]
 	},
 	{
@@ -264,7 +281,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": null,
+		"subcategory": "app links",
 		"hint": ["https://example.com"],
 		"autofill": false,
 		"description": ["Canonical link to be optionally used alongside app links", "If user is on desktop or doesn't have the app installed, the page will automatically redirect to the specified URL"],
@@ -282,10 +299,10 @@
 		"autofill": false,
 		"description": ["Control Google crawler behavior"],
 		"suggested": [
-			{"value": "index,follow", "description": ""},
-			{"value": "noindex,nofollow", "description": ""},
-			{"value": "index,nofollow", "description": ""},
-			{"value": "noindex,follow", "description": ""}
+			{"value": "index,follow", "description": "Index page and any links in it"},
+			{"value": "noindex,nofollow", "description": "Don't index page or any links in it"},
+			{"value": "index,nofollow", "description": "Index page, but no links"},
+			{"value": "noindex,follow", "description": "Don't index page, but follow links"}
 		],
 		"links": [
 			{"href": "https://developers.google.com/search/docs/crawling-indexing/special-tags", "text": "Google Developer Docs"}
@@ -310,24 +327,11 @@
 		]
 	},
 	{
-		"tag": ["meta name=\"mobile-web-app-capable\" content="],
-		"type": "check",
-		"standard": false,
-		"category": "application",
-		"subcategory": "pwa",
-		"hint": ["yes"],
-		"autofill": true,
-		"description": ["Disable navigation bar for web apps on Android"],
-		"links": [
-			{"href": "https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
-		]
-	},
-	{
 		"tag": ["meta property=\"al:android:url\" content="],
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": null,
+		"subcategory": "app links",
 		"hint": ["applinks://docs"],
 		"autofill": false,
 		"description": [],
@@ -340,7 +344,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": null,
+		"subcategory": "app links",
 		"hint": ["App Links"],
 		"autofill": false,
 		"description": [],
@@ -353,7 +357,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": null,
+		"subcategory": "app links",
 		"hint": ["org.applinks"],
 		"autofill": false,
 		"description": [],
@@ -366,9 +370,9 @@
 		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "qq",
+		"subcategory": "qq browser",
 		"hint": ["true"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["Address bar becomes a floating button"]
 	},
 	{
@@ -376,9 +380,9 @@
 		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "qq",
+		"subcategory": "qq browser",
 		"hint": ["app"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["If the page should display in 'application mode'"]
 	},
 
@@ -390,7 +394,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "uc",
+		"subcategory": "uc browser",
 		"hint": ["landscape"],
 		"autofill": false,
 		"description": ["Force certain screen orientation"],
@@ -404,9 +408,9 @@
 		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "uc",
+		"subcategory": "uc browser",
 		"hint": ["yes"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["Address bar becomes a floating button"]
 	},
 	{
@@ -414,9 +418,9 @@
 		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "uc",
+		"subcategory": "uc browser",
 		"hint": ["force"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["Force displaying images when browser is in text mode"]
 	},
 	{
@@ -424,9 +428,9 @@
 		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "uc",
+		"subcategory": "uc browser",
 		"hint": ["application"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["If the page should display in 'application mode'"]
 	},
 	{
@@ -434,9 +438,9 @@
 		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "uc",
+		"subcategory": "uc browser",
 		"hint": ["disable"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["Disable browser night mode"]
 	},
 	{
@@ -444,9 +448,9 @@
 		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "uc",
+		"subcategory": "uc browser",
 		"hint": ["fitscreen"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["Force a simplified rendering, similar to 'reader mode'"]
 	},
 	{
@@ -454,23 +458,23 @@
 		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "uc",
+		"subcategory": "uc browser",
 		"hint": ["no"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["Disable UC Browser's automatic resizing of fonts when page is detected as text-focused"]
 	},
 
 
 	{
 		"tag": ["meta name=\"format-detection\" content="],
-		"type": "text",
+		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "device",
-		"hint": ["date=no"],
-		"suggested": ["date=no", "telephone=no", "address=no", "email=no"],
-		"autofill": false,
-		"description": ["Disable automatic detection and formatting of addresses", "Safari-only"],
+		"subcategory": "safari",
+		"hint": ["telephone=no"],
+		"suggested": [],
+		"autofill": true,
+		"description": ["Disable automatic detection and linkification of phone numbers"],
 		"links": [
 			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW5", "text": "Apple Docs"}
 		]
@@ -558,7 +562,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "pwa",
+		"subcategory": "app links",
 		"hint": ["applinks://docs"],
 		"autofill": false,
 		"description": [],
@@ -571,7 +575,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "pwa",
+		"subcategory": "app links",
 		"hint": ["12345"],
 		"autofill": false,
 		"description": [],
@@ -584,7 +588,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "pwa",
+		"subcategory": "app links",
 		"hint": ["App Links"],
 		"autofill": false,
 		"description": [],
@@ -647,7 +651,7 @@
 
 
 	{
-		"tag": ["meta name=\"pinterest\""],
+		"tag": ["meta name=\"pinterest\" content=\"nopin\" description="],
 		"type": "text",
 		"standard": false,
 		"category": "social",
@@ -663,8 +667,8 @@
 		"tag": ["link rel=\"alternate\" type=\"application/json+oembed\" href=", "title="],
 		"type": "text",
 		"standard": false,
-		"category": "content",
-		"subcategory": "feed",
+		"category": "social",
+		"subcategory": "oembed",
 		"hint": ["https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=json", "oEmbed JSON"],
 		"autofill": false,
 		"description": [],
@@ -676,8 +680,8 @@
 		"tag": ["link rel=\"alternate\" type=\"text/xml+oembed\" href=", "title="],
 		"type": "text",
 		"standard": false,
-		"category": "content",
-		"subcategory": "feed",
+		"category": "social",
+		"subcategory": "oembed",
 		"hint": ["https://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&format=xml", "oEmbed XML"],
 		"autofill": false,
 		"description": [],
@@ -950,8 +954,8 @@
 		"tag": ["link rel=\"amphtml\" href="],
 		"type": "text",
 		"standard": false,
-		"category": "other",
-		"subcategory": null,
+		"category": "content",
+		"subcategory": "related",
 		"hint": ["https://example.com/page/amp.html"],
 		"autofill": false,
 		"description": ["Link to AMP page"],
@@ -970,20 +974,6 @@
 		"description": ["Link to web app manifest"],
 		"links": [
 
-		]
-	},
-	{
-		"tag": ["link rel=\"preconnect\" href="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "performance",
-		"hint": ["https://example.com/"],
-		"autofill": false,
-		"description": ["Tells the browser to initiate a connection to the linked content upon page load", "Improves load time of linked content, but doesn't complete a connection"],
-		"links": [
-			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect", "text": "MDN"},
-			{"href": "https://www.debugbear.com/blog/resource-hints-rel-preload-prefetch-preconnect", "text": "Preload / Prefetch / Preconnect}"}
 		]
 	},
 	{
@@ -1018,7 +1008,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "content",
-		"subcategory": "alt",
+		"subcategory": "related",
 		"hint": ["https://example.com/article"],
 		"autofill": false,
 		"description": ["Used to prevent duplicate content in search engines", "Link to the page's main location"],
@@ -1031,7 +1021,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "content",
-		"subcategory": "alt",
+		"subcategory": "related",
 		"hint": ["https://es.example.com/", "es"],
 		"autofill": false,
 		"description": ["Point to the page in a different language", "Used by search engines"],
@@ -1045,7 +1035,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "content",
-		"subcategory": "alt",
+		"subcategory": "related",
 		"hint": ["https://example.com/article/?page=1"],
 		"autofill": false,
 		"description": ["Previous page in a series"],
@@ -1058,7 +1048,7 @@
 		"type": "text",
 		"standard": false,
 		"category": "content",
-		"subcategory": "alt",
+		"subcategory": "related",
 		"hint": ["https://example.com/article/?page=3"],
 		"autofill": false,
 		"description": ["Next page in a series"],
@@ -1070,7 +1060,7 @@
 		"tag": ["link rel=\"webmention\" href="],
 		"type": "text",
 		"standard": false,
-		"category": "other",
+		"category": "social",
 		"subcategory": null,
 		"hint": ["https://example.com/webmention"],
 		"autofill": false,
@@ -1084,7 +1074,7 @@
 		"tag": ["link rel=\"micropub\" href="],
 		"type": "text",
 		"standard": false,
-		"category": "other",
+		"category": "social",
 		"subcategory": null,
 		"hint": ["https://example.com/micropub"],
 		"autofill": false,
@@ -1098,8 +1088,8 @@
 		"tag": ["meta name=\"generator\" content="],
 		"type": "text",
 		"standard": true,
-		"category": "other",
-		"subcategory": null,
+		"category": "content",
+		"subcategory": "metadata",
 		"hint": ["WordPress 3.0.1"],
 		"autofill": false,
 		"description": ["Identify the software used to build the site (if any)"],
@@ -1111,10 +1101,10 @@
 		"tag": ["meta name=\"rating\" content="],
 		"type": "check",
 		"standard": false,
-		"category": "other",
-		"subcategory": null,
+		"category": "content",
+		"subcategory": "metadata",
 		"hint": ["adult"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["Mark explicit content for search engines"],
 		"links": [
 			{"href": "https://developers.google.com/search/docs/crawling-indexing/safesearch#add-metadata", "text": "Google Dev Docs"}
@@ -1124,8 +1114,8 @@
 		"tag": ["meta name=\"ICBM\" content="],
 		"type": "text",
 		"standard": false,
-		"category": "other",
-		"subcategory": null,
+		"category": "content",
+		"subcategory": "metadata",
 		"hint": ["latitude, longitude"],
 		"autofill": false,
 		"description": ["Specify geographic location (latitude, longitude)", "Older version of geo.position"],
@@ -1137,8 +1127,8 @@
 		"tag": ["meta name=\"geo.position\" content="],
 		"type": "text",
 		"standard": false,
-		"category": "other",
-		"subcategory": null,
+		"category": "content",
+		"subcategory": "metadata",
 		"hint": ["latitude;longitude"],
 		"autofill": false,
 		"description": ["Specify geographic location (latitude;longitude)"],
@@ -1150,8 +1140,8 @@
 		"tag": ["meta name=\"geo.region\" content="],
 		"type": "text",
 		"standard": false,
-		"category": "other",
-		"subcategory": null,
+		"category": "content",
+		"subcategory": "metadata",
 		"hint": ["country[-state]"],
 		"autofill": false,
 		"description": ["Identify approximate location", "Country code (ISO 3166-1) required", "Region code (ISO 3166-2) optional", "e.g. content=\"US\" | content=\"US-NY\""],
@@ -1163,8 +1153,8 @@
 		"tag": ["meta name=\"geo.placename\" content="],
 		"type": "text",
 		"standard": false,
-		"category": "other",
-		"subcategory": null,
+		"category": "content",
+		"subcategory": "metadata",
 		"hint": ["New York"],
 		"autofill": false,
 		"description": ["Name of location"],
