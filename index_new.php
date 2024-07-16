@@ -60,16 +60,7 @@
 					</div>
 					<div class="category-content"></div>
 				</div>
-				<div class="category" id="other">
-					<div class="category-label">
-						<h2 class="category-label-main">Other</h2>
-						<div class="category-label-buttons">
-							<div class="collapse link" data-checked="false">expand all</div>
 
-						</div>
-					</div>
-					<div class="category-content"></div>
-				</div>
 
 
 			</section>

@@ -28,7 +28,6 @@ function populateForms(tags) {
 	categories["content"] = document.querySelector("#content .category-content");
 	categories["application"] = document.querySelector("#application .category-content");
 	categories["social"] = document.querySelector("#social .category-content");
-	categories["other"] = document.querySelector("#other .category-content");
 
 
 	for (const category in categories) {
