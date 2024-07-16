@@ -67,7 +67,8 @@
 			{"value": "10; url=https://www.example.com", "description": "redirect to example.com after 10 seconds"}
 		],
 		"links": [
-			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh", "text": "WHATWG"}
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh", "text": "WHATWG"},
+			{"href": "https://en.wikipedia.org/wiki/Meta_refresh", "text": "Wikipedia"}
 		]
 	},
 	{
@@ -117,7 +118,7 @@
 		"description": ["Tells the browser to initiate a connection to the linked content upon page load", "Improves load time of linked content, but doesn't complete a connection"],
 		"links": [
 			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect", "text": "MDN"},
-			{"href": "https://www.debugbear.com/blog/resource-hints-rel-preload-prefetch-preconnect", "text": "Preload / Prefetch / Preconnect}"}
+			{"href": "https://web.dev/learn/performance/resource-hints#preconnect", "text": "web.dev"}
 		]
 	},
 	{
@@ -158,22 +159,9 @@
 		"subcategory": "style",
 		"hint": ["#FFFFFF", "(prefers-color-scheme: light|dark)"],
 		"autofill": false,
-		"description": ["Used for browser styling", "Colors the status bar on Chrome Android, address bar on Safari iOS, tile when pinned with Edge, etc.", "Can be any valid css color"],
+		"description": ["Used for browser styling", "Colors the status bar on Chrome Android, address bar on Safari iOS, tile when pinned with Edge, etc.", "Can be any valid css color", "Second value is an optional media query"],
 		"links": [
 			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color", "text": "MDN"}
-		]
-	},
-	{
-		"tag": ["meta name=\"application-name\" content="],
-		"type": "text",
-		"standard": true,
-		"category": "application",
-		"subcategory": null,
-		"hint": ["Application Name"],
-		"autofill": false,
-		"description": ["Title for web applications", "Should not be used if page is not a web application", "(no precise definition for web application is given by WHATWG)"],
-		"links": [
-			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name", "text": "WHATWG"}
 		]
 	},
 	{
@@ -264,29 +252,70 @@
 		]
 	},
 	{
+		"tag": ["link rel=\"manifest\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "web app",
+		"hint": ["manifest.json"],
+		"autofill": false,
+		"description": ["Link to web app manifest", "NOTE: modern Progressive Web Apps are primarily configured in <code>manifest.json</code>", "Web-app-specific HTML tags should only be used for legacy support"],
+		"links": [
+			{"href": "https://web.dev/learn/pwa/web-app-manifest", "text": "web.dev"},
+			{"href": "https://web.dev/articles/add-manifest", "text": "web.dev manifest guide"},
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/Manifest", "text": "MDN"}
+		]
+	},
+	{
+		"tag": ["meta name=\"application-name\" content="],
+		"type": "text",
+		"standard": true,
+		"category": "application",
+		"subcategory": null,
+		"hint": ["Application Name"],
+		"autofill": false,
+		"description": ["Title for web applications", "Should not be used if page is not a web application", "(<code>web application</code> has no specific definition in the specification)"],
+		"links": [
+			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#meta-application-name", "text": "WHATWG"}
+		]
+	},
+	{
+		"tag": ["meta name=\"apple-mobile-web-app-title\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "web app",
+		"hint": ["App Title"],
+		"autofill": false,
+		"description": ["Sets PWA title on legacy iOS"],
+		"links": [
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-DontLinkElementID_1", "text": "Apple Docs"}
+		]
+	},
+	{
 		"tag": ["meta name=\"mobile-web-app-capable\" content="],
 		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "pwa",
+		"subcategory": "web app",
 		"hint": ["yes"],
 		"autofill": true,
-		"description": ["Disable navigation bar for web apps on Android"],
+		"description": ["Disable navigation bar for installed web apps on legacy Android", "Note: linked documentation uses <code>apple-</code> prefix; Android supports this, only without a prefix"],
 		"links": [
-			{"href": "https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW2", "text": "Apple Docs"}
 		]
 	},
 	{
-		"tag": ["meta property=\"al:web:url\" content="],
-		"type": "text",
+		"tag": ["meta name=\"apple-mobile-web-app-capable\" content="],
+		"type": "check",
 		"standard": false,
 		"category": "application",
-		"subcategory": "app links",
-		"hint": ["https://example.com"],
-		"autofill": false,
-		"description": ["Canonical link to be optionally used alongside app links", "If user is on desktop or doesn't have the app installed, the page will automatically redirect to the specified URL"],
+		"subcategory": "web app",
+		"hint": ["yes"],
+		"autofill": true,
+		"description": ["Disable navigation bar for installed web apps on legacy iOS"],
 		"links": [
-			{"href": "https://developers.facebook.com/docs/applinks/metadata-reference/", "text": "Facebook Docs"}
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW2", "text": "Apple Docs"}
 		]
 	},
 	{
@@ -324,45 +353,6 @@
 		],
 		"links": [
 			{"href": "https://developers.google.com/search/docs/crawling-indexing/special-tags", "text": "Google Developer Docs"}
-		]
-	},
-	{
-		"tag": ["meta property=\"al:android:url\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "app links",
-		"hint": ["applinks://docs"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
-		]
-	},
-	{
-		"tag": ["meta property=\"al:android:app_name\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "app links",
-		"hint": ["App Links"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
-		]
-	},
-	{
-		"tag": ["meta property=\"al:android:package\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "app links",
-		"hint": ["org.applinks"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
 		]
 	},
 	{
@@ -480,29 +470,16 @@
 		]
 	},
 	{
-		"tag": ["meta name=\"apple-mobile-web-app-title\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "pwa",
-		"hint": ["App Title"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
-		]
-	},
-	{
 		"tag": ["link rel=\"apple-touch-icon\" href="],
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "pwa",
+		"subcategory": "web app",
 		"hint": ["/app_icon.png"],
 		"autofill": false,
-		"description": [],
+		"description": ["Link to installed web app icon for legacy iOS"],
 		"links": [
-			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4", "text": "Apple Docs"}
 		]
 	},
 	{
@@ -510,25 +487,12 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "pwa",
+		"subcategory": "web app",
 		"hint": ["/splash.png"],
 		"autofill": false,
-		"description": [],
+		"description": ["Link to installed web app splash screen for legacy iOS"],
 		"links": [
-			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
-		]
-	},
-	{
-		"tag": ["meta name=\"apple-mobile-web-app-capable\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "pwa",
-		"hint": ["yes"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6", "text": "Apple Docs"}
 		]
 	},
 	{
@@ -536,12 +500,12 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "pwa",
+		"subcategory": "web app",
 		"hint": ["black"],
 		"autofill": false,
-		"description": [],
+		"description": ["Set web app status bar color on legacy iOS"],
 		"links": [
-			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
+			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW1", "text": "Apple Docs"}
 		]
 	},
 	{
@@ -549,51 +513,12 @@
 		"type": "text",
 		"standard": false,
 		"category": "application",
-		"subcategory": "pwa",
+		"subcategory": "safari",
 		"hint": ["app-id=\"APP-ID\", app-argument=\"http/example.com\""],
 		"autofill": false,
-		"description": [],
+		"description": ["Add app banner on iOS", "If app is installed, a link to open it is shown, if app is not installed, a link to the App Store is shown"],
 		"links": [
-			{"href": "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html", "text": "Apple Docs"}
-		]
-	},
-	{
-		"tag": ["meta property=\"al:ios:url\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "app links",
-		"hint": ["applinks://docs"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
-		]
-	},
-	{
-		"tag": ["meta property=\"al:ios:app_store_id\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "app links",
-		"hint": ["12345"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
-		]
-	},
-	{
-		"tag": ["meta property=\"al:ios:app_name\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "app links",
-		"hint": ["App Links"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developers.facebook.com/docs/applinks/add-to-content", "text": "Facebook Docs"}
+			{"href": "https://developer.apple.com/documentation/webkit/promoting_apps_with_smart_app_banners", "text": "Apple Docs"}
 		]
 	},
 	{
@@ -964,19 +889,6 @@
 		]
 	},
 	{
-		"tag": ["link rel=\"manifest\" href="],
-		"type": "text",
-		"standard": false,
-		"category": "application",
-		"subcategory": "pwa",
-		"hint": ["manifest.json"],
-		"autofill": false,
-		"description": ["Link to web app manifest"],
-		"links": [
-
-		]
-	},
-	{
 		"tag": ["link rel=\"prefetch\" href="],
 		"type": "text",
 		"standard": false,
@@ -987,7 +899,7 @@
 		"description": ["Tells the browser to fetch and cache the linked content upon page load", "Improves load time of linked content"],
 		"links": [
 			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/prefetch", "text": "MDN"},
-			{"href": "https://www.debugbear.com/blog/resource-hints-rel-preload-prefetch-preconnect", "text": "Preload / Prefetch / Preconnect}"}
+			{"href": "https://web.dev/learn/performance/resource-hints#prefetch", "text": "web.dev"}
 		]
 	},
 	{
@@ -1000,7 +912,30 @@
 		"autofill": false,
 		"description": ["Tells the browser to resolve DNS for link upon page load", "Improves load time of linked content"],
 		"links": [
-			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch", "text": "MDN"}
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch", "text": "MDN"},
+			{"href": "https://web.dev/learn/performance/resource-hints#dns-prefetch", "text": "web.dev"}
+		]
+	},
+	{
+		"tag": ["link rel=\"preload\" href=", "as="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "performance",
+		"hint": ["image.png", "image"],
+		"autofill": false,
+		"suggested": [
+			{"value": "fetch", "description": ""},
+			{"value": "font", "description": ""},
+			{"value": "image", "description": ""},
+			{"value": "script", "description": ""},
+			{"value": "style", "description": ""},
+			{"value": "track", "description": ""}
+		],
+		"description": ["Specify resources to be loaded for initial browser rendering", "Improves load time of linked content"],
+		"links": [
+			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload", "text": "MDN"},
+			{"href": "https://web.dev/learn/performance/resource-hints#preload", "text": "web.dev"}
 		]
 	},
 	{
