@@ -84,7 +84,9 @@ function populateForms(tags) {
 		if (tag.suggested) {
 			tagSuggestions += "<ul>";
 			for(const suggestion of tag.suggested) {
-				tagSuggestions += `<li><span class="link">${suggestion.value}</span><span>//${suggestion.description}</span></li>`;
+				tagSuggestions += `<li><span class="link">${suggestion.value}</span>`;
+				tagSuggestions += suggestion.description ? `<span>//${suggestion.description}</span></li>` : "";
+				tagSuggestions += `</li>`;
 			}
 			tagSuggestions += "</ul>";
 		}
