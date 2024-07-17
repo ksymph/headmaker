@@ -623,7 +623,7 @@
 		"subcategory": "facebook",
 		"hint": ["123456789"],
 		"autofill": false,
-		"description": [],
+		"description": ["Specify Facebook app ID"],
 		"links": [
 			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
 		]
@@ -636,9 +636,10 @@
 		"subcategory": "facebook",
 		"hint": ["https://example.com/page.html"],
 		"autofill": false,
-		"description": [],
+		"description": ["Specify the canonical URL for the page"],
 		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"},
+			{"href": "https://ogp.me/", "text": "ogp.me Open Graph Reference"}
 		]
 	},
 	{
@@ -649,9 +650,24 @@
 		"subcategory": "facebook",
 		"hint": ["website"],
 		"autofill": false,
-		"description": [],
+		"description": ["Specify which category the page's content falls under", "See ogp.me for category-specific metadata to supplement"],
+		"suggested": [
+			{"value": "music.song"},
+			{"value": "music.album"},
+			{"value": "music.playlist"},
+			{"value": "music.radio_station"},
+			{"value": "video.movie"},
+			{"value": "video.episode"},
+			{"value": "video.tv_show"},
+			{"value": "video.other"},
+			{"value": "article"},
+			{"value": "book"},
+			{"value": "profile"},
+			{"value": "website"}
+		],
 		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"},
+			{"href": "https://ogp.me/#types", "text": "ogp.me Open Graph Reference"}
 		]
 	},
 	{
@@ -662,9 +678,10 @@
 		"subcategory": "facebook",
 		"hint": ["Content Title"],
 		"autofill": false,
-		"description": [],
+		"description": ["Title of the Open Graph object"],
 		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"},
+			{"href": "https://ogp.me/", "text": "ogp.me Open Graph Reference"}
 		]
 	},
 	{
@@ -675,9 +692,10 @@
 		"subcategory": "facebook",
 		"hint": ["https://example.com/image.png"],
 		"autofill": false,
-		"description": [],
+		"description": ["Image representing the Open Graph object"],
 		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"},
+			{"href": "https://ogp.me/", "text": "ogp.me Open Graph Reference"}
 		]
 	},
 	{
@@ -688,9 +706,10 @@
 		"subcategory": "facebook",
 		"hint": ["A description of the image"],
 		"autofill": false,
-		"description": [],
+		"description": ["Describe the associated image"],
 		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"},
+			{"href": "https://ogp.me/", "text": "ogp.me Open Graph Reference"}
 		]
 	},
 	{
@@ -701,9 +720,10 @@
 		"subcategory": "facebook",
 		"hint": ["A description of the page"],
 		"autofill": false,
-		"description": [],
+		"description": ["Give a one to two sentence description of the page"],
 		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"},
+			{"href": "https://ogp.me/", "text": "ogp.me Open Graph Reference"}
 		]
 	},
 	{
@@ -714,9 +734,10 @@
 		"subcategory": "facebook",
 		"hint": ["Site Name"],
 		"autofill": false,
-		"description": [],
+		"description": ["Name of the website as a whole"],
 		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"},
+			{"href": "https://ogp.me/", "text": "ogp.me Open Graph Reference"}
 		]
 	},
 	{
@@ -727,35 +748,10 @@
 		"subcategory": "facebook",
 		"hint": ["en_US"],
 		"autofill": false,
-		"description": [],
+		"description": ["Locale of the Open Graph tags", "Formatted as language_TERRITORY"],
 		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
-		]
-	},
-	{
-		"tag": ["meta property=\"article:author\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "social",
-		"subcategory": "facebook",
-		"hint": ["John Doe"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
-		]
-	},
-	{
-		"tag": ["meta property=\"op:markup_version\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "social",
-		"subcategory": "facebook",
-		"hint": ["1.0"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"}
+			{"href": "https://developers.facebook.com/docs/sharing/webmasters/", "text": "Facebook Docs"},
+			{"href": "https://ogp.me/", "text": "ogp.me Open Graph Reference"}
 		]
 	},
 	{
@@ -764,11 +760,21 @@
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"hint": ["description of content"],
+		"hint": ["summary"],
 		"autofill": false,
-		"description": [],
+		"description": ["Type of embed card", "Required"],
+		"suggested": [
+			{"value": "summary"},
+			{"value": "summary_large_image"},
+			{"value": "app"},
+			{"value": "player"}
+		],
 		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"},
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/summary", "text": "Twitter (x) Docs - Summary"},
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image", "text": "Twitter (x) Docs - Summary w/ Large Image"},
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"},
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/player-card", "text": "Twitter (x) Docs - Player"}
 		]
 	},
 	{
@@ -779,9 +785,22 @@
 		"subcategory": "twitter",
 		"hint": ["@website_account"],
 		"autofill": false,
-		"description": [],
+		"description": ["@twitter_username of website", "Either <code>twitter:site</code> or <code>twitter:site:id</code> is required"],
 		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:site:id\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["8675309"],
+		"autofill": false,
+		"description": ["Twitter ID of website", "Not used with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
 		]
 	},
 	{
@@ -792,22 +811,35 @@
 		"subcategory": "twitter",
 		"hint": ["@creator_account"],
 		"autofill": false,
-		"description": [],
+		"description": ["@twitter_username of content creator", "Only used with <code>summary_large_image</code> card type"],
 		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
 		]
 	},
 	{
-		"tag": ["meta name=\"twitter:url\" content="],
+		"tag": ["meta name=\"twitter:creator:id\" content="],
 		"type": "text",
 		"standard": false,
 		"category": "social",
 		"subcategory": "twitter",
-		"hint": ["https://example.com/page.html"],
+		"hint": ["8675309"],
 		"autofill": false,
-		"description": [],
+		"description": ["Twitter ID of content creator", "Only used with <code>summary_large_image</code> card type"],
 		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:description\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["A description of the page's content"],
+		"autofill": false,
+		"description": ["Describe the page in 200 characters or less", "Not used with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
 		]
 	},
 	{
@@ -818,22 +850,9 @@
 		"subcategory": "twitter",
 		"hint": ["Content Title"],
 		"autofill": false,
-		"description": [],
+		"description": ["Title of the content", "Maximum 70 characters", "Not used with <code>app</code> card type"],
 		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
-		]
-	},
-	{
-		"tag": ["meta name=\"twitter:description\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "social",
-		"subcategory": "twitter",
-		"hint": ["Content description less than 200 characters"],
-		"autofill": false,
-		"description": [],
-		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
 		]
 	},
 	{
@@ -844,9 +863,9 @@
 		"subcategory": "twitter",
 		"hint": ["https://example.com/image.png"],
 		"autofill": false,
-		"description": [],
+		"description": ["Image to be displayed in card", "Maximum 5MB", "Not used with <code>app</code> card type"],
 		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
 		]
 	},
 	{
@@ -857,9 +876,178 @@
 		"subcategory": "twitter",
 		"hint": ["A description of the image"],
 		"autofill": false,
-		"description": [],
+		"description": ["Describe the associated image", "Not used with <code>app</code> card type"],
 		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:player\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["https://example.com/player"],
+		"autofill": false,
+		"description": ["Player iFrame URL", "Used only with <code>player</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/player-card", "text": "Twitter (x) Docs - Player"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:player:width\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["720"],
+		"autofill": false,
+		"description": ["iFrame width in pixels", "Used only with <code>player</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/player-card", "text": "Twitter (x) Docs - Player"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:player:height\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["720"],
+		"autofill": false,
+		"description": ["iFrame height in pixels", "Used only with <code>player</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/player-card", "text": "Twitter (x) Docs - Player"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:player:stream\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["https://example.com/video.mp4"],
+		"autofill": false,
+		"description": ["URL to raw video or audio stream", "Used only with <code>player</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/player-card", "text": "Twitter (x) Docs - Player"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:app:name:iphone\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["App Name"],
+		"autofill": false,
+		"description": ["App name on iPhone", "Used only with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:app:name:ipad\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["App Name"],
+		"autofill": false,
+		"description": ["App name on iPad", "Used only with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:app:name:googleplay\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["App Name"],
+		"autofill": false,
+		"description": ["App name on Google Play", "Used only with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:app:id:iphone\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["8675309"],
+		"autofill": false,
+		"description": ["App store ID", "Used only with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:app:id:ipad\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["8675309"],
+		"autofill": false,
+		"description": ["App store ID", "Used only with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:app:id:googleplay\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["com.example.app"],
+		"autofill": false,
+		"description": ["Play Store package name", "Used only with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:app:url:iphone\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["app://custom_url"],
+		"autofill": false,
+		"description": ["Link with custom URL scheme for iPhone", "Used only with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:app:url:ipad\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["app://custom_url"],
+		"autofill": false,
+		"description": ["Link with custom URL scheme for iPad", "Used only with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"}
+		]
+	},
+	{
+		"tag": ["meta name=\"twitter:app:url:googleplay\" content="],
+		"type": "text",
+		"standard": false,
+		"category": "social",
+		"subcategory": "twitter",
+		"hint": ["app://custom_url"],
+		"autofill": false,
+		"description": ["Link with custom URL scheme for Android", "Used only with <code>app</code> card type"],
+		"links": [
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/app-card", "text": "Twitter (x) Docs - App"}
 		]
 	},
 	{
@@ -872,7 +1060,7 @@
 		"autofill": true,
 		"description": [],
 		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/guides/getting-started", "text": "Twitter Docs"}
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
 		]
 	},
 	{
