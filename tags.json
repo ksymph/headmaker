@@ -24,7 +24,7 @@
 		"subcategory": null,
 		"hint": ["width=device-width, initial-scale=1"],
 		"autofill": true,
-		"description": ["Sets viewport properties", "Used primarily to make page responsive on mobile"],
+		"description": ["Sets viewport properties", "Used primarily for responsive mobile pages"],
 		"suggested": [
 			{"value": "width=device-width, initial-scale=1", "description": "sets page width to device width, and not zoomed in by default"}
 		],
@@ -59,7 +59,7 @@
 		"standard": true,
 		"category": "application",
 		"subcategory": null,
-		"hint": ["seconds; url=URL"],
+		"hint": ["seconds[; url=https://example.com/]"],
 		"autofill": false,
 		"description": ["Timed page refresh"],
 		"suggested": [
@@ -514,7 +514,7 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "safari",
-		"hint": ["app-id=\"APP-ID\", app-argument=\"http/example.com\""],
+		"hint": ["app-id=8675309, app-argument=https://example.com"],
 		"autofill": false,
 		"description": ["Add app banner on iOS", "If app is installed, a link to open it is shown, if app is not installed, a link to the App Store is shown"],
 		"links": [
@@ -1058,9 +1058,9 @@
 		"subcategory": "twitter",
 		"hint": ["on"],
 		"autofill": true,
-		"description": [],
+		"description": ["Disable tracking in tweets embedded on the page"],
 		"links": [
-			{"href": "https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup", "text": "Twitter (x) Docs"}
+			{"href": "https://developer.x.com/en/docs/twitter-for-websites/webpage-properties", "text": "Twitter (x) Docs"}
 		]
 	},
 	{
@@ -1231,19 +1231,6 @@
 		"description": ["Mark explicit content for search engines"],
 		"links": [
 			{"href": "https://developers.google.com/search/docs/crawling-indexing/safesearch#add-metadata", "text": "Google Dev Docs"}
-		]
-	},
-	{
-		"tag": ["meta name=\"ICBM\" content="],
-		"type": "text",
-		"standard": false,
-		"category": "content",
-		"subcategory": "metadata",
-		"hint": ["latitude, longitude"],
-		"autofill": false,
-		"description": ["Specify geographic location (latitude, longitude)", "Older version of geo.position"],
-		"links": [
-			{"href": "https://www.geo-tag.de/informator/en2.html", "text": "Geo Tag Information"}
 		]
 	},
 	{

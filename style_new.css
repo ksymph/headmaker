@@ -81,6 +81,9 @@ h1 {
 }
 #output-pane {
 	width: 30vw;
+	position: sticky;
+	height: fit-content;
+	top: 0;
 }
 
 

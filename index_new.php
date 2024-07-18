@@ -14,7 +14,7 @@
 			<h1>headmaker</h1>
 			<div id="intro-desc">
 				<p>An easier way to get a<span class="mono">&lt;head></span></p>
-				<p><a href="https://github.com/Flicsmo/headmaker">GitHub</a></p>
+				<p><a href="https://github.com/Flicsmo/headmaker">Source</a></p>
 			</div>
 		</header>
 
@@ -80,11 +80,12 @@
 
 		<footer>
 			<p>Made by <a href="https://kwikle.me/">Kelton Wikle</a></p>
-			<p>Thank you <a href="https://htmlhead.dev">htmlhead.dev</a></p>
+			<p>Thanks to <a href="https://htmlhead.dev">htmlhead.dev</a> for the excellent resource</p>
 			<p>Further reading:</p>
 			<ul>
-				<li><a href="https://html.spec.whatwg.org/multipage/semantics.html#standard-metadata-names">WHATWG standard metadata names</a></li>
-				<li><a href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG non-standard &ltmeta> names</a></li>
+				<li><a href="https://html.spec.whatwg.org/multipage/semantics.html#standard-metadata-names">WHATWG Standard Metadata Names</a></li>
+				<li><a href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Non-standard Metadata Names</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">MDN &lthead></a></li>
 			</ul>
 			<a href="https://creativecommons.org/publicdomain/zero/1.0/" id="license">
 				<img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" alt="CC0">
