@@ -1187,10 +1187,11 @@
 		"subcategory": null,
 		"hint": ["https://example.com/webmention"],
 		"autofill": false,
-		"description": ["URL for Webmention service", "Used to notify other sites about mentions"],
+		"description": ["URL for Webmention service", "Notifies the URL when it's linked"],
 		"links": [
 			{"href": "https://www.w3.org/TR/webmention/", "text": "W3C"},
-			{"href": "https://indieweb.org/Webmention", "text": "IndieWeb"}
+			{"href": "https://indieweb.org/Webmention", "text": "IndieWeb"},
+			{"href": "https://webmention.net", "text": "webmention.net"}
 		]
 	},
 	{
@@ -1201,7 +1202,7 @@
 		"subcategory": null,
 		"hint": ["https://example.com/micropub"],
 		"autofill": false,
-		"description": ["Micropub endpoint"],
+		"description": ["Micropub endpoint", "Allows for posting to the website from a Micropub client"],
 		"links": [
 			{"href": "https://www.w3.org/TR/micropub/", "text": "W3C"},
 			{"href": "https://indieweb.org/Micropub", "text": "IndieWeb"}
