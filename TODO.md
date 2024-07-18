@@ -3,10 +3,11 @@
 ## In Progress
 
 ## To Do
-- [ ] multi-field autofill
-- [ ] tag duplication
+- [ ] add tag duplication
+- [ ] think of a way to add tag duplication
 
 ## Completed
 - [x] make new todo list
 - [x] sticky output
 - [x] clean up tag data
+- [x] multi-field autofill

@@ -106,7 +106,7 @@ function populateForms(tags) {
 		}
 
 		selectedSubcategory.innerHTML += `
-			<details class="tag${(tag.standard) ? " standard" : ""} type-${tag.type}">
+			<details class="tag${(tag.standard) ? " standard" : ""} type-${tag.type}${(tag.suggested_second) ? " suggest-second" : ""}">
 				<summary class="tag-main"">
 					<div class="tag-label">
 						${tagLabel}
@@ -208,10 +208,15 @@ function addExpandListeners() {
 }
 
 function addAutofillListeners() {
-	const tags = document.querySelectorAll(".tag");
-	for (const tag of tags) {
-		const input = tag.querySelector(".tag-input input");
+	const tagsObjects = document.querySelectorAll(".tag");
+	for (const tag of tagsObjects) {
+		let input = tag.querySelector(".tag-input input");
 		const autofillList = tag.querySelectorAll(".tag-details li .link");
+
+		if (tag.classList.contains("suggest-second")) {
+			input = tag.querySelectorAll(".tag-input input")[1];
+		}
+
 		for (const autofillItem of autofillList) {
 			autofillItem.addEventListener("click", function() {
 				input.value = autofillItem.innerText;

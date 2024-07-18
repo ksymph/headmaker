@@ -158,6 +158,11 @@
 		"subcategory": "style",
 		"hint": ["#FFFFFF", "(prefers-color-scheme: light|dark)"],
 		"autofill": false,
+		"suggested": [
+			{"value": "(prefers-color-scheme: light)"},
+			{"value": "(prefers-color-scheme: dark)"}
+		],
+		"suggested_second": true,
 		"description": ["Used for browser styling", "Colors the status bar on Chrome Android, address bar on Safari iOS, tile when pinned with Edge, etc.", "Can be any valid css color", "Second value is an optional media query"],
 		"links": [
 			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color", "text": "MDN"}
@@ -1119,6 +1124,7 @@
 			{"value": "style", "description": ""},
 			{"value": "track", "description": ""}
 		],
+		"suggested_second": true,
 		"description": ["Specify resources to be loaded for initial browser rendering", "Improves load time of linked content"],
 		"links": [
 			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload", "text": "MDN"},
