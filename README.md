@@ -1,7 +1,5 @@
-# source for headmaker.kwikle.me
+# Source for headmaker.kwikle.me
 
-a simple app for generating tags for the html head element
+Web app for generating <head> elements
 
-made as a practice project to learn javascript, how the head element works, and git
-
-WIP
+Created as a practice project to learn javascript and git (and how <head>s work)
