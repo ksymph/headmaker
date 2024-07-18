@@ -1117,12 +1117,12 @@
 		"hint": ["image.png", "image"],
 		"autofill": false,
 		"suggested": [
-			{"value": "fetch", "description": ""},
-			{"value": "font", "description": ""},
-			{"value": "image", "description": ""},
-			{"value": "script", "description": ""},
-			{"value": "style", "description": ""},
-			{"value": "track", "description": ""}
+			{"value": "fetch", "description": "resource to be accessed with a fetch request, e.g. json, webassembly"},
+			{"value": "font", "description": "font file"},
+			{"value": "image", "description": "image file"},
+			{"value": "script", "description": "javascript file"},
+			{"value": "style", "description": "css stylesheet"},
+			{"value": "track", "description": "webvtt file"}
 		],
 		"suggested_second": true,
 		"description": ["Specify resources to be loaded for initial browser rendering", "Improves load time of linked content"],
