@@ -29,7 +29,6 @@
 			{"value": "width=device-width, initial-scale=1", "description": "sets page width to device width, and not zoomed in by default"}
 		],
 		"links": [
-			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag", "text": "MDN"},
 			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag", "text": "MDN"}
 		]
 	},
@@ -129,7 +128,7 @@
 		"subcategory": null,
 		"hint": ["Page Title"],
 		"autofill": true,
-		"description": ["Sets page title", "Displayed in search engine results, browser tab title, bookmarks, etc."],
+		"description": ["Sets page title", "Displayed in search engine results, browser tab, bookmarks, etc."],
 		"links": [
 			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element", "text": "WHATWG"},
 			{"href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title", "text": "MDN"},
@@ -242,10 +241,10 @@
 		"autofill": false,
 		"description": ["Instructions for crawlers", "robots.txt is site-wide, use this for per-page control"],
 		"suggested": [
-			{"value": "index,follow", "description": "Index page and any links in it"},
-			{"value": "noindex,nofollow", "description": "Don't index page or any links in it"},
-			{"value": "index,nofollow", "description": "Index page, but no links"},
-			{"value": "noindex,follow", "description": "Don't index page, but follow links"}
+			{"value": "index,follow", "description": "index page and any links in it"},
+			{"value": "noindex,nofollow", "description": "don't index page or any links in it"},
+			{"value": "index,nofollow", "description": "index page, but no links"},
+			{"value": "noindex,follow", "description": "don't index page, but follow links"}
 		],
 		"links": [
 			{"href": "https://www.robotstxt.org/meta.html", "text": "robotstxt.org"}
@@ -259,10 +258,10 @@
 		"subcategory": "web app",
 		"hint": ["manifest.json"],
 		"autofill": false,
-		"description": ["Link to web app manifest", "NOTE: modern Progressive Web Apps are primarily configured in <code>manifest.json</code>", "Web-app-specific HTML tags should only be used for legacy support"],
+		"description": ["Link to web app manifest", "Note: modern Progressive Web Apps are primarily configured in <code>manifest.json</code>", "Web-app-specific HTML tags should only be used for legacy support"],
 		"links": [
-			{"href": "https://web.dev/learn/pwa/web-app-manifest", "text": "web.dev"},
-			{"href": "https://web.dev/articles/add-manifest", "text": "web.dev manifest guide"},
+			{"href": "https://web.dev/learn/pwa/web-app-manifest", "text": "web.dev reference"},
+			{"href": "https://web.dev/articles/add-manifest", "text": "web.dev guide"},
 			{"href": "https://developer.mozilla.org/en-US/docs/Web/Manifest", "text": "MDN"}
 		]
 	},
@@ -328,10 +327,10 @@
 		"autofill": false,
 		"description": ["Control Google crawler behavior"],
 		"suggested": [
-			{"value": "index,follow", "description": "Index page and any links in it"},
-			{"value": "noindex,nofollow", "description": "Don't index page or any links in it"},
-			{"value": "index,nofollow", "description": "Index page, but no links"},
-			{"value": "noindex,follow", "description": "Don't index page, but follow links"}
+			{"value": "index,follow", "description": "dndex page and any links in it"},
+			{"value": "noindex,nofollow", "description": "don't index page or any links in it"},
+			{"value": "index,nofollow", "description": "index page, but no links"},
+			{"value": "noindex,follow", "description": "don't index page, but follow links"}
 		],
 		"links": [
 			{"href": "https://developers.google.com/search/docs/crawling-indexing/special-tags", "text": "Google Developer Docs"}
@@ -347,9 +346,9 @@
 		"autofill": true,
 		"description": ["Control Google search result features"],
 		"suggested": [
-			{"value": "nositelinkssearchbox", "description": "disables site-specific search box"},
-			{"value": "nopagereadaloud", "description": "disables google tts"},
-			{"value": "notranslate", "description": "disables translate button"}
+			{"value": "nositelinkssearchbox", "description": "disable site-specific search box"},
+			{"value": "nopagereadaloud", "description": "disable google text-to-speech"},
+			{"value": "notranslate", "description": "disable translate button"}
 		],
 		"links": [
 			{"href": "https://developers.google.com/search/docs/crawling-indexing/special-tags", "text": "Google Developer Docs"}
@@ -1071,7 +1070,7 @@
 		"subcategory": "related",
 		"hint": ["https://example.com/page/amp.html"],
 		"autofill": false,
-		"description": ["Link to AMP page"],
+		"description": ["Link to AMP page", "AMP is a subset of HTML intended to help improve page load times", "After heavy criticism, AMP has fallen out of favor"],
 		"links": [
 			{"href": "https://amp.dev/", "text": "amp.dev"}
 		]
