@@ -128,7 +128,7 @@
 		"category": "core",
 		"subcategory": null,
 		"hint": ["Page Title"],
-		"autofill": false,
+		"autofill": true,
 		"description": ["Sets page title", "Displayed in search engine results, browser tab title, bookmarks, etc."],
 		"links": [
 			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element", "text": "WHATWG"},
