@@ -6,6 +6,7 @@
 	<title>headmaker</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js" defer></script>
+	<link rel="icon" type="image/x-icon" href="/icon.png">
 </head>
 
 <body>
