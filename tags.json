@@ -101,9 +101,20 @@
 		"standard": false,
 		"category": "application",
 		"subcategory": "style",
-		"hint": ["style.css"],
+		"hint": ["/style.css"],
 		"autofill": false,
 		"description": ["Load an external stylesheet"],
+		"links": ["href": "https://en.wikipedia.org/wiki/Favicon", "text": "Wikipedia"]
+	},
+	{
+		"tag": ["link rel=\"icon\" type=\"image/x-icon\" href="],
+		"type": "text",
+		"standard": false,
+		"category": "application",
+		"subcategory": "style",
+		"hint": ["/favicon.ico"],
+		"autofill": false,
+		"description": ["Point to favicon, displayed in browser tab"],
 		"links": []
 	},
 	{
