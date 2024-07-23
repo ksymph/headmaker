@@ -104,7 +104,7 @@
 		"hint": ["/style.css"],
 		"autofill": false,
 		"description": ["Load an external stylesheet"],
-		"links": ["href": "https://en.wikipedia.org/wiki/Favicon", "text": "Wikipedia"]
+		"links": []
 	},
 	{
 		"tag": ["link rel=\"icon\" type=\"image/x-icon\" href="],
@@ -115,7 +115,7 @@
 		"hint": ["/favicon.ico"],
 		"autofill": false,
 		"description": ["Point to favicon, displayed in browser tab"],
-		"links": []
+		"links": [{"href": "https://en.wikipedia.org/wiki/Favicon", "text": "Wikipedia"}]
 	},
 	{
 		"tag": ["link rel=\"preconnect\" href="],
