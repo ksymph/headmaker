@@ -354,7 +354,7 @@
 	},
 	{
 		"tag": ["meta name=\"google\" content="],
-		"type": "check",
+		"type": "text",
 		"standard": false,
 		"category": "content",
 		"subcategory": "search",
