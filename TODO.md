@@ -3,7 +3,7 @@
 ## In Progress
 
 ## To Do
-- [ ] add tag duplication
+- [ ] tag duplication
 - [ ] think of a way to add tag duplication
 
 ## Completed
@@ -11,3 +11,4 @@
 - [x] sticky output
 - [x] clean up tag data
 - [x] multi-field autofill
+- [x] basic mobile layout improvements

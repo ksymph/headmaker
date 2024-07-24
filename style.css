@@ -63,7 +63,9 @@ h1 {
 
 
 
+html {
 
+}
 
 
 
@@ -71,6 +73,30 @@ h1 {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+	#input-pane {
+		width: 100% !important;
+	}
+	#output-pane {
+		min-width: 90vw;
+	}
+	.tag-main {
+		flex-direction: column;
+		text-align: center;
+	}
+	.tag-main:before {
+		position: absolute;
+		left: 16px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.tag-input {
+		overflow: hidden;
+	}
 }
 
 #input-pane {
