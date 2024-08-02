@@ -17,7 +17,7 @@
 		]
 	},
 	{
-		"tag": ["meta description="],
+		"tag": ["meta name=\"description\" content="],
 		"type": "text",
 		"standard": true,
 		"category": "core",
@@ -372,7 +372,7 @@
 		"category": "content",
 		"subcategory": "search",
 		"hint": ["nositelinkssearchbox"],
-		"autofill": true,
+		"autofill": false,
 		"description": ["Control Google search result features"],
 		"suggested": [
 			{"value": "nositelinkssearchbox", "description": "disable site-specific search box"},
