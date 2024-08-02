@@ -5,6 +5,7 @@
 ## To Do
 - [ ] tag duplication
 - [ ] think of a way to add tag duplication
+- [ ] license autofill
 
 ## Completed
 - [x] make new todo list
