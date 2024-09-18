@@ -24,7 +24,7 @@
 		"subcategory": null,
 		"hint": ["A short description of the page"],
 		"autofill": true,
-		"description": ["Describe the page", "Shown in search results"],
+		"description": ["Describe the page", "Less than ~160 characters is often recommended for SEO", "Shown in search results"],
 		"links": [
 			{"href": "https://html.spec.whatwg.org/multipage/semantics.html#meta-description", "text": "WHATWG"}
 		]
