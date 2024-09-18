@@ -128,12 +128,22 @@ function populateForms(tags) {
 	}
 }
 
+var fn = function(e) {
+		if(e.keyCode == 32){
+			e.preventDefault();
+		}
+	};
+
 function buildOutput() {
 	const tagsHtml = document.querySelectorAll(".tag");
 
 	let output = "<head>\n";
 
 	for (const tagHtml of tagsHtml) {
+		let summary = tagHtml.querySelector(".tag-main");
+		summary.onkeyup = fn;
+
+
 		if (tagHtml.classList.contains("type-text")) {
 			const inputs = tagHtml.querySelectorAll(".tag-input input");
 			const labels = tagHtml.querySelectorAll(".tag-label span");
