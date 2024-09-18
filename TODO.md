@@ -3,9 +3,8 @@
 ## In Progress
 
 ## To Do
-- [ ] tag duplication
-- [ ] think of a way to add tag duplication
 - [ ] license autofill
+- [ ] character count for description,
 
 ## Completed
 - [x] make new todo list
